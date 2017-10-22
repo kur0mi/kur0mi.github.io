@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.nightmare.xin/test.html</loc>
+    
+    <lastmod>2017-10-22T04:54:13.982Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.nightmare.xin/test2.html</loc>
     
-    <lastmod>2017-10-22T04:09:13.287Z</lastmod>
+    <lastmod>2017-10-22T04:53:51.236Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://blog.nightmare.xin/tools/index.html</loc>
     
     <lastmod>2017-10-22T03:55:22.512Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/test.html</loc>
-    
-    <lastmod>2017-10-22T03:30:53.591Z</lastmod>
     
   </url>
   

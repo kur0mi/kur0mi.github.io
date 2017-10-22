@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2017-10-22T04:09:13.287Z</updated>
+  <updated>2017-10-22T04:53:51.236Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="https://blog.nightmare.xin/test2.html"/>
     <id>https://blog.nightmare.xin/test2.html</id>
     <published>2017-10-22T02:46:26.000Z</published>
-    <updated>2017-10-22T04:09:13.287Z</updated>
+    <updated>2017-10-22T04:53:51.236Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CTF校赛"><a href="#CTF校赛" class="headerlink" title="CTF校赛"></a>CTF校赛</h1><p>本来想趁着学校大佬们都去打天翼杯，然后校赛混个奖什么的，然而，哈哈没有然而确实混到了，排名第四，校内队伍第二。 作为第一次参加这种 <strong>比较</strong> 正式的比赛也是一个好的开始。</p><p>最出乎意料的是，这次比赛比预想中难了好多好多好多。差点心态就炸了，不过还好队友们相互鼓励还是坚持了下来。</p><p>现在将这次比赛过程记录如下：</p><h2 id="web50"><a href="#web50" class="headerlink" title="web50"></a>web50</h2><p>因为每道题的一血(第一个做出来的)有额外加分嘛，然后就准备抢一血。 刷新网页，点开sign-in题，右键源码，找到flag，提交，失败…而且输入框也有问题，不能显示。 然后过了几分钟，应该是被主办方修好了，我们运气不错拿到了一血。</p><h2 id="web100"><a href="#web100" class="headerlink" title="web100"></a>web100</h2><p>题目是sign-up，点开题目地址，主要有<strong>注册</strong>，<strong>登录</strong>，<strong>注销</strong>三个功能。试了一下随便注册一个账号都可以登录。一时没有其他思路就用awvs扫了一下，扫出来一个index.php.bak和scehma.sql文件，基本确定应该是属于源码泄露的题。然后对着源码开始审计，发现需要修改一个字段，试着用 <strong>me’ union select 1#</strong> 注入失败，一直到比赛结束都没做出来… 感觉这里应该是有过滤。</p><h2 id="web150"><a href="#web150" class="headerlink" title="web150"></a>web150</h2><p><img src="http://oxm4hc2s3.bkt.clouddn.com/3.png" alt=""></p><p>题目循环检测alert并删除，试了各种编码无效，去做web300的时候才想到jsfuck编码，可以绕过检测并且由js解析。</p><p>当然要先闭合前边的引号，后边可以闭合或直接注释掉。</p><h2 id="web200"><a href="#web200" class="headerlink" title="web200"></a>web200</h2><p>这道题就是真的坑了，参数 <strong>?file=flag</strong> 没有显示任何内容，试着%00截断返回错误信息，包括文件包含路径<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">然后当我输入绝对路径就会显示</div><div class="line">&gt;you want to search with root path, huh?</div><div class="line"></div><div class="line">输入相对路径就显示</div><div class="line">&gt;you want to search with apparent path, huh?</div><div class="line"></div><div class="line">那个 **huh** 真是巨嘲讽，各种尝试都失败了，最后也没做出来，赛后才知道只需要用 **php://filter/read=convert.base64-encode/resource=flag** 就可以了，，我记得我当时这样试过，但貌似哪里出错了就放弃了。还是经验不够。</div><div class="line"></div><div class="line">## web300</div><div class="line">这就是这次比赛最开心的一道题了，进去之后发现正则匹配对输入进行了过滤，&apos;[^\[\]\!\+]+/g&apos;，也就是说只能使用 **[]!+** 四个字符进行构造，eval(input)可以对input进行js解析，综合题意，只要可以使用eval(input)构造出&apos;alert&apos;字符串即可。</div><div class="line"></div><div class="line">一开始当然直接jsfuck，然后由于 **()** 被过滤掉了就fail了。然后各种困惑，各种google之后，get到jsfuck的编码方式，就解开了本题。记录如下：</div><div class="line"></div><div class="line">```jsfuck</div><div class="line">以下内容基于</div><div class="line">[]      =&gt;  []</div><div class="line"></div><div class="line">然后!可以将类型转化为布尔型</div><div class="line">![]     =&gt;  false</div><div class="line">!![]    =&gt;  true</div><div class="line"></div><div class="line">+可以将类型转化为整形</div><div class="line">+![]    =&gt;  0</div><div class="line">+!![]   =&gt;  1</div><div class="line">!![]+!![]   =&gt;  2 </div><div class="line"></div><div class="line">然后+[]可以转化为字符串</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line"></div><div class="line">类似于数组取下标</div><div class="line">(![]+[])[+!![]] =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">然后就可以类似的从&apos;false&apos;, &apos;true&apos;中读出&apos;a&apos;,&apos;l&apos;,&apos;e&apos;,&apos;r&apos;,&apos;t&apos;。</div><div class="line"></div><div class="line">em...但是...题目过滤了小括号。需要绕一下</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line">[![]+[]]    =&gt;  [&apos;false&apos;]</div><div class="line">[![]+[]][+[]]    =&gt;  &apos;false&apos;</div><div class="line">[![]+[]][+[]][+!![]]    =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">最后用加号拼起来即可。</div><div class="line">这题最后一半靠蒙，\笑哭\笑哭</div></pre></td></tr></table></figure></p><p>截图如下：<br><img src="http://oxm4hc2s3.bkt.clouddn.com/4.png" alt=""></p><p><img src="http://oxm4hc2s3.bkt.clouddn.com/2.png" alt=""></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>开心，也有点小遗憾吧，路还很长啊。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;CTF校赛&quot;&gt;&lt;a href=&quot;#CTF校赛&quot; class=&quot;headerlink&quot; title=&quot;CTF校赛&quot;&gt;&lt;/a&gt;CTF校赛&lt;/h1&gt;&lt;p&gt;本来想趁着学校大佬们都去打天翼杯，然后校赛混个奖什么的，然而，哈哈没有然而确实混到了，排名第四，校内队伍第二。 作为
-      
+      2017年南航CTF校赛
     
     </summary>
     
@@ -42,16 +39,13 @@
     <link href="https://blog.nightmare.xin/test.html"/>
     <id>https://blog.nightmare.xin/test.html</id>
     <published>2017-10-21T01:43:47.000Z</published>
-    <updated>2017-10-22T03:30:53.591Z</updated>
+    <updated>2017-10-22T04:54:13.982Z</updated>
     
     <content type="html"><![CDATA[<h1 id="第四届世安杯划水日记"><a href="#第四届世安杯划水日记" class="headerlink" title="第四届世安杯划水日记"></a>第四届世安杯划水日记</h1><p>本来没写的，看到两位队友@a-lie-Z<a href="http://qrzbing.cn/2017/CTF_WriteUp171008.html#more" target="_blank" rel="external"> 链接地址 </a>和@primykq<a href="https://primykq.top/2017/10/08/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E4%B8%96%E5%AE%89%E6%9D%AF%E9%85%B1%E6%B2%B9%E8%AE%B0/" target="_blank" rel="external"> 链接地址 </a>都写了，就顺手记录一下吧，整理在一起做个纪念。(第一次参加比赛没存图，习惯还是要改…)<br><a href="http://blog.nightmare.xin/test/">本文链接</a></p><h2 id="ctf入门级题目"><a href="#ctf入门级题目" class="headerlink" title="ctf入门级题目"></a>ctf入门级题目</h2><p>ereg传入数组时不会返回FALSE，strpos传入数组也不会反回FALSE…</p><p>此外ereg还可以使用%00截断</p><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><p>php代码审计的题，很喜欢</p><p>对于x1，注意到case 0后边没有break，直接传入<strong>x1=0</strong>即可</p><p>对于x2，构造json字符串。其中x21不能为数字且x21&gt;”2017”，传入<strong>x21=2018a</strong>。x22出题点应该是array_search是弱比较，只需要有一个键为0，就可以绕过。</p><p>对于x3，直接md5碰撞，脚本大概长这样…<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$a = &apos;1&apos;;</div><div class="line">$s = &apos;XIPU&apos;;</div><div class="line">while(1)</div><div class="line">&#123;</div><div class="line">    $x3 = $s + $a;</div><div class="line">    substr(md5($x3),8,16) == substr(md5(&apos;15562&apos;),8,16)?die($x3):$a++;</div><div class="line">&#125;</div><div class="line">?&gt;</div></pre></td></tr></table></figure></p><h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>右键查看源码发现提示，密码为五位数字，想到爆破。看一下验证码，猜想应该是第一次请求会生成vcode并保存在session，后面每一次请求与保存的vcode比对并生成新的vcode。所以写脚本每次请求需要带入phpsessid（一开始没注意导致一直抓不到验证vcode的页面，还以为出bug了…）</p><p>基于此，写python脚本爆破，这里又踩了一个坑，没错，我是从10000开始爆破的，五位数字…只想说人生经验还不够丰富</p><p>好像burp可以用intruder模块直接爆破，有一个选项是可以使用返回的页面作为下一次请求的参数，很适合这个题。</p><h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p>php://input伪协议+未处理的post数据绕过第一层，然后利用include+php://filter/read=convert.base64-encode/class.php读源码，这里很好奇无法读取flag.php。</p><p>先读取index.php发现对$file参数做了过滤.构造序列化字符串（其中需要给一个变量赋值），然后程序执行echo调用_toString，就可以getflag。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>然后就…没有了。 </p><p>不说了，虽然菜，但还是玩的很开心的。</p><p>ps: 希望下午校赛可以取得好成绩</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;第四届世安杯划水日记&quot;&gt;&lt;a href=&quot;#第四届世安杯划水日记&quot; class=&quot;headerlink&quot; title=&quot;第四届世安杯划水日记&quot;&gt;&lt;/a&gt;第四届世安杯划水日记&lt;/h1&gt;&lt;p&gt;本来没写的，看到两位队友@a-lie-Z&lt;a href=&quot;http://qr
-      
+      第四届世安杯比赛
     
     </summary>
     
