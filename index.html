@@ -86,7 +86,7 @@
       
         <h1 id="CTF校赛"><a href="#CTF校赛" class="headerlink" title="CTF校赛"></a>CTF校赛</h1><p>本来想趁着学校大佬们都去打天翼杯，然后校赛混个奖什么的，然而，哈哈没有然而确实混到了，排名第四，校内队伍第二。 作为第一次参加这种 <strong>比较</strong> 正式的比赛也是一个好的开始。</p>
 <p>最出乎意料的是，这次比赛比预想中难了好多好多好多。差点心态就炸了，不过还好队友们相互鼓励还是坚持了下来。</p>
-<p>现在将这次比赛过程记录如下：</p>
+<p>现在将这次比赛过程记录如下：<br>&lt;!−− more −−&gt;</p>
 <h2 id="web50"><a href="#web50" class="headerlink" title="web50"></a>web50</h2><p>因为每道题的一血(第一个做出来的)有额外加分嘛，然后就准备抢一血。 刷新网页，点开sign-in题，右键源码，找到flag，提交，失败…而且输入框也有问题，不能显示。 然后过了几分钟，应该是被主办方修好了，我们运气不错拿到了一血。</p>
 <h2 id="web100"><a href="#web100" class="headerlink" title="web100"></a>web100</h2><p>题目是sign-up，点开题目地址，主要有<strong>注册</strong>，<strong>登录</strong>，<strong>注销</strong>三个功能。试了一下随便注册一个账号都可以登录。一时没有其他思路就用awvs扫了一下，扫出来一个index.php.bak和scehma.sql文件，基本确定应该是属于源码泄露的题。然后对着源码开始审计，发现需要修改一个字段，试着用 <strong>me’ union select 1#</strong> 注入失败，一直到比赛结束都没做出来… 感觉这里应该是有过滤。</p>
 <h2 id="web150"><a href="#web150" class="headerlink" title="web150"></a>web150</h2><p><img src="http://oxm4hc2s3.bkt.clouddn.com/3.png" alt=""></p>
