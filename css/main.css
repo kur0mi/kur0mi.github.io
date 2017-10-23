@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffec7f;
+  background: #b811f2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2616,7 +2616,7 @@ pre .javascript .function {
   padding: 0;
   width: 240px;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #000;
 }
 @media (min-width: 1600px) {
@@ -2678,7 +2678,7 @@ pre .javascript .function {
   background: rbga(0, 0, 0, 0);
   border-style: solid;
   border-color: #000;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 25px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2702,7 +2702,7 @@ pre .javascript .function {
   margin-top: 300px;
   width: 240px;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #000;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2813,8 +2813,8 @@ pre .javascript .function {
 }
 .menu .menu-item a:hover,
 .menu-item-active a {
-  background: SteelBlue;
-  border-bottom-color: SteelBlue;
+  background: #000;
+  border-bottom-color: #000;
 }
 .menu .menu-item br {
   display: none;
