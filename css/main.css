@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #065d45;
+  background: #0fff00;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2616,9 +2616,10 @@ pre .javascript .function {
   overflow: hidden;
   padding: 0;
   width: 240px;
-  background: #fff;
-  box-shadow: initial;
-  border-radius: initial;
+  background: rbga(255, 255, 255, 0.5);
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00f;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2675,10 +2676,12 @@ pre .javascript .function {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: rbga(255, 255, 255, 0.5);
   min-height: 700px;
-  box-shadow: initial;
-  border-radius: initial;
+  background: rbga(255, 255, 255, 0.5);
+  border-style: solid;
+  border-color: #00f;
+  border-width: 2px;
+  border-radius: 25px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -2700,8 +2703,10 @@ pre .javascript .function {
   float: left;
   margin-top: 300px;
   width: 240px;
-  background: #f5f7f9;
-  box-shadow: none;
+  background-color: rbga(0, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00f;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sidebar {
@@ -2719,6 +2724,10 @@ pre .javascript .function {
 .footer-inner {
   width: 960px;
   padding-left: 260px;
+  background: rbga(255, 255, 255, 0.5);
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00f;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .footer-inner {
@@ -2858,7 +2867,7 @@ pre .javascript .function {
   width: 240px;
   color: #555;
   background: #fff;
-  box-shadow: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
   border-radius: initial;
   opacity: 0;
 }
@@ -2992,9 +3001,15 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/0756131.gif");
+  background: url("/images/L18A1DS2L4I1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+code {
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  margin: 1px 3px;
+  padding: 1px 3px;
 }
