@@ -188,7 +188,7 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: DarkGray;
+  color: #696969;
   background: #f5f7f9;
 }
 @media (max-width: 767px) {
@@ -306,7 +306,7 @@ hr {
 }
 blockquote {
   padding: 0 15px;
-  color: #666;
+  color: #fff;
   border-left: 4px solid #ddd;
 }
 blockquote cite::before {
@@ -967,7 +967,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: DarkGray;
+  background: #696969;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1419,7 +1419,7 @@ pre .javascript .function {
   transition-property: background;
 }
 .posts-collapse .post-header:hover {
-  border-bottom-color: #666;
+  border-bottom-color: #fff;
 }
 .posts-collapse .post-header:hover::before {
   background: #222;
@@ -1444,7 +1444,7 @@ pre .javascript .function {
   opacity: 0.6;
 }
 .posts-collapse .post-title a {
-  color: #666;
+  color: #fff;
   border-bottom: none;
 }
 .page-home .post-type-quote .post-header,
@@ -1824,7 +1824,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fb5be7;
+  background: #f7ffc3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1885,7 +1885,7 @@ pre .javascript .function {
 }
 .post-toc-empty {
   font-size: 14px;
-  color: #666;
+  color: #fff;
 }
 .post-toc-wrap {
   overflow: hidden;
@@ -1908,7 +1908,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #666;
+  color: #fff;
   border-bottom-color: OrangeRed;
 }
 .post-toc ol a:hover {
