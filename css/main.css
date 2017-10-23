@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b621ff;
+  background: #d90055;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2613,13 +2613,11 @@ pre .javascript .function {
 .header-inner {
   position: absolute;
   top: 0;
-  overflow: hidden;
   padding: 0;
   width: 240px;
-  background: rbga(255, 255, 255, 0.5);
   border-style: solid;
   border-width: 2px;
-  border-color: #00f;
+  border-color: #000;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2677,9 +2675,9 @@ pre .javascript .function {
   padding: 40px;
   width: 700px;
   min-height: 700px;
-  background: rbga(255, 255, 255, 0.5);
+  background: rbga(0, 0, 0, 0);
   border-style: solid;
-  border-color: #00f;
+  border-color: #000;
   border-width: 2px;
   border-radius: 25px;
 }
@@ -2703,10 +2701,9 @@ pre .javascript .function {
   float: left;
   margin-top: 300px;
   width: 240px;
-  background-color: rbga(0, 0, 0, 0.5);
   border-style: solid;
   border-width: 2px;
-  border-color: #00f;
+  border-color: #000;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sidebar {
@@ -2724,10 +2721,6 @@ pre .javascript .function {
 .footer-inner {
   width: 960px;
   padding-left: 260px;
-  background: rbga(255, 255, 255, 0.5);
-  border-style: solid;
-  border-width: 2px;
-  border-color: #00f;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .footer-inner {
@@ -2762,24 +2755,24 @@ pre .javascript .function {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #222;
+  background: rgba(0,0,0,0);
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    box-shadow: 0 0 16px rgba(0,0,0,0);
   }
 }
 @media (max-width: 767px) {
   .site-meta {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    box-shadow: 0 0 16px rgba(0,0,0,0);
   }
 }
 .brand {
   padding: 0;
-  background: none;
+  background: rgba(0,0,0,0);
 }
 .brand:hover {
-  color: #fff;
+  color: OrangeRed;
 }
 .site-subtitle {
   margin: 10px 10px 0;
@@ -2818,8 +2811,8 @@ pre .javascript .function {
 }
 .menu .menu-item a:hover,
 .menu-item-active a {
-  background: #f9f9f9;
-  border-bottom-color: #fff;
+  background: #000;
+  border-bottom-color: OrangeRed;
 }
 .menu .menu-item br {
   display: none;
@@ -2833,10 +2826,10 @@ pre .javascript .function {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: #000;
 }
 .btn-bar {
-  background-color: #fff;
+  background: rgba(0,0,0,0.5);
 }
 .site-nav-toggle {
   left: 20px;
@@ -2865,10 +2858,8 @@ pre .javascript .function {
 .sidebar-inner {
   box-sizing: border-box;
   width: 240px;
-  color: #555;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12);
-  border-radius: initial;
+  color: #fff;
+  background: #000;
   opacity: 0;
 }
 .sidebar-inner.affix {
@@ -2891,10 +2882,10 @@ pre .javascript .function {
   clear: both;
 }
 .sidebar a {
-  color: #555;
+  color: OrangeRed;
 }
 .sidebar a:hover {
-  color: #222;
+  color: DarkBlue;
 }
 .site-state-item {
   padding: 0 10px;
@@ -2917,7 +2908,7 @@ pre .javascript .function {
   border: none;
 }
 .feed-link a:hover {
-  background: none;
+  background: #000;
   color: #e34603;
 }
 .feed-link a:hover i {
@@ -3001,15 +2992,9 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/L18A1DS2L4I1.jpg");
+  background: url("/images/GOQS6G4LH2Z1_1000x500.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-}
-code {
-  color: #fff;
-  background: rgba(0,0,0,0.5);
-  margin: 1px 3px;
-  padding: 1px 3px;
 }
