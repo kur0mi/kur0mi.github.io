@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="使用autohotkey自定义热键，并通过利用python脚本强大的处理能力，实现一键处理功能">
+<meta name="description" content="今天我翻新了我的博客外观(没错，就是你们现在看到的这样子)，吃饱喝足之后，干脆和我搭建博客的过程一起记录一下吧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速获取markdown图片链接">
-<meta property="og:url" content="https://blog.nightmare.xin/test3.html">
+<meta property="og:title" content="记一次搭建博客全过程">
+<meta property="og:url" content="https://blog.nightmare.xin/test4.html">
 <meta property="og:site_name" content="kur0mi&#39;s blog">
-<meta property="og:description" content="使用autohotkey自定义热键，并通过利用python脚本强大的处理能力，实现一键处理功能">
+<meta property="og:description" content="今天我翻新了我的博客外观(没错，就是你们现在看到的这样子)，吃饱喝足之后，干脆和我搭建博客的过程一起记录一下吧">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-23T11:57:04.950Z">
+<meta property="og:image" content="http://store.nightmare.xin/54324234.png">
+<meta property="og:updated_time" content="2017-10-23T11:52:57.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速获取markdown图片链接">
-<meta name="twitter:description" content="使用autohotkey自定义热键，并通过利用python脚本强大的处理能力，实现一键处理功能">
+<meta name="twitter:title" content="记一次搭建博客全过程">
+<meta name="twitter:description" content="今天我翻新了我的博客外观(没错，就是你们现在看到的这样子)，吃饱喝足之后，干脆和我搭建博客的过程一起记录一下吧">
+<meta name="twitter:image" content="http://store.nightmare.xin/54324234.png">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.nightmare.xin/test3.html"/>
+  <link rel="canonical" href="https://blog.nightmare.xin/test4.html"/>
 
 
 
 
 
-  <title>快速获取markdown图片链接 | kur0mi's blog</title>
+  <title>记一次搭建博客全过程 | kur0mi's blog</title>
   
 
 
@@ -232,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/test3.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/test4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kur0mi">
@@ -249,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">快速获取markdown图片链接</h1>
+          <h1 class="post-title" itemprop="name headline">记一次搭建博客全过程</h1>
         
 
         <div class="post-meta">
@@ -261,8 +263,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-22T22:39:47+08:00">
-                2017-10-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-23T18:33:38+08:00">
+                2017-10-23
               </time>
             
 
@@ -286,7 +288,7 @@
 
           
               <div class="post-description">
-                  使用autohotkey自定义热键，并通过利用python脚本强大的处理能力，实现一键处理功能
+                  今天我翻新了我的博客外观(没错，就是你们现在看到的这样子)，吃饱喝足之后，干脆和我搭建博客的过程一起记录一下吧
               </div>
           
 
@@ -303,15 +305,23 @@
       
 
       
-        <h1 id="markdown简介"><a href="#markdown简介" class="headerlink" title="markdown简介"></a>markdown简介</h1><p>Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性，被称作“「电子邮件」风格的「标记语言」”。</p>
-<p>markdown语法参考<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">链接</a></p>
-<h1 id="七牛云简介"><a href="#七牛云简介" class="headerlink" title="七牛云简介"></a>七牛云简介</h1><p>这里主要使用七牛云作为图床————也就是互联网上的一处空间————来存储markdown需要的图片。</p>
-<h1 id="autohotkey-python简介"><a href="#autohotkey-python简介" class="headerlink" title="autohotkey+python简介"></a>autohotkey+python简介</h1><p>autohotkey使用一种极为简便的语法来创建脚本自定义热键，python同样以简洁的语法和强大的功能著称，两者配合就可以使用热键快速的解决很多复杂问题。</p>
-<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><p>设置快捷键，实现一键<strong>上传图片到七牛云存储，并复制外链到剪切板</strong>，避免编写markdown文档时<strong>打开七牛云+上传图片+复制外链</strong>的繁杂操作。</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h2 id="autohotkey脚本"><a href="#autohotkey脚本" class="headerlink" title="autohotkey脚本"></a>autohotkey脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">^!c::</div><div class="line">send, ^c</div><div class="line">clipwait</div><div class="line">Run cmd /k &quot;Python d:\QQPCmgr\Desktop\toolbox\script\ahk\upload_qiniu.py %Clipboard% &amp;ECHO. &amp;PAUSE &amp;EXIT&quot;</div><div class="line">return</div></pre></td></tr></table></figure>
-<h2 id="python脚本"><a href="#python脚本" class="headerlink" title="python脚本"></a>python脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">#-*- coding: utf-8 -*-</div><div class="line">import os</div><div class="line">import sys</div><div class="line">from qiniu import Auth, put_file</div><div class="line"></div><div class="line">access_key = &quot;AK&quot; # 填入你的AK</div><div class="line">secret_key = &quot;SK&quot; # 填入你的SK</div><div class="line">bucket_name = &quot;BUCKET_NAME&quot; # 填入你的七牛空间名称</div><div class="line">url = &quot;URL&quot; # 填入你的域名地址</div><div class="line">qiniu = Auth(access_key, secret_key)</div><div class="line"></div><div class="line">def upload_qiniu(path):</div><div class="line">    dirname, filename = os.path.split(path)</div><div class="line">    key = filename</div><div class="line">    policy = &#123;</div><div class="line">        &quot;scope&quot; : &quot;%s:%s&quot; % (bucket_name, key)</div><div class="line">    &#125;</div><div class="line">    token = qiniu.upload_token(bucket_name, key = key, policy = policy)</div><div class="line">    ret, info = put_file(token, key, path)</div><div class="line">    return ret != None and ret[&apos;key&apos;] == key</div><div class="line"></div><div class="line">def addToClipBoard(text):</div><div class="line">    command = &apos;echo &apos; + text.strip() + &apos;| clip&apos;</div><div class="line">    os.system(command)</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    path = sys.argv[1]</div><div class="line">    name = os.path.split(path)[1]</div><div class="line">    markdown_url = &quot;![](%s/%s)&quot; % (url, name)</div><div class="line">    # make it to clipboard</div><div class="line">    addToClipBoard(markdown_url)</div><div class="line">    print markdown_url</div><div class="line">    </div><div class="line">    ret = upload_qiniu(path)</div><div class="line">    if ret:</div><div class="line">        print &quot;upload_succeed&quot;</div><div class="line">    else:</div><div class="line">        print &quot;upload_failed&quot;</div></pre></td></tr></table></figure>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>nothing… </p>
-<p>ps: 第一次写这种博客，时间也有点匆忙，以后有时间再改改吧。</p>
+        <h1 id="最初的悸动"><a href="#最初的悸动" class="headerlink" title="最初的悸动"></a>最初的悸动</h1><p>每个学计算机的都应该萌生过搭建个人网站或写博客的想法吧。其一当然是觉得建站很牛逼，写博客的都是大佬；其二这个过程对自己也是很不错的锻炼和成长。</p>
+<p>这里插一个小故事，再次感慨一下程序员之间的鄙视链，后端鄙视前端，开发鄙视运维（此处略去几万字）。大一上学期，一次上课某老师对我们说，前端就是做做网站，没什么技术含量的啊，反正那老师对前端很是鄙视的样子。。</p>
+<p>大一下学期接触了一些网络编程，恰逢阿里有活动，十几块钱送1核2G的服务器ecs实例一个+对象存储+各种数据库+负载均衡全家桶六个月+VIP版云解析一年和一个价值不错的万网域名代金券，于是我就拥有了一个ubuntu服务器和一个域名。C++课设写的网络双人对战版中国象棋v1.0就是用服务器做媒介(仅仅用来获取一方IP交给另一方然后双方建立socket连接，还是很渣的)来完成的。做完之后自信心很膨胀啊就想搭建个人网站了无非就是写一些html放在服务器上让其他人去访问嘛，管他搭建好之后做什么，先搭建起来玩玩。然后看了一些html教程，内容不难，但自己写就是不会…看网上什么五分钟急速建站教程，用wordpress搭建网站，弄完hello页面就没碰过了。</p>
+<p>然后是学python，在codewars(一个刷题网站)把py级别刷到2kyu，听说可以用python实现个人网站，前端页面后端数据库手动一行一行写，听的是热血沸腾…于是本辣鸡的大一就这么过去了。</p>
+<p>大二知识面广了一些后会经常搜索一些东西，会搜到一些写的很不错的博客，一开始是CSDN博客，后来是博客园，然后是简书，然后就是各种炫酷的个人博客了。然后是现在的CTF小队他们都有自己的博客@Primykq<a href="http://qrzbing.cn/" target="_blank" rel="external">链接</a>和@a-Lie-Z<a href="http://qrzbing.cn/" target="_blank" rel="external">链接</a>，主要是看了曾老师的超级炫酷的博客<a href="https://www.rexskz.info/" target="_blank" rel="external">链接</a>就又想搭一个了，这次就一次性搭建好了。</p>
+<h1 id="搭建开始"><a href="#搭建开始" class="headerlink" title="搭建开始"></a>搭建开始</h1><p>我的个人博客使用的是hexo+github pages搭建，这个只需要按着教程一步一步走就好了，<a href="http://www.jianshu.com/p/ab21abc31153" target="_blank" rel="external">参考链接</a>。手上正巧还有一个(还有几个月过期)的域名，顺手在域名服务商做了CNAME解析到自己的github pages</p>
+<h1 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h1><p>网上有一些hexo美化的教程，但做出来的效果不太满意，有些高难度的操作起来又总是出错，干脆自己折腾吧。</p>
+<p><img src="http://store.nightmare.xin/54324234.png" alt=""></p>
+<p>选用了next主题，折腾了两天还是有点效果的。</p>
+<p>基础的一些配置在hexo根目录下的_config.yml文件中，主题配置在themes/next/_config.yml中，一些个性化配置则需要修改主题目录下的source目录。</p>
+<p>source目录下有css, fonts, images, js, lib五个文件夹，修改颜色背景标题栏大小挂件之类的样式需要去修改css，其他四个文件夹存储渲染页面需要用到的字体，图片，js特效和依赖文件。</p>
+<p>我做的修改如下(均在css文件夹中)：</p>
+<p>在_custom/custom.styl添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Custom styles.</div><div class="line">body &#123; </div><div class="line">    background: url(/images/GOQS6G4LH2Z1_1000x500.jpg);</div><div class="line">    background-size: cover;</div><div class="line">    background-repeat: no-repeat;</div><div class="line">    background-attachment: fixed;</div><div class="line">    background-position: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样就有了背景图。但是next的Pisces不支持文本半透明，导致图片大部分被遮住了，于是继续修改_schemes/Pisces文件夹。我基本是看到什么改什么，打开hexo s –debug本地调试，一点一点的改，里面碰到一些变量我找了好久找不到它在哪里，比如这样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.content-wrap &#123;</div><div class="line">  float: right;</div><div class="line">  box-sizing: border-box;</div><div class="line">  padding: $content-desktop-padding;</div><div class="line">  width: $content-desktop;</div><div class="line">  min-height: 700px;</div></pre></td></tr></table></figure></p>
+<p>于是，，碰到这种变量不知道是什么值我又特别想改，，就直接改了，终于在我的不懈努力下改完了！</p>
+<p>但是！！！最终在我打开variables文件夹后心态崩溃了，里面base.styl(基本样式)和Pisces.styl(Pisces特有的样式)存储了所有这些变量还附带了说明，我如同一个白痴晕晕乎乎瞎改了一遍，在那么一瞬间都想重装next了，想想毕竟是自己的成果，还是就这样吧，何必自己为难自己…</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>本来想写成一篇技术博客的，不知不觉就成了流水账，一是菜二是懒，唉，就当成随笔吧。</p>
 
       
     </div>
@@ -336,8 +346,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/test2.html" rel="next" title="2017年南航CTF校赛">
-                <i class="fa fa-chevron-left"></i> 2017年南航CTF校赛
+              <a href="/test3.html" rel="next" title="快速获取markdown图片链接">
+                <i class="fa fa-chevron-left"></i> 快速获取markdown图片链接
               </a>
             
           </div>
@@ -345,10 +355,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/test4.html" rel="prev" title="记一次搭建博客全过程">
-                记一次搭建博客全过程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -510,7 +516,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown简介"><span class="nav-number">1.</span> <span class="nav-text">markdown简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七牛云简介"><span class="nav-number">2.</span> <span class="nav-text">七牛云简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#autohotkey-python简介"><span class="nav-number">3.</span> <span class="nav-text">autohotkey+python简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#功能"><span class="nav-number">4.</span> <span class="nav-text">功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现"><span class="nav-number">5.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#autohotkey脚本"><span class="nav-number">5.1.</span> <span class="nav-text">autohotkey脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python脚本"><span class="nav-number">5.2.</span> <span class="nav-text">python脚本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最初的悸动"><span class="nav-number">1.</span> <span class="nav-text">最初的悸动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建开始"><span class="nav-number">2.</span> <span class="nav-text">搭建开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#美化"><span class="nav-number">3.</span> <span class="nav-text">美化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
 
           </div>
