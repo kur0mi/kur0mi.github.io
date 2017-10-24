@@ -188,7 +188,7 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: #696969;
+  color: #d3d3d3;
   background: #f5f7f9;
 }
 @media (max-width: 767px) {
@@ -226,27 +226,27 @@ h6 {
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 21px;
+  font-size: 24px;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 h2 {
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 h3 {
-  font-size: 15px;
+  font-size: 16px;
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 h4 {
@@ -258,19 +258,19 @@ h4 {
   }
 }
 h5 {
-  font-size: 9px;
+  font-size: 8px;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 5px;
+    font-size: 4px;
   }
 }
 h6 {
-  font-size: 6px;
+  font-size: 4px;
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 2px;
+    font-size: 0px;
   }
 }
 p {
@@ -280,7 +280,7 @@ a {
   color: #fff;
   text-decoration: none;
   outline: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #d3d3d3;
   word-wrap: break-word;
 }
 a:hover {
@@ -386,7 +386,7 @@ kbd {
 .translation {
   margin-top: -20px;
   font-size: 14px;
-  color: #999;
+  color: #d3d3d3;
 }
 .scrollbar-measure {
   width: 100px;
@@ -967,7 +967,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #696969;
+  background: #d3d3d3;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1097,7 +1097,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #222;
+  background: #00f;
 }
 .site-meta {
   margin: 0;
@@ -1136,7 +1136,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  color: #fff;
+  color: #d3d3d3;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1239,7 +1239,7 @@ pre .javascript .function {
   margin: -20px auto 15px;
   text-align: center;
   font-size: 16px;
-  color: #999;
+  color: #d3d3d3;
   font-weight: bold;
   line-height: 1;
 }
@@ -1497,7 +1497,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
-  color: #999;
+  color: #d3d3d3;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
@@ -1508,7 +1508,7 @@ pre .javascript .function {
   padding: 3px;
 }
 .posts-expand .post-meta .post-category-list-link {
-  color: #999;
+  color: #d3d3d3;
 }
 .posts-expand .post-meta .post-description {
   font-size: 14px;
@@ -1672,7 +1672,7 @@ pre .javascript .function {
   -webkit-transform: translateZ(0);
 }
 .sidebar a {
-  color: #999;
+  color: #d3d3d3;
   border-bottom-color: #fff;
 }
 .sidebar a:hover {
@@ -1691,7 +1691,7 @@ pre .javascript .function {
 .sidebar-inner {
   position: relative;
   padding: 20px 10px;
-  color: #999;
+  color: #d3d3d3;
   text-align: center;
 }
 .site-overview-wrap {
@@ -1754,7 +1754,7 @@ pre .javascript .function {
   margin-top: 0;
   text-align: center;
   font-size: 15px;
-  color: #fff;
+  color: #d3d3d3;
 }
 .site-state {
   overflow: hidden;
@@ -1782,7 +1782,7 @@ pre .javascript .function {
 }
 .site-state-item-name {
   font-size: 13px;
-  color: #999;
+  color: #d3d3d3;
 }
 .feed-link {
   margin-top: 20px;
@@ -1824,7 +1824,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f7ffc3;
+  background: #dbad41;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1945,7 +1945,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: #d3d3d3;
 }
 .footer img {
   border: none;
@@ -2755,7 +2755,7 @@ pre .javascript .function {
 }
 .site-meta {
   padding: 20px 0;
-  color: #fff;
+  color: #d3d3d3;
   background: rgba(0,0,0,0);
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2990,7 +2990,7 @@ pre .javascript .function {
   text-overflow: ellipsis;
 }
 .post-body {
-  color: #696969;
+  color: #d3d3d3;
 }
 @media (max-width: 767px) {
   .post-body {
