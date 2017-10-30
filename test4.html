@@ -65,6 +65,10 @@
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
 
 
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
 
 
 
@@ -185,8 +189,6 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
             Home
           </a>
         </li>
@@ -195,9 +197,31 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
             Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+            Categories
           </a>
         </li>
       
@@ -317,8 +341,8 @@
 <p>基础的一些配置在hexo根目录下的_config.yml文件中，主题配置在themes/next/_config.yml中，一些个性化配置则需要修改主题目录下的source目录。</p>
 <p>source目录下有css, fonts, images, js, lib五个文件夹，修改颜色背景标题栏大小挂件之类的样式需要去修改css，其他四个文件夹存储渲染页面需要用到的字体，图片，js特效和依赖文件。</p>
 <p>我做的修改如下(均在css文件夹中)：</p>
-<p>在_custom/custom.styl添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// Custom styles.</div><div class="line">body &#123; </div><div class="line">    background: url(/images/GOQS6G4LH2Z1_1000x500.jpg);</div><div class="line">    background-size: cover;</div><div class="line">    background-repeat: no-repeat;</div><div class="line">    background-attachment: fixed;</div><div class="line">    background-position: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这样就有了背景图。但是next的Pisces不支持文本半透明，导致图片大部分被遮住了，于是继续修改_schemes/Pisces文件夹。我基本是看到什么改什么，打开hexo s –debug本地调试，一点一点的改，里面碰到一些变量我找了好久找不到它在哪里，比如这样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.content-wrap &#123;</div><div class="line">  float: right;</div><div class="line">  box-sizing: border-box;</div><div class="line">  padding: $content-desktop-padding;</div><div class="line">  width: $content-desktop;</div><div class="line">  min-height: 700px;</div></pre></td></tr></table></figure></p>
+<p>在_custom/custom.styl添加<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Custom styles.</span></div><div class="line"><span class="selector-tag">body</span> &#123; </div><div class="line">    <span class="attribute">background</span>: url(/images/GOQS6G4LH2Z1_1000x500.jpg);</div><div class="line">    <span class="attribute">background-size</span>: cover;</div><div class="line">    <span class="attribute">background-repeat</span>: no-repeat;</div><div class="line">    <span class="attribute">background-attachment</span>: fixed;</div><div class="line">    <span class="attribute">background-position</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样就有了背景图。但是next的Pisces不支持文本半透明，导致图片大部分被遮住了，于是继续修改_schemes/Pisces文件夹。我基本是看到什么改什么，打开hexo s –debug本地调试，一点一点的改，里面碰到一些变量我找了好久找不到它在哪里，比如这样的。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.content-wrap</span> &#123;</div><div class="line">  <span class="attribute">float</span>: right;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">padding</span>: $content-desktop-padding;</div><div class="line">  <span class="attribute">width</span>: $content-desktop;</div><div class="line">  <span class="attribute">min-height</span>: <span class="number">700px</span>;</div></pre></td></tr></table></figure></p>
 <p>于是，，碰到这种变量不知道是什么值我又特别想改，，就直接改了，终于在我的不懈努力下改完了！</p>
 <p>但是！！！最终在我打开variables文件夹后心态崩溃了，里面base.styl(基本样式)和Pisces.styl(Pisces特有的样式)存储了所有这些变量还附带了说明，我如同一个白痴晕晕乎乎瞎改了一遍，在那么一瞬间都想重装next了，想想毕竟是自己的成果，还是就这样吧，何必自己为难自己…</p>
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>本来想写成一篇技术博客的，不知不觉就成了流水账，一是菜二是懒，唉，就当成随笔吧。</p>
@@ -429,7 +453,7 @@
                 alt="kur0mi" />
             
               <p class="site-author-name" itemprop="name">kur0mi</p>
-              <p class="site-description motion-element" itemprop="description">on the way to faith and brave</p>
+              <p class="site-description motion-element" itemprop="description">wanna to faith and brave</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -455,6 +479,14 @@
 
           <div class="links-of-author motion-element">
             
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/kur0mi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            
           </div>
 
           
@@ -470,19 +502,19 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.rexskz.info/" title="rex" target="_blank">rex</a>
+                    <a href="https://www.rexskz.info/" title="Rex" target="_blank">Rex</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://susers.github.io/" title="sus" target="_blank">sus</a>
+                    <a href="https://susers.github.io/" title="SUS" target="_blank">SUS</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://blog.imagemlt.xyz/" title="image" target="_blank">image</a>
+                    <a href="http://blog.imagemlt.xyz/" title="Image" target="_blank">Image</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://qrzbing.cn/" title="qrz" target="_blank">qrz</a>
+                    <a href="http://qrzbing.cn/" title="A-Lie-Z" target="_blank">A-Lie-Z</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">

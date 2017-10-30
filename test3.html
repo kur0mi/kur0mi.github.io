@@ -65,6 +65,10 @@
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
 
 
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
 
 
 
@@ -183,8 +187,6 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
             Home
           </a>
         </li>
@@ -193,9 +195,31 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
             Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+            Categories
           </a>
         </li>
       
@@ -308,8 +332,8 @@
 <h1 id="七牛云简介"><a href="#七牛云简介" class="headerlink" title="七牛云简介"></a>七牛云简介</h1><p>这里主要使用七牛云作为图床————也就是互联网上的一处空间————来存储markdown需要的图片。</p>
 <h1 id="autohotkey-python简介"><a href="#autohotkey-python简介" class="headerlink" title="autohotkey+python简介"></a>autohotkey+python简介</h1><p>autohotkey使用一种极为简便的语法来创建脚本自定义热键，python同样以简洁的语法和强大的功能著称，两者配合就可以使用热键快速的解决很多复杂问题。</p>
 <h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><p>设置快捷键，实现一键<strong>上传图片到七牛云存储，并复制外链到剪切板</strong>，避免编写markdown文档时<strong>打开七牛云+上传图片+复制外链</strong>的繁杂操作。</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h2 id="autohotkey脚本"><a href="#autohotkey脚本" class="headerlink" title="autohotkey脚本"></a>autohotkey脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">^!c::</div><div class="line">send, ^c</div><div class="line">clipwait</div><div class="line">Run cmd /k &quot;Python d:\QQPCmgr\Desktop\toolbox\script\ahk\upload_qiniu.py %Clipboard% &amp;ECHO. &amp;PAUSE &amp;EXIT&quot;</div><div class="line">return</div></pre></td></tr></table></figure>
-<h2 id="python脚本"><a href="#python脚本" class="headerlink" title="python脚本"></a>python脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">#-*- coding: utf-8 -*-</div><div class="line">import os</div><div class="line">import sys</div><div class="line">from qiniu import Auth, put_file</div><div class="line"></div><div class="line">access_key = &quot;AK&quot; # 填入你的AK</div><div class="line">secret_key = &quot;SK&quot; # 填入你的SK</div><div class="line">bucket_name = &quot;BUCKET_NAME&quot; # 填入你的七牛空间名称</div><div class="line">url = &quot;URL&quot; # 填入你的域名地址</div><div class="line">qiniu = Auth(access_key, secret_key)</div><div class="line"></div><div class="line">def upload_qiniu(path):</div><div class="line">    dirname, filename = os.path.split(path)</div><div class="line">    key = filename</div><div class="line">    policy = &#123;</div><div class="line">        &quot;scope&quot; : &quot;%s:%s&quot; % (bucket_name, key)</div><div class="line">    &#125;</div><div class="line">    token = qiniu.upload_token(bucket_name, key = key, policy = policy)</div><div class="line">    ret, info = put_file(token, key, path)</div><div class="line">    return ret != None and ret[&apos;key&apos;] == key</div><div class="line"></div><div class="line">def addToClipBoard(text):</div><div class="line">    command = &apos;echo &apos; + text.strip() + &apos;| clip&apos;</div><div class="line">    os.system(command)</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    path = sys.argv[1]</div><div class="line">    name = os.path.split(path)[1]</div><div class="line">    markdown_url = &quot;![](%s/%s)&quot; % (url, name)</div><div class="line">    # make it to clipboard</div><div class="line">    addToClipBoard(markdown_url)</div><div class="line">    print markdown_url</div><div class="line">    </div><div class="line">    ret = upload_qiniu(path)</div><div class="line">    if ret:</div><div class="line">        print &quot;upload_succeed&quot;</div><div class="line">    else:</div><div class="line">        print &quot;upload_failed&quot;</div></pre></td></tr></table></figure>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h2 id="autohotkey脚本"><a href="#autohotkey脚本" class="headerlink" title="autohotkey脚本"></a>autohotkey脚本</h2><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">^!c::</div><div class="line">send, ^c</div><div class="line">clipwait</div><div class="line">Run cmd /k "Python d:<span class="symbol">\Q</span>QPCmgr<span class="symbol">\D</span>esktop<span class="symbol">\t</span>oolbox<span class="symbol">\s</span>cript<span class="symbol">\a</span>hk<span class="symbol">\u</span>pload_qiniu.py <span class="variable">%Clipboard%</span> &amp;ECHO. &amp;PAUSE &amp;EXIT"</div><div class="line">return</div></pre></td></tr></table></figure>
+<h2 id="python脚本"><a href="#python脚本" class="headerlink" title="python脚本"></a>python脚本</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#-*- coding: utf-8 -*-</span></div><div class="line"><span class="built_in">import</span> os</div><div class="line"><span class="built_in">import</span> sys</div><div class="line">from qiniu <span class="built_in">import</span> Auth, put_file</div><div class="line"></div><div class="line"><span class="attr">access_key</span> = <span class="string">"AK"</span> <span class="comment"># 填入你的AK</span></div><div class="line"><span class="attr">secret_key</span> = <span class="string">"SK"</span> <span class="comment"># 填入你的SK</span></div><div class="line"><span class="attr">bucket_name</span> = <span class="string">"BUCKET_NAME"</span> <span class="comment"># 填入你的七牛空间名称</span></div><div class="line"><span class="attr">url</span> = <span class="string">"URL"</span> <span class="comment"># 填入你的域名地址</span></div><div class="line"><span class="attr">qiniu</span> = Auth(access_key, secret_key)</div><div class="line"></div><div class="line">def upload_qiniu(path):</div><div class="line">    dirname, <span class="attr">filename</span> = os.path.split(path)</div><div class="line">    <span class="attr">key</span> = filename</div><div class="line">    <span class="attr">policy</span> = &#123;</div><div class="line">        <span class="string">"scope"</span> : <span class="string">"%s:%s"</span> % (bucket_name, key)</div><div class="line">    &#125;</div><div class="line">    <span class="attr">token</span> = qiniu.upload_token(bucket_name, <span class="attr">key</span> = key, <span class="attr">policy</span> = policy)</div><div class="line">    ret, <span class="attr">info</span> = put_file(token, key, path)</div><div class="line">    return ret != None <span class="literal">and</span> ret['key'] == key</div><div class="line"></div><div class="line">def addToClipBoard(text):</div><div class="line">    <span class="attr">command</span> = 'echo ' + text.strip() + '| clip'</div><div class="line">    os.system(command)</div><div class="line"></div><div class="line"><span class="keyword">if</span> <span class="attr">__name__</span> == '__main__':</div><div class="line">    <span class="attr">path</span> = sys.argv[<span class="number">1</span>]</div><div class="line">    <span class="attr">name</span> = os.path.split(path)[<span class="number">1</span>]</div><div class="line">    <span class="attr">markdown_url</span> = <span class="string">"![](%s/%s)"</span> % (url, name)</div><div class="line">    <span class="comment"># make it to clipboard</span></div><div class="line">    addToClipBoard(markdown_url)</div><div class="line">    print markdown_url</div><div class="line">    </div><div class="line">    <span class="attr">ret</span> = upload_qiniu(path)</div><div class="line">    <span class="keyword">if</span> ret:</div><div class="line">        print <span class="string">"upload_succeed"</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        print <span class="string">"upload_failed"</span></div></pre></td></tr></table></figure>
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>nothing… </p>
 <p>ps: 第一次写这种博客，时间也有点匆忙，以后有时间再改改吧。</p>
 
@@ -419,7 +443,7 @@
                 alt="kur0mi" />
             
               <p class="site-author-name" itemprop="name">kur0mi</p>
-              <p class="site-description motion-element" itemprop="description">on the way to faith and brave</p>
+              <p class="site-description motion-element" itemprop="description">wanna to faith and brave</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -445,6 +469,14 @@
 
           <div class="links-of-author motion-element">
             
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/kur0mi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            
           </div>
 
           
@@ -460,19 +492,19 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.rexskz.info/" title="rex" target="_blank">rex</a>
+                    <a href="https://www.rexskz.info/" title="Rex" target="_blank">Rex</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://susers.github.io/" title="sus" target="_blank">sus</a>
+                    <a href="https://susers.github.io/" title="SUS" target="_blank">SUS</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://blog.imagemlt.xyz/" title="image" target="_blank">image</a>
+                    <a href="http://blog.imagemlt.xyz/" title="Image" target="_blank">Image</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://qrzbing.cn/" title="qrz" target="_blank">qrz</a>
+                    <a href="http://qrzbing.cn/" title="A-Lie-Z" target="_blank">A-Lie-Z</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
