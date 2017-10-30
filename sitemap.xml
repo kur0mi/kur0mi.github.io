@@ -2,65 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.nightmare.xin/about/index.html</loc>
-    
-    <lastmod>2017-10-30T10:01:33.611Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.nightmare.xin/translate.html</loc>
     
-    <lastmod>2017-10-30T08:42:36.858Z</lastmod>
+    <lastmod>2017-10-30T11:23:03.198Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.nightmare.xin/test6.html</loc>
     
-    <lastmod>2017-10-24T13:52:00.043Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/test7.html</loc>
-    
-    <lastmod>2017-10-24T13:25:43.698Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/test.html</loc>
-    
-    <lastmod>2017-10-23T14:58:42.978Z</lastmod>
+    <lastmod>2017-10-30T11:22:55.337Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.nightmare.xin/test3.html</loc>
     
-    <lastmod>2017-10-23T14:58:31.269Z</lastmod>
+    <lastmod>2017-10-30T11:22:41.083Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.nightmare.xin/test4.html</loc>
+    <loc>https://blog.nightmare.xin/test7.html</loc>
     
-    <lastmod>2017-10-23T14:58:22.710Z</lastmod>
+    <lastmod>2017-10-30T11:22:10.264Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.nightmare.xin/test5.html</loc>
     
-    <lastmod>2017-10-23T14:58:16.108Z</lastmod>
+    <lastmod>2017-10-30T11:21:17.161Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/test4.html</loc>
+    
+    <lastmod>2017-10-30T11:20:38.149Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.nightmare.xin/test2.html</loc>
     
-    <lastmod>2017-10-23T14:57:49.646Z</lastmod>
+    <lastmod>2017-10-30T11:19:50.920Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/test.html</loc>
+    
+    <lastmod>2017-10-30T11:19:25.987Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/tags/index.html</loc>
+    
+    <lastmod>2017-10-30T11:05:10.418Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/categories/index.html</loc>
+    
+    <lastmod>2017-10-30T11:04:19.267Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/about/index.html</loc>
+    
+    <lastmod>2017-10-30T10:01:33.611Z</lastmod>
     
   </url>
   

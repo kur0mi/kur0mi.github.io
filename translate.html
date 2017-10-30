@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="工具,ahk,python,翻译," />
 
 
 
@@ -84,6 +84,7 @@
 
 
 <meta name="description" content="在计算机的学习中，英文阅读本来就是一大障碍，同时感觉对翻译工具的需求也越来越迫切，于是...">
+<meta name="keywords" content="工具,ahk,python,翻译">
 <meta property="og:type" content="article">
 <meta property="og:title" content="便捷的一键翻译功能">
 <meta property="og:url" content="https://blog.nightmare.xin/translate.html">
@@ -92,7 +93,7 @@
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="http://store.nightmare.xin/58d78da94cbf52033f7b8871e3190b43.png">
 <meta property="og:image" content="http://store.nightmare.xin/fd1dc10102b5423681cc0b9987500313.png">
-<meta property="og:updated_time" content="2017-10-30T08:42:36.858Z">
+<meta property="og:updated_time" content="2017-10-30T11:23:03.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="便捷的一键翻译功能">
 <meta name="twitter:description" content="在计算机的学习中，英文阅读本来就是一大障碍，同时感觉对翻译工具的需求也越来越迫切，于是...">
@@ -106,7 +107,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -167,7 +168,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">step by step</p>
+        <p class="site-subtitle">faith and brave</p>
       
   </div>
 
@@ -190,6 +191,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-navicon"></i> <br />
+            
             首页
           </a>
         </li>
@@ -198,23 +201,9 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-list"></i> <br />
+            
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-            标签
           </a>
         </li>
       
@@ -222,7 +211,29 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-pie-chart"></i> <br />
+            
             分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -299,6 +310,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Action/" itemprop="url" rel="index">
+                    <span itemprop="name">Action</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -371,6 +404,18 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+            <a href="/tags/ahk/" rel="tag"># ahk</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/翻译/" rel="tag"># 翻译</a>
+          
+        </div>
+      
 
       
       
@@ -435,6 +480,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -459,7 +506,7 @@
                 alt="kur0mi" />
             
               <p class="site-author-name" itemprop="name">kur0mi</p>
-              <p class="site-description motion-element" itemprop="description">wanna to faith and brave</p>
+              <p class="site-description motion-element" itemprop="description">step by step</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -476,7 +523,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -490,6 +555,12 @@
                   <a href="https://github.com/kur0mi" target="_blank" title="GitHub">
                     
                       <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/qq_37074040" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-csdn"></i>CSDN</a>
                 </span>
               
             
@@ -656,9 +727,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -698,16 +766,6 @@
   
   
     <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
 
