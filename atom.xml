@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2017-10-30T11:23:03.198Z</updated>
+  <updated>2017-10-31T13:44:17.174Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyqt 学习小记(一)</title>
+    <link href="https://blog.nightmare.xin/pyqt.html"/>
+    <id>https://blog.nightmare.xin/pyqt.html</id>
+    <published>2017-10-31T12:46:06.000Z</published>
+    <updated>2017-10-31T13:44:17.174Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>首先google找教程</p><p>参考<a href="http://pyqt.sourceforge.net/Docs/PyQt5/" target="_blank" rel="external">sourceforge上的一个英文文档</a>和<a href="http://code.py40.com/pyqt5/" target="_blank" rel="external">中文教程</a></p><p>使用pip安装<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">python</span> -m pip install <span class="keyword">python</span>-qt5</div></pre></td></tr></table></figure></p><p>ps: 因为我的pip出了一些问题所以前边加python -m</p><p>尝试后发现下载速度太慢而且网络连接会中断，不能忍，直接去官网找压缩包，结果在官网下载到一个gpl的包… what’s fxxk，这是啥</p><p>顿时觉得pyqt的安装不是那么顺利了，翻到一篇文章<a href="https://zhuanlan.zhihu.com/p/25561911" target="_blank" rel="external">python2+pyqt5安装</a>，这么复杂，还要自己编译，可能是pyqt5太新了，我也不是那么强迫症的人，试试其他的。</p><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">python</span> -m pip install <span class="keyword">python</span>-qt</div></pre></td></tr></table></figure><p>秒成功</p><p>但是打开 <strong>F:\Runtime\Python\Python27\Lib\site-packages\Qt</strong> 一看就一个<strong>init</strong>.py文件…</p><p>pip下载太慢，gpl包又懒得编译，直接去sourceforge下载exe，<a href="https://sourceforge.net/projects/pyqt/?source=typ_redirect" target="_blank" rel="external">地址</a>，下载完安装时发现时python3.5的…</p><p>不吐槽了，一番艰辛后找到了<a href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/" target="_blank" rel="external">下载地址</a>，为什么选pyqt4呢.. 当然是因为找不到python2的pyqt5安装程序。 </p><p>一路next，修改为自己的python安装路径，一切OK。</p><h1 id="继续"><a href="#继续" class="headerlink" title="继续"></a>继续</h1><p>打开文件夹 <strong>F:\Runtime\Python\Python27\Lib\site-packages\PyQt4</strong> ，和自己的pyqt打声招呼吧。看到一堆包和模块，菜鸡先不管这些..</p><p>开始写一个小程序，参考<a href="http://www.qaulau.com/books/PyQt4_Tutorial/" target="_blank" rel="external">文章</a></p><h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">import sys</div><div class="line">from PyQt4 import QtGui</div><div class="line"></div><div class="line">app = QtGui.QApplication(sys.argv)</div><div class="line"></div><div class="line">widget = QtGui.QWidget()</div><div class="line">widget.resize(<span class="number">250</span>, <span class="number">150</span>)</div><div class="line">widget.setWindowTitle(<span class="string">'simple'</span>)</div><div class="line">widget.show()</div><div class="line"></div><div class="line">sys.<span class="keyword">exit</span>(app.exec_())</div></pre></td></tr></table></figure><p>成功显示一个窗口</p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>打算着每学习一个新知识点都写点demo什么的，有时间把大一上写的C语言贪吃蛇，大一下写的中国象棋搬过来233</p><p>感冒貌似又重了，明天英语还有presentation，有时间再做吧，(事情总是一推再推~)，无奈.jpg</p><p>ps: 寒流来袭，小心感冒…</p>]]></content>
+    
+    <summary type="html">
+    
+      day1 pyqt的安装
+    
+    </summary>
+    
+      <category term="Demo" scheme="https://blog.nightmare.xin/categories/Demo/"/>
+    
+    
+      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
+    
+      <category term="pyqt" scheme="https://blog.nightmare.xin/tags/pyqt/"/>
+    
+  </entry>
   
   <entry>
     <title>便捷的一键翻译功能</title>
@@ -34,11 +58,11 @@
       <category term="Action" scheme="https://blog.nightmare.xin/categories/Action/"/>
     
     
+      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
+    
       <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
-    
-      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
       <category term="翻译" scheme="https://blog.nightmare.xin/tags/%E7%BF%BB%E8%AF%91/"/>
     
@@ -62,13 +86,13 @@
       <category term="Action" scheme="https://blog.nightmare.xin/categories/Action/"/>
     
     
+      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
+    
       <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="截图" scheme="https://blog.nightmare.xin/tags/%E6%88%AA%E5%9B%BE/"/>
     
       <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
-    
-      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
   </entry>
   
