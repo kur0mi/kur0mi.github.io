@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.nightmare.xin/kmp.html</loc>
+    
+    <lastmod>2017-11-02T05:00:35.214Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.nightmare.xin/pyqt.html</loc>
     
     <lastmod>2017-10-31T13:44:17.174Z</lastmod>
