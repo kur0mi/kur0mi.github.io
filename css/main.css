@@ -1071,7 +1071,7 @@ pre .javascript .function {
 .site-nav-toggle button {
   margin-top: 2px;
   padding: 9px 10px;
-  background: transparent;
+  background: rgba(252,155,0,0.961);
   border: none;
 }
 @media (max-width: 767px) {
@@ -1370,7 +1370,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #3cc71b;
+  color: #60a3ec;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1733,7 +1733,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f2c603;
+  background: #ffb1da;
 }
 .links-of-blogroll {
   font-size: 13px;
