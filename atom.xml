@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2017-11-06T15:11:47.945Z</updated>
+  <updated>2017-11-08T09:48:19.473Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>插入排序 学习小记</title>
+    <link href="https://blog.nightmare.xin/insert.html"/>
+    <id>https://blog.nightmare.xin/insert.html</id>
+    <published>2017-11-08T09:24:26.000Z</published>
+    <updated>2017-11-08T09:48:19.473Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="easy-version"><a href="#easy-version" class="headerlink" title="easy version"></a>easy version</h1><p>一种简单的想法…</p><p>一开始只有一个字符，认为它是有序的； 后来出现了第二个字符，寻找恰当的位置插入，这时它们又变得有序了；</p><p>然后出现了第三个字符，寻找恰当的位置插入，它们还是有序的； 然后第四个…</p><p>C语言代码实现：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">inserch_sort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line"><span class="keyword">int</span> i;</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</div><div class="line">&#123;</div><div class="line"><span class="keyword">int</span> k = i + <span class="number">1</span>;</div><div class="line"><span class="keyword">int</span> temp = a[k];</div><div class="line"><span class="keyword">while</span> (temp &lt; a[k - <span class="number">1</span>] &amp;&amp; k &gt; <span class="number">0</span>)</div><div class="line">&#123;</div><div class="line">a[k] = a[k - <span class="number">1</span>];</div><div class="line">k--;</div><div class="line">&#125;</div><div class="line">a[k] = temp;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h1 id="hard-version"><a href="#hard-version" class="headerlink" title="hard version"></a>hard version</h1><p>基于一种递归思想，现在要对n个数据排序，那么只需要先将前n-1个数据排序，再将最后一个元素插入；</p><p>然后知道递归到最后只需对一个元素排序。</p><p>函数大概会长这样：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">void <span class="function"><span class="title">fun</span><span class="params">(int a[], int n)</span></span>    <span class="comment">//对前n个数据排序</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>):</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line"></div><div class="line">    b = <span class="function"><span class="title">fun</span><span class="params">(a, n<span class="number">-1</span>)</span></span>;</div><div class="line">    <span class="comment">//将最后一个元素插入b中</span></div><div class="line">    <span class="keyword">return</span> b;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>嗯，差不多就这样</p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>最近网安比赛比较多，打算停一段时间开始补补作业了，毕竟还没做好挂科的准备。</p><p>ps: 感冒可以说马上就要好了么… 倒是快好啊</p>]]></content>
+    
+    <summary type="html">
+    
+      插入排序认为一部分字符总是有序的，并且在插入新的字符后仍然保持有序。
+    
+    </summary>
+    
+      <category term="Demo" scheme="https://blog.nightmare.xin/categories/Demo/"/>
+    
+    
+      <category term="排序" scheme="https://blog.nightmare.xin/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="算法" scheme="https://blog.nightmare.xin/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="递归" scheme="https://blog.nightmare.xin/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
   
   <entry>
     <title>今天的云很好看啊</title>

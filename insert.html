@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="排序,算法,递归," />
 
 
 
@@ -83,16 +83,18 @@
 
 
 
-<meta name="description" content="step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="kur0mi&#39;s blog">
-<meta property="og:url" content="https://blog.nightmare.xin/tags/七牛云/index.html">
+<meta name="description" content="插入排序认为一部分字符总是有序的，并且在插入新的字符后仍然保持有序。">
+<meta name="keywords" content="排序,算法,递归">
+<meta property="og:type" content="article">
+<meta property="og:title" content="插入排序 学习小记">
+<meta property="og:url" content="https://blog.nightmare.xin/insert.html">
 <meta property="og:site_name" content="kur0mi&#39;s blog">
-<meta property="og:description" content="step by step">
+<meta property="og:description" content="插入排序认为一部分字符总是有序的，并且在插入新的字符后仍然保持有序。">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-11-08T09:48:19.473Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kur0mi&#39;s blog">
-<meta name="twitter:description" content="step by step">
+<meta name="twitter:title" content="插入排序 学习小记">
+<meta name="twitter:description" content="插入排序认为一部分字符总是有序的，并且在插入新的字符后仍然保持有序。">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.nightmare.xin/tags/七牛云/"/>
+  <link rel="canonical" href="https://blog.nightmare.xin/insert.html"/>
 
 
 
 
 
-  <title>标签: 七牛云 | kur0mi's blog</title>
+  <title>插入排序 学习小记 | kur0mi's blog</title>
   
 
 
@@ -147,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,54 +253,186 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>七牛云<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/insert.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kur0mi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/yoshino.bmp">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kur0mi's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/test3.html" itemprop="url">
-              
-                <span itemprop="name">快速获取markdown图片链接</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">插入排序 学习小记</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-22T22:39:47+08:00"
-              content="2017-10-22" >
-          10-22
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-08T17:24:26+08:00">
+                2017-11-08
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Demo/" itemprop="url" rel="index">
+                    <span itemprop="name">Demo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  插入排序认为一部分字符总是有序的，并且在插入新的字符后仍然保持有序。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="easy-version"><a href="#easy-version" class="headerlink" title="easy version"></a>easy version</h1><p>一种简单的想法…</p>
+<p>一开始只有一个字符，认为它是有序的； 后来出现了第二个字符，寻找恰当的位置插入，这时它们又变得有序了；</p>
+<p>然后出现了第三个字符，寻找恰当的位置插入，它们还是有序的； 然后第四个…</p>
+<p>C语言代码实现：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">inserch_sort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> i;</div><div class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> k = i + <span class="number">1</span>;</div><div class="line">		<span class="keyword">int</span> temp = a[k];</div><div class="line">		<span class="keyword">while</span> (temp &lt; a[k - <span class="number">1</span>] &amp;&amp; k &gt; <span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			a[k] = a[k - <span class="number">1</span>];</div><div class="line">			k--;</div><div class="line">		&#125;</div><div class="line">		a[k] = temp;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="hard-version"><a href="#hard-version" class="headerlink" title="hard version"></a>hard version</h1><p>基于一种递归思想，现在要对n个数据排序，那么只需要先将前n-1个数据排序，再将最后一个元素插入；</p>
+<p>然后知道递归到最后只需对一个元素排序。</p>
+<p>函数大概会长这样：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">void <span class="function"><span class="title">fun</span><span class="params">(int a[], int n)</span></span>    <span class="comment">//对前n个数据排序</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>):</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line"></div><div class="line">    b = <span class="function"><span class="title">fun</span><span class="params">(a, n<span class="number">-1</span>)</span></span>;</div><div class="line">    <span class="comment">//将最后一个元素插入b中</span></div><div class="line">    <span class="keyword">return</span> b;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>嗯，差不多就这样</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>最近网安比赛比较多，打算停一段时间开始补补作业了，毕竟还没做好挂科的准备。</p>
+<p>ps: 感冒可以说马上就要好了么… 倒是快好啊</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/排序/" rel="tag"># 排序</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/tags/递归/" rel="tag"># 递归</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017-11-6.html" rel="next" title="今天的云很好看啊">
+                <i class="fa fa-chevron-left"></i> 今天的云很好看啊
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -306,6 +440,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -326,8 +464,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -463,6 +610,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#easy-version"><span class="nav-number">1.</span> <span class="nav-text">easy version</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hard-version"><span class="nav-number">2.</span> <span class="nav-text">hard version</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -613,6 +776,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
