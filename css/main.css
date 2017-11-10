@@ -1061,9 +1061,8 @@ pre .javascript .function {
   margin-right: 0;
 }
 .pagination .page-number.current {
-  color: #fff;
-  background: OrangeRed;
-  border-top-color: OrangeRed;
+  color: #f00;
+  background: #60676d;
 }
 @media (max-width: 767px) {
   .pagination {
@@ -1199,7 +1198,7 @@ pre .javascript .function {
 .site-nav-toggle button {
   margin-top: 2px;
   padding: 9px 10px;
-  background: rgba(252,155,0,0.55);
+  background: rgba(0,0,0,0);
   border: none;
 }
 @media (max-width: 767px) {
@@ -1498,7 +1497,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #60a3ec;
+  color: #166bec;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1861,7 +1860,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3b249c;
+  background: #4a66b3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2869,7 +2868,7 @@ pre .javascript .function {
   background-color: #000;
 }
 .btn-bar {
-  background: rgba(0,0,0,0.5);
+  background: #fc6423;
 }
 .site-nav-toggle {
   left: 20px;
@@ -3029,7 +3028,7 @@ pre .javascript .function {
   text-overflow: ellipsis;
 }
 .post-body {
-  color: #d3d3d3;
+  color: #f9f9f9;
 }
 @media (max-width: 767px) {
   .post-body {
