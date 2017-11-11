@@ -1860,7 +1860,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5effcc;
+  background: #0fdfb4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3045,6 +3045,10 @@ body {
 .container {
   background: rgba(0,0,0,0.7) !important;
 }
+.site-subtitle {
+  color: #d9534f;
+  font-size: 14px;
+}
 .post-title-link {
   color: #6f42c1 !important;
 }
@@ -3058,4 +3062,8 @@ body {
 .post-body h1 {
   color: #f00;
   font-size: 36px;
+}
+.post-body h2 {
+  color: #5cb85c;
+  font-size: 24px;
 }
