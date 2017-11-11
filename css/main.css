@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 2;
   color: #d3d3d3;
   background: #f5f7f9;
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 h1,
@@ -1274,7 +1274,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   color: #d3d3d3;
   font-weight: bold;
   line-height: 1;
@@ -1860,7 +1860,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a862d0;
+  background: #5effcc;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3041,4 +3041,21 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.container {
+  background: rgba(0,0,0,0.7) !important;
+}
+.post-title-link {
+  color: #6f42c1 !important;
+}
+.post-title {
+  color: #6f42c1;
+}
+.post-body a {
+  color: #2e7ac4;
+  border-bottom: 1px solid #2e7ac4;
+}
+.post-body h1 {
+  color: #f00;
+  font-size: 36px;
 }
