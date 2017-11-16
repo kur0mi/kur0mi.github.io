@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="kur0mi&#39;s blog">
 <meta property="og:description" content="Makefile 关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分别放在若干个目录中，makefile 定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-11-16T04:38:29.539Z">
+<meta property="og:updated_time" content="2017-11-16T14:27:41.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Makefile 学习小记">
 <meta name="twitter:description" content="Makefile 关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分别放在若干个目录中，makefile 定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。">
@@ -371,13 +371,15 @@
 <li><a href="https://tonghuix.io/2012/04/cc%E7%9A%84%E9%80%9A%E7%94%A8makefile%E6%A8%A1%E6%9D%BF/" target="_blank" rel="external">C/C++ 的通用Makefile模板</a></li>
 <li><a href="https://sourceforge.net/projects/gcmakefile/" target="_blank" rel="external">Generic Makefile for C/C++ Programs</a></li>
 </ul>
-<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>下午1000米来不及写了，先写个TODO…</p>
-<p>TODO list：</p>
+<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>TODO list：</p>
 <ul>
-<li>…</li>
+<li>添加自动从源文件寻找包含文件的功能(无需手动添加)</li>
+<li>成功实现删除所有目标文件和可执行文件的一键清理功能</li>
+<li>more…</li>
 </ul>
-<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>本菜鸡目前写的 Makefile，目前勉强够用。</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">objects = list_array	#主程序依赖的库</div><div class="line">target = test			#主程序文件名</div><div class="line"></div><div class="line">inc_path = inc			#头文件所在目录（.h）</div><div class="line">lib_path = lib			#目标文件所在目录（.o）</div><div class="line">src_path = src			#源文件所在目录（.cpp）</div><div class="line"></div><div class="line"></div><div class="line">#################################################</div><div class="line">#################################################</div><div class="line"></div><div class="line">cc = g++ -Wall -std=c++<span class="number">1</span>z -MM</div><div class="line"></div><div class="line">$(target).exe : $(target).o $(lib_path)/$(objects).o</div><div class="line">	$(cc) -o $@ $^</div><div class="line"></div><div class="line">$(target).o : $(target).cpp</div><div class="line">	$(cc) -c $&lt; -o $@ -I$(inc_path)</div><div class="line"></div><div class="line">$(lib_path)/$(objects).o : $(src_path)/$(objects).cpp $(inc_path)/$(objects).h</div><div class="line">	$(cc) -c $&lt; -o $@ -I$(inc_path)</div><div class="line"></div><div class="line">.PHONY : debug clean</div><div class="line"></div><div class="line">debug :</div><div class="line">	@echo <span class="string">'waiting...'</span></div><div class="line"></div><div class="line">clean :</div><div class="line">#这里直接写 rm *.o 一直报错就很气</div><div class="line">	@powershell -c <span class="string">"rm *.o | rm lib/*.o"</span></div></pre></td></tr></table></figure>
+<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>本菜鸡修改的 makefile 模板。</p>
+<p><a href="https://github.com/kur0mi/Makefile" target="_blank" rel="external">Makefile 模板 v1.0</a></p>
+
       
     </div>
     
