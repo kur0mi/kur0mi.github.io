@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2017-11-13T10:09:58.263Z</updated>
+  <updated>2017-11-16T04:38:29.539Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Makefile 学习小记</title>
+    <link href="https://blog.nightmare.xin/makefile.html"/>
+    <id>https://blog.nightmare.xin/makefile.html</id>
+    <published>2017-11-16T03:51:00.000Z</published>
+    <updated>2017-11-16T04:38:29.539Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>参考文章：</p><ul><li><a href="https://seisman.github.io/how-to-write-makefile/overview.html" target="_blank" rel="external">跟我一起写 Makefile</a></li><li><a href="https://github.com/oxnz/clang-user-manual/wiki/Clang-%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C" target="_blank" rel="external">Clang 中文用户手册</a></li><li><a href="http://blog.sina.com.cn/s/blog_4de067e40102ds7d.html" target="_blank" rel="external">编译器 cc、gcc、g++、CC 的区别</a></li><li><a href="https://www.zhihu.com/question/39952667" target="_blank" rel="external">MinGW、MinGW-w64 与TDM-GCC 应该如何选择？</a></li><li><a href="http://blog.csdn.net/vlily/article/details/7247888" target="_blank" rel="external">C++ 函数系列篇：函数的默认值+带默认参数的函数</a></li><li><a href="http://www.cnblogs.com/lidan/archive/2011/05/25/2239517.html" target="_blank" rel="external">g++ 参数介绍</a></li><li><a href="https://tonghuix.io/2012/04/cc%E7%9A%84%E9%80%9A%E7%94%A8makefile%E6%A8%A1%E6%9D%BF/" target="_blank" rel="external">C/C++ 的通用Makefile模板</a></li><li><a href="https://sourceforge.net/projects/gcmakefile/" target="_blank" rel="external">Generic Makefile for C/C++ Programs</a></li></ul><h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>下午1000米来不及写了，先写个TODO…</p><p>TODO list：</p><ul><li>…</li></ul><h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>本菜鸡目前写的 Makefile，目前勉强够用。</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">objects = list_array#主程序依赖的库</div><div class="line">target = test#主程序文件名</div><div class="line"></div><div class="line">inc_path = inc#头文件所在目录（.h）</div><div class="line">lib_path = lib#目标文件所在目录（.o）</div><div class="line">src_path = src#源文件所在目录（.cpp）</div><div class="line"></div><div class="line"></div><div class="line">#################################################</div><div class="line">#################################################</div><div class="line"></div><div class="line">cc = g++ -Wall -std=c++<span class="number">1</span>z -MM</div><div class="line"></div><div class="line">$(target).exe : $(target).o $(lib_path)/$(objects).o</div><div class="line">$(cc) -o $@ $^</div><div class="line"></div><div class="line">$(target).o : $(target).cpp</div><div class="line">$(cc) -c $&lt; -o $@ -I$(inc_path)</div><div class="line"></div><div class="line">$(lib_path)/$(objects).o : $(src_path)/$(objects).cpp $(inc_path)/$(objects).h</div><div class="line">$(cc) -c $&lt; -o $@ -I$(inc_path)</div><div class="line"></div><div class="line">.PHONY : debug clean</div><div class="line"></div><div class="line">debug :</div><div class="line">@echo <span class="string">'waiting...'</span></div><div class="line"></div><div class="line">clean :</div><div class="line">#这里直接写 rm *.o 一直报错就很气</div><div class="line">@powershell -c <span class="string">"rm *.o | rm lib/*.o"</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      Makefile 关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分别放在若干个目录中，makefile 定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。
+    
+    </summary>
+    
+      <category term="Demo" scheme="https://blog.nightmare.xin/categories/Demo/"/>
+    
+    
+      <category term="Demo" scheme="https://blog.nightmare.xin/tags/Demo/"/>
+    
+      <category term="Makefile" scheme="https://blog.nightmare.xin/tags/Makefile/"/>
+    
+  </entry>
   
   <entry>
     <title>线性表（二）</title>
