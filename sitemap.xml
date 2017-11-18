@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.nightmare.xin/python-makefile.html</loc>
+    
+    <lastmod>2017-11-18T15:54:34.356Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.nightmare.xin/makefile.html</loc>
     
-    <lastmod>2017-11-16T14:27:41.168Z</lastmod>
+    <lastmod>2017-11-18T15:39:37.733Z</lastmod>
     
   </url>
   

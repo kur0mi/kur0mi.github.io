@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2017-11-16T14:27:41.168Z</updated>
+  <updated>2017-11-18T15:54:34.356Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Makefile v2.0</title>
+    <link href="https://blog.nightmare.xin/python-makefile.html"/>
+    <id>https://blog.nightmare.xin/python-makefile.html</id>
+    <published>2017-11-18T15:37:44.000Z</published>
+    <updated>2017-11-18T15:54:34.356Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>我的上一篇文章地址: <a href="http://blog.nightmare.xin/makefile.html">Makefile 学习小记</a></p><p>吃饭的时候想到的，感觉 makefile 还不是很成熟，使用 makefile 的语法去生成一个模板有些困难，想着一些做不过去的的部分使用 shell 调用python 去完成，越写越乱，索性全部用 python 生成模板，再用 make 执行，嗯，写完感觉 py 功力见长…</p><h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>虽然一键清理功能还是不知道出了什么问题一直无法用，不过自动寻找依赖的功能已经实现了，而且支持批量编译。</p><p>TODO list：</p><ul><li><del>添加自动从源文件寻找包含文件的功能(无需手动添加)</del></li><li>成功实现删除所有目标文件和可执行文件的一键清理功能</li><li>more…</li></ul><h1 id="0x01-1"><a href="#0x01-1" class="headerlink" title="0x01"></a>0x01</h1><p>欢迎使用我的 <a href="https://github.com/kur0mi/Makefile/blob/master/Makefile%20v2.0" target="_blank" rel="external">Makefile 模板 v2.0</a></p>]]></content>
+    
+    <summary type="html">
+    
+      win 对 makefile 和 shell 的支持不太好，网上的模板大都基于 linux 的，所以都不怎么好用，今天改进了一下，结果还是很满意的
+    
+    </summary>
+    
+      <category term="Demo" scheme="https://blog.nightmare.xin/categories/Demo/"/>
+    
+    
+      <category term="Demo" scheme="https://blog.nightmare.xin/tags/Demo/"/>
+    
+      <category term="Makefile" scheme="https://blog.nightmare.xin/tags/Makefile/"/>
+    
+      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Makefile 学习小记</title>
     <link href="https://blog.nightmare.xin/makefile.html"/>
     <id>https://blog.nightmare.xin/makefile.html</id>
     <published>2017-11-16T03:51:00.000Z</published>
-    <updated>2017-11-16T14:27:41.168Z</updated>
+    <updated>2017-11-18T15:39:37.733Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>参考文章：</p><ul><li><a href="https://seisman.github.io/how-to-write-makefile/overview.html" target="_blank" rel="external">跟我一起写 Makefile</a></li><li><a href="https://github.com/oxnz/clang-user-manual/wiki/Clang-%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C" target="_blank" rel="external">Clang 中文用户手册</a></li><li><a href="http://blog.sina.com.cn/s/blog_4de067e40102ds7d.html" target="_blank" rel="external">编译器 cc、gcc、g++、CC 的区别</a></li><li><a href="https://www.zhihu.com/question/39952667" target="_blank" rel="external">MinGW、MinGW-w64 与TDM-GCC 应该如何选择？</a></li><li><a href="http://blog.csdn.net/vlily/article/details/7247888" target="_blank" rel="external">C++ 函数系列篇：函数的默认值+带默认参数的函数</a></li><li><a href="http://www.cnblogs.com/lidan/archive/2011/05/25/2239517.html" target="_blank" rel="external">g++ 参数介绍</a></li><li><a href="https://tonghuix.io/2012/04/cc%E7%9A%84%E9%80%9A%E7%94%A8makefile%E6%A8%A1%E6%9D%BF/" target="_blank" rel="external">C/C++ 的通用Makefile模板</a></li><li><a href="https://sourceforge.net/projects/gcmakefile/" target="_blank" rel="external">Generic Makefile for C/C++ Programs</a></li></ul><h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>TODO list：</p><ul><li>添加自动从源文件寻找包含文件的功能(无需手动添加)</li><li>成功实现删除所有目标文件和可执行文件的一键清理功能</li><li>more…</li></ul><h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>本菜鸡修改的 makefile 模板。</p><p><a href="https://github.com/kur0mi/Makefile" target="_blank" rel="external">Makefile 模板 v1.0</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>参考文章：</p><ul><li><a href="https://seisman.github.io/how-to-write-makefile/overview.html" target="_blank" rel="external">跟我一起写 Makefile</a></li><li><a href="https://github.com/oxnz/clang-user-manual/wiki/Clang-%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C" target="_blank" rel="external">Clang 中文用户手册</a></li><li><a href="http://blog.sina.com.cn/s/blog_4de067e40102ds7d.html" target="_blank" rel="external">编译器 cc、gcc、g++、CC 的区别</a></li><li><a href="https://www.zhihu.com/question/39952667" target="_blank" rel="external">MinGW、MinGW-w64 与TDM-GCC 应该如何选择？</a></li><li><a href="http://blog.csdn.net/vlily/article/details/7247888" target="_blank" rel="external">C++ 函数系列篇：函数的默认值+带默认参数的函数</a></li><li><a href="http://www.cnblogs.com/lidan/archive/2011/05/25/2239517.html" target="_blank" rel="external">g++ 参数介绍</a></li><li><a href="https://tonghuix.io/2012/04/cc%E7%9A%84%E9%80%9A%E7%94%A8makefile%E6%A8%A1%E6%9D%BF/" target="_blank" rel="external">C/C++ 的通用Makefile模板</a></li><li><a href="https://sourceforge.net/projects/gcmakefile/" target="_blank" rel="external">Generic Makefile for C/C++ Programs</a></li></ul><h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>TODO list：</p><ul><li>添加自动从源文件寻找包含文件的功能(无需手动添加)</li><li>成功实现删除所有目标文件和可执行文件的一键清理功能</li><li>more…</li></ul><h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>本菜鸡修改的 makefile 模板。</p><p><a href="https://github.com/kur0mi/Makefile/blob/master/Makefile%20v1.0" target="_blank" rel="external">Makefile 模板 v1.0</a></p>]]></content>
     
     <summary type="html">
     
@@ -270,11 +296,11 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
+    
       <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
     
       <category term="翻译" scheme="https://blog.nightmare.xin/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -298,11 +324,11 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
-      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
-    
       <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="截图" scheme="https://blog.nightmare.xin/tags/%E6%88%AA%E5%9B%BE/"/>
+    
+      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
     
   </entry>
   
@@ -392,13 +418,13 @@
       <category term="Action" scheme="https://blog.nightmare.xin/categories/Action/"/>
     
     
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="markdown" scheme="https://blog.nightmare.xin/tags/markdown/"/>
     
       <category term="图床" scheme="https://blog.nightmare.xin/tags/%E5%9B%BE%E5%BA%8A/"/>
     
       <category term="七牛云" scheme="https://blog.nightmare.xin/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+    
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
