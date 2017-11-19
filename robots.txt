@@ -1,0 +1,14 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /about/
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /page/
+Disallow: /js/
+Disallow: /css/
+Disallow: /lib/
+Disallow: /images/
+Sitemap: http://blog.nightmare.xin/sitemap.xml
+Sitemap: http://blog.nightmare.xin/baidusitemap.xml
