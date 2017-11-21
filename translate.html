@@ -97,7 +97,7 @@
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="http://store.nightmare.xin/58d78da94cbf52033f7b8871e3190b43.png">
 <meta property="og:image" content="http://store.nightmare.xin/fd1dc10102b5423681cc0b9987500313.png">
-<meta property="og:updated_time" content="2017-10-30T11:23:03.198Z">
+<meta property="og:updated_time" content="2017-11-21T13:00:01.523Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="便捷的一键翻译功能">
 <meta name="twitter:description" content="在计算机的学习中，英文阅读本来就是一大障碍，同时感觉对翻译工具的需求也越来越迫切，于是...">
@@ -370,29 +370,17 @@
         <h1 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h1><p>有时候英文阅读真的很烦，比如好不容易google了一篇很精彩的文章，当你看的兴起的时候，遇到一个生词，不管了跳过去吧，又遇到一个，于是老老实实的打开了谷歌翻译… 翻译完继续去阅读，灵感也差不多没了; 又或者是新安装了一款软件，官方文档是最好的入手教程，但教程一般都是英文的，大段大段的复制到谷歌翻译就会很烦而且显得很low; 就算是中文的博客，看到一个不懂的计算机词汇，有时候想把它查一下，但嫌麻烦，跳过去吧，这样就错过了积累的过程。 如果你遇到过上面的情况，那就继续读下去吧。</p>
 <h1 id="进入正题"><a href="#进入正题" class="headerlink" title="进入正题"></a>进入正题</h1><p>本篇用到的工具/语言是ahk和python</p>
 <h2 id="关于ahk"><a href="#关于ahk" class="headerlink" title="关于ahk"></a>关于ahk</h2><p>即AutoHotkey，是一种便捷的自定义热键语言。<a href="http://blog.csdn.net/foxbryant/article/details/7628392" target="_blank" rel="external">ahk简单命令列表</a></p>
-<p>ahk 脚本如下：</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">^/::</div><div class="line">send, ^c</div><div class="line">clipwait</div><div class="line">Run <span class="built_in">cmd</span> /k "python translate.py <span class="variable">%Clipboard%</span> &amp;<span class="built_in">ECHO</span>. &amp;<span class="built_in">PAUSE</span> &amp;<span class="keyword">EXIT</span>"</div><div class="line">return</div></pre></td></tr></table></figure>
-<p><strong>^/::</strong> 表示按下 ctrl+/ 时就执行下边的代码</p>
-<p><strong>send, ^c</strong> 表示发送模拟键击 ctrl+c 到活动窗口</p>
-<p><strong>clipwait</strong> 表示等到剪切板有数据</p>
-<p><strong>Run</strong> 表示运行外部程序</p>
-<p><strong>cmd /k</strong> 表示打开cmd并执行后边的命令</p>
-<p><strong>python translate.py %Clipboard%</strong> 执行python脚本并将剪切板内的文本作为参数传入</p>
-<p><strong>&amp;ECHO. &amp;PAUSE &amp;EXIT</strong> 换行，暂停，退出</p>
-<p>为了方便，我将ahk脚本的快捷方式加入开机启动项</p>
 <h2 id="关于python"><a href="#关于python" class="headerlink" title="关于python"></a>关于python</h2><p>python是一种编程语言，以简洁高效著称，<strong>life is short, use python</strong>.</p>
 <p>处理google翻译的过程中遇到tk参数问题，参考了gayhub上的一个项目<a href="https://github.com/Dayunxi/googleTranslate" target="_blank" rel="external">googleTranslate</a></p>
-<p>python 脚本如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests, execjs, json, sys</div><div class="line"><span class="keyword">from</span> CalcTk <span class="keyword">import</span> CalcTk</div><div class="line"></div><div class="line">headers = &#123;</div><div class="line"><span class="string">'Host'</span>: <span class="string">'translate.google.cn'</span>,</div><div class="line"><span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0'</span>,</div><div class="line"><span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'</span>,</div><div class="line"><span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'</span>,</div><div class="line"><span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</div><div class="line"><span class="string">'Content-Type'</span>: <span class="string">'application/x-www-form-urlencoded;charset=utf-8'</span>,</div><div class="line"><span class="string">'Referer'</span>: <span class="string">'https://translate.google.cn/'</span>,</div><div class="line"><span class="string">'Cookie'</span>: <span class="string">'NID=101=pkAnwSBvDm2ACj2lEVnWO7YEPUoWCTges7B7z2jJNyrNwAZ2OL9FFOQLpdethA_20gCVqukiHnVm1hUbMGZc_ItQFdP5AHoq5XoMeEORaeidU196NDVRsrAu_zT0Yfsd; _ga=GA1.3.1338395464.1492313906'</span>,</div><div class="line"><span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,</div><div class="line"><span class="string">'Cache-Control'</span>: <span class="string">'max-age=0'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">params = &#123;</div><div class="line"><span class="string">'client'</span>: <span class="string">'t'</span>, <span class="string">'sl'</span>: <span class="string">'en'</span>, <span class="string">'tl'</span>: <span class="string">'zh-CN'</span>, <span class="string">'hl'</span>: <span class="string">'zh-CN'</span>,</div><div class="line"><span class="string">'dt'</span>: <span class="string">'at'</span>, <span class="string">'dt'</span>: <span class="string">'bd'</span>, <span class="string">'dt'</span>: <span class="string">'ex'</span>, <span class="string">'dt'</span>: <span class="string">'ld'</span>, <span class="string">'dt'</span>: <span class="string">'md'</span>,</div><div class="line"><span class="string">'dt'</span>: <span class="string">'qca'</span>, <span class="string">'dt'</span>: <span class="string">'rw'</span>, <span class="string">'dt'</span>: <span class="string">'rm'</span>, <span class="string">'dt'</span>: <span class="string">'ss'</span>, <span class="string">'dt'</span>: <span class="string">'t'</span>,</div><div class="line"><span class="string">'ie'</span>: <span class="string">'UTF-8'</span>, <span class="string">'oe'</span>: <span class="string">'UTF-8'</span>, <span class="string">'source'</span>: <span class="string">'bh'</span>, <span class="string">'ssel'</span>: <span class="string">'0'</span>,</div><div class="line"><span class="string">'tsel'</span>: <span class="string">'0'</span>, <span class="string">'kc'</span>: <span class="string">'1'</span>, <span class="string">'tk'</span>: <span class="string">'376032.257956'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">TK = CalcTk()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_res</span><span class="params">(url, data, params)</span>:</span></div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        res = requests.post(url, headers = headers, data = data, params = params, timeout = <span class="number">2</span>)</div><div class="line">        res.raise_for_status()</div><div class="line">        <span class="keyword">return</span> res</div><div class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> ex:</div><div class="line">        print(<span class="string">'[-]ERROR: '</span> + str(ex))</div><div class="line">        <span class="keyword">return</span> res</div><div class="line">        </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_json</span><span class="params">(res)</span>:</span></div><div class="line">    <span class="keyword">return</span> json.loads(res)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span><span class="params">(text)</span>:</span></div><div class="line">    <span class="keyword">global</span> params, TK</div><div class="line">    url = <span class="string">'https://translate.google.cn/translate_a/single'</span></div><div class="line">    data = &#123;<span class="string">'q'</span>: text&#125;</div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        params[<span class="string">'tk'</span>] = TK.get_tk(text)</div><div class="line">        res = get_res(url, data, params)</div><div class="line">        ret_list = parse_json(res.text)</div><div class="line">        <span class="keyword">return</span> ret_list[<span class="number">0</span>]</div><div class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> ex:</div><div class="line">        print(<span class="string">'[-]ERROR: '</span> + str(ex))</div><div class="line">        <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment"># print sys.argv</span></div><div class="line">    source = <span class="string">' '</span>.join(sys.argv[<span class="number">1</span>:])</div><div class="line">    <span class="comment"># print source</span></div><div class="line">        </div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        ret = translate(source)</div><div class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> ret:</div><div class="line">            <span class="keyword">print</span> item[<span class="number">1</span>], <span class="string">'\n'</span>, item[<span class="number">0</span>], <span class="string">'\n'</span></div><div class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> ex:</div><div class="line">        print(<span class="string">'[-]ERROR: '</span> + str(ex))</div><div class="line">        </div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
 <p>这里我主要做了一些小小的修改，由于将剪切板的文本作为参数传入，就遇到了空格和换行符问题</p>
-<p>了解过命令行(linux传参数)规则的应该知道 空格 可以将一行命令分割成不同的参数，在Python中传入的参数argv是一个列表形式，<strong>argv=[‘filename’, ‘arg_1’, ‘arg_2’, […]]</strong> 所以我采用 <strong>source = ‘ ‘.join(sys.argv[1:])</strong> 获取到想要转化的文本字符串。</p>
-<p>而在命令行下，换行符后的内容会被处理成下一条命令，我暂时没有合适的办法来处理。</p>
+<p>了解过命令行传参规则的应该知道 空格 将一行命令分割成不同的参数，在Python中传入的参数argv是一个列表形式，<strong>argv=[‘filename’, ‘arg_1’, ‘arg_2’, […]]</strong> 所以我采用 <strong>source = ‘ ‘.join(sys.argv[1:])</strong> 获取到想要转化的文本字符串。</p>
+<p><del>而在命令行下，换行符后的内容会被处理成下一条命令，我暂时没有合适的办法来处理。</del> 已修复</p>
 <h1 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h1><p>鼠标左键选中之后按下 ctrl+/</p>
 <p><img src="http://store.nightmare.xin/58d78da94cbf52033f7b8871e3190b43.png" alt=""></p>
-<p>但是如果包含换行符则会被截断233</p>
+<p><del>但是如果包含换行符则会被截断233</del></p>
 <p><img src="http://store.nightmare.xin/fd1dc10102b5423681cc0b9987500313.png" alt=""></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>写的第二个比较有成就感的工具，上一篇<a href="http://blog.nightmare.xin/test3.html">地址</a></p>
-<p>ps: 最近天气转冷，夜跑有点痛苦orz</p>
+<p>现在的地址: <a href="https://github.com/kur0mi/tools/tree/master/google_translate" target="_blank" rel="external"> google 翻译工具</a></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>ps: 最近天气转冷，夜跑有点痛苦orz</p>
 
       
     </div>
@@ -522,7 +510,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -533,7 +521,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -544,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

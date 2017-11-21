@@ -2,44 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.nightmare.xin/python-makefile.html</loc>
+    <loc>https://blog.nightmare.xin/translate.html</loc>
     
-    <lastmod>2017-11-18T15:54:34.356Z</lastmod>
+    <lastmod>2017-11-21T13:00:01.523Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/test3.html</loc>
+    
+    <lastmod>2017-11-21T12:59:10.522Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/test6.html</loc>
+    
+    <lastmod>2017-11-21T12:55:31.717Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.nightmare.xin/pyqt.html</loc>
+    
+    <lastmod>2017-11-21T12:53:40.275Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.nightmare.xin/makefile.html</loc>
     
-    <lastmod>2017-11-18T15:39:37.733Z</lastmod>
+    <lastmod>2017-11-21T12:49:36.896Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.nightmare.xin/dt-2-2.html</loc>
+    <loc>https://blog.nightmare.xin/rainbow.html</loc>
     
-    <lastmod>2017-11-13T10:10:04.238Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/dt-2-3.html</loc>
-    
-    <lastmod>2017-11-13T10:09:58.263Z</lastmod>
+    <lastmod>2017-11-21T11:14:59.384Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.nightmare.xin/dark.html</loc>
+    <loc>https://blog.nightmare.xin/cloud.html</loc>
     
-    <lastmod>2017-11-11T15:40:20.825Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/2333.html</loc>
-    
-    <lastmod>2017-11-09T12:02:03.142Z</lastmod>
+    <lastmod>2017-11-21T11:12:14.640Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://blog.nightmare.xin/insert.html</loc>
     
     <lastmod>2017-11-08T09:48:19.473Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/2017-11-6.html</loc>
-    
-    <lastmod>2017-11-06T15:11:47.945Z</lastmod>
     
   </url>
   
@@ -68,34 +68,6 @@
     <loc>https://blog.nightmare.xin/kmp.html</loc>
     
     <lastmod>2017-11-02T05:00:35.214Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/pyqt.html</loc>
-    
-    <lastmod>2017-10-31T13:44:17.174Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/translate.html</loc>
-    
-    <lastmod>2017-10-30T11:23:03.198Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/test6.html</loc>
-    
-    <lastmod>2017-10-30T11:22:55.337Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.nightmare.xin/test3.html</loc>
-    
-    <lastmod>2017-10-30T11:22:41.083Z</lastmod>
     
   </url>
   

@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="Demo,Makefile,python," />
+  <meta name="keywords" content="Life,daily," />
 
 
 
@@ -87,18 +87,21 @@
 
 
 
-<meta name="description" content="win 对 makefile 和 shell 的支持不太好，网上的模板大都基于 linux 的，所以都不怎么好用，今天改进了一下，结果还是很满意的">
-<meta name="keywords" content="Demo,Makefile,python">
+<meta name="description" content="随便记点什么吧，想到哪写到哪233">
+<meta name="keywords" content="Life,daily">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Makefile v2.0">
-<meta property="og:url" content="https://blog.nightmare.xin/python-makefile.html">
+<meta property="og:title" content="今天的云很好看啊">
+<meta property="og:url" content="https://blog.nightmare.xin/cloud.html">
 <meta property="og:site_name" content="kur0mi&#39;s blog">
-<meta property="og:description" content="win 对 makefile 和 shell 的支持不太好，网上的模板大都基于 linux 的，所以都不怎么好用，今天改进了一下，结果还是很满意的">
+<meta property="og:description" content="随便记点什么吧，想到哪写到哪233">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-11-18T15:54:34.356Z">
+<meta property="og:image" content="http://store.nightmare.xin/0593ceb4c528a20a4daf1f70f0c70ebf.png">
+<meta property="og:image" content="http://store.nightmare.xin/28b1895a15ed5e7d4e8fc83bbfb15495.png">
+<meta property="og:updated_time" content="2017-11-21T11:12:14.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Makefile v2.0">
-<meta name="twitter:description" content="win 对 makefile 和 shell 的支持不太好，网上的模板大都基于 linux 的，所以都不怎么好用，今天改进了一下，结果还是很满意的">
+<meta name="twitter:title" content="今天的云很好看啊">
+<meta name="twitter:description" content="随便记点什么吧，想到哪写到哪233">
+<meta name="twitter:image" content="http://store.nightmare.xin/0593ceb4c528a20a4daf1f70f0c70ebf.png">
 
 
 
@@ -128,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.nightmare.xin/python-makefile.html"/>
+  <link rel="canonical" href="https://blog.nightmare.xin/cloud.html"/>
 
 
 
 
 
-  <title>Makefile v2.0 | kur0mi's blog</title>
+  <title>今天的云很好看啊 | kur0mi's blog</title>
   
 
 
@@ -271,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/python-makefile.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/cloud.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kur0mi">
@@ -288,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Makefile v2.0</h1>
+          <h1 class="post-title" itemprop="name headline">今天的云很好看啊</h1>
         
 
         <div class="post-meta">
@@ -300,8 +303,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-18T23:37:44+08:00">
-                2017-11-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-06T22:11:43+08:00">
+                2017-11-06
               </time>
             
 
@@ -323,8 +326,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Demo/" itemprop="url" rel="index">
-                    <span itemprop="name">Demo</span>
+                  <a href="/categories/Life/" itemprop="url" rel="index">
+                    <span itemprop="name">Life</span>
                   </a>
                 </span>
 
@@ -347,7 +350,7 @@
 
           
               <div class="post-description">
-                  win 对 makefile 和 shell 的支持不太好，网上的模板大都基于 linux 的，所以都不怎么好用，今天改进了一下，结果还是很满意的
+                  随便记点什么吧，想到哪写到哪233
               </div>
           
 
@@ -364,16 +367,24 @@
       
 
       
-        <h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>我的上一篇文章地址: <a href="http://blog.nightmare.xin/makefile.html">Makefile 学习小记</a></p>
-<p>吃饭的时候想到的，感觉 makefile 还不是很成熟，使用 makefile 的语法去生成一个模板有些困难，想着一些做不过去的的部分使用 shell 调用python 去完成，越写越乱，索性全部用 python 生成模板，再用 make 执行，嗯，写完感觉 py 功力见长…</p>
-<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>虽然一键清理功能还是不知道出了什么问题一直无法用，不过自动寻找依赖的功能已经实现了，而且支持批量编译。</p>
-<p>TODO list：</p>
-<ul>
-<li><del>添加自动从源文件寻找包含文件的功能(无需手动添加)</del></li>
-<li>成功实现删除所有目标文件和可执行文件的一键清理功能</li>
-<li>more…</li>
-</ul>
-<h1 id="0x01-1"><a href="#0x01-1" class="headerlink" title="0x01"></a>0x01</h1><p>欢迎使用我的 <a href="https://github.com/kur0mi/Makefile/blob/master/Makefile%20v2.0" target="_blank" rel="external">Makefile 模板 v2.0</a></p>
+        <h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>忘了从0开始计数了，特意返回来补上…</p>
+<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>em.. 感冒已经很轻了，应该是要好了，终于可以免受这种痛苦了，算是这段时间的一个好消息。 再休息几天吧，暂停了一周的跑步计划也该重新开始了(又想到1000米跑逐步临近，有点迫不及待的想检测一下这段时间的成果呢)。 话说，我为什么总会感冒呢..</p>
+<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>近期的CTF比赛有上海的比赛和浙警的比赛，上海的网安大赛太难了，勉强做了一道100分的sql注入就跑路了，学长们很厉害，用我们的账号打到前几名。</p>
+<p>浙警的比赛今天刚刚开始，分三周三次小比赛，听学长说题目对萌新比较友好，怀着激动的心情去玩了玩，几分郁闷，几分开心。</p>
+<p><img src="http://store.nightmare.xin/0593ceb4c528a20a4daf1f70f0c70ebf.png" alt=""></p>
+<p>就我自己的感觉吧，没有特别水的题，题目难度基本分为<strong>突然就做出来了</strong>和<strong>做到死也做不出来</strong>两种。</p>
+<p>应该是很多大表哥对这种小比赛不感兴趣，侥幸混个no.10。</p>
+<p><img src="http://store.nightmare.xin/28b1895a15ed5e7d4e8fc83bbfb15495.png" alt=""></p>
+<h1 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h1><p>数据结构讲到了tree(树)了，今天认真听了一下，感觉老师讲的还是很好的，讲的很详细听的也有意思，以前为什么不想听呢，其实以前内心是有点反感的，大部分人都没有什么编程能力就去讲数据结构算法什么的，数据结构是算法的基础，算法是程序的灵魂嘛，但是这些要建立在代码熟练的基础上，嗯em.. 反感的最初来源应该是编程速成班，快速培训或校园招聘什么的，不理解那些人的心态，完全就是抱着”试试看，或许我成功了呢”，或者”我周围人都那么做，我那么做也没什么嘛”的心态？ 一边渴望得到认可，一边又沉醉在”周围人都和我一样”的心态中，或许是我性格比较孤僻的原因么</p>
+<h1 id="0x04"><a href="#0x04" class="headerlink" title="0x04"></a>0x04</h1><p>谈到性格改变什么的，在大二认识的伙伴们可能会觉得我平时在一起时不太爱讲话，其实比起大一已经好多了，大一认识的伙伴们应该有体会，一年我还是学到了些什么有很大改变的，提到了大一就不得不提起高中和初中了，初中被欺负，高中没住校，六年与人交流可以说是非常少之又少了… 刚进大学也只想混日子混过去的，至于为什么突然转变，这就不得不说提起我的大姐姐了，由于在博客中又是不太好提的就不提了… (想知道的直接问我嘛，又不是不能说(骄傲.jpg))</p>
+<h1 id="0x05"><a href="#0x05" class="headerlink" title="0x05"></a>0x05</h1><p>嘛，现在社会还是太浮躁了</p>
+<h1 id="0x06"><a href="#0x06" class="headerlink" title="0x06"></a>0x06</h1><p>我的小窝还是装的很不错了，改天再买个放东西的架子什么的，对了，我的二次元枕套也要买</p>
+<h1 id="0x07"><a href="#0x07" class="headerlink" title="0x07"></a>0x07</h1><p>哇，都0x07了，再写点什么呢</p>
+<h1 id="0x08"><a href="#0x08" class="headerlink" title="0x08"></a>0x08</h1><p>人生有很多选择，有些很重要，但更重要的是选择之后坚持走下去。</p>
+<h1 id="0x09"><a href="#0x09" class="headerlink" title="0x09"></a>0x09</h1><p>其实我特别想知道都有谁看过我的博客，想写个签到评论什么的功能，但是，本菜鸡懒啊…</p>
+<h1 id="0x0a"><a href="#0x0a" class="headerlink" title="0x0a"></a>0x0a</h1><p>乒乓球握拍姿势感觉越来越奇怪，很别扭，难受</p>
+<p>上次打赢了了一个小姐姐还不服气(哼~)</p>
+<h1 id="0x0b"><a href="#0x0b" class="headerlink" title="0x0b"></a>0x0b</h1><p>到这里结束了，为什么呢，因为马上要熄灯断网了</p>
 
       
     </div>
@@ -391,11 +402,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Demo/" rel="tag"># Demo</a>
+            <a href="/tags/Life/" rel="tag"># Life</a>
           
-            <a href="/tags/Makefile/" rel="tag"># Makefile</a>
-          
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/daily/" rel="tag"># daily</a>
           
         </div>
       
@@ -408,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/makefile.html" rel="next" title="Makefile 学习小记">
-                <i class="fa fa-chevron-left"></i> Makefile 学习小记
+              <a href="/kurumi.html" rel="next" title="Kurumi">
+                <i class="fa fa-chevron-left"></i> Kurumi
               </a>
             
           </div>
@@ -417,6 +426,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/insert.html" rel="prev" title="插入排序 学习小记">
+                插入排序 学习小记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -497,7 +510,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -508,7 +521,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -519,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -628,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00"><span class="nav-number">1.</span> <span class="nav-text">0x00</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01"><span class="nav-number">2.</span> <span class="nav-text">0x01</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-1"><span class="nav-number">3.</span> <span class="nav-text">0x01</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00"><span class="nav-number">1.</span> <span class="nav-text">0x00</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01"><span class="nav-number">2.</span> <span class="nav-text">0x01</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02"><span class="nav-number">3.</span> <span class="nav-text">0x02</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03"><span class="nav-number">4.</span> <span class="nav-text">0x03</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04"><span class="nav-number">5.</span> <span class="nav-text">0x04</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x05"><span class="nav-number">6.</span> <span class="nav-text">0x05</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x06"><span class="nav-number">7.</span> <span class="nav-text">0x06</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x07"><span class="nav-number">8.</span> <span class="nav-text">0x07</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x08"><span class="nav-number">9.</span> <span class="nav-text">0x08</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x09"><span class="nav-number">10.</span> <span class="nav-text">0x09</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x0a"><span class="nav-number">11.</span> <span class="nav-text">0x0a</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x0b"><span class="nav-number">12.</span> <span class="nav-text">0x0b</span></a></li></ol></div>
             
 
           </div>

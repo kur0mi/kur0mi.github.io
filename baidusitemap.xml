@@ -4,12 +4,112 @@
 
     
   <url>
-    <loc>https://blog.nightmare.xin/python-makefile.html</loc>
-    <lastmod>2017-11-18T15:54:34.356Z</lastmod>
+    <loc>https://blog.nightmare.xin/translate.html</loc>
+    <lastmod>2017-11-21T13:00:01.523Z</lastmod>
     <data>
         <display>
-        <title>Makefile v2.0</title>
-        <pubTime>2017-11-18T15:37:44.000Z</pubTime>
+        <title>便捷的一键翻译功能</title>
+        <pubTime>2017-10-29T09:19:49.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>ahk</tag>
+         
+        <tag>翻译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Action" url="https://blog.nightmare.xin/categories/Action/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.nightmare.xin/test3.html</loc>
+    <lastmod>2017-11-21T12:59:10.522Z</lastmod>
+    <data>
+        <display>
+        <title>快速获取markdown图片链接</title>
+        <pubTime>2017-10-22T14:39:47.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+        <tag>图床</tag>
+         
+        <tag>七牛云</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="Action" url="https://blog.nightmare.xin/categories/Action/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.nightmare.xin/test6.html</loc>
+    <lastmod>2017-11-21T12:55:31.717Z</lastmod>
+    <data>
+        <display>
+        <title>如何编写一个快捷的截图工具呢？</title>
+        <pubTime>2017-10-24T13:26:35.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>截图</tag>
+         
+        <tag>ahk</tag>
+         
+         
+           
+             
+              <breadCrumb title="Action" url="https://blog.nightmare.xin/categories/Action/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.nightmare.xin/pyqt.html</loc>
+    <lastmod>2017-11-21T12:53:40.275Z</lastmod>
+    <data>
+        <display>
+        <title>pyqt 学习小记(一)</title>
+        <pubTime>2017-10-31T12:46:06.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>pyqt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Demo" url="https://blog.nightmare.xin/categories/Demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.nightmare.xin/makefile.html</loc>
+    <lastmod>2017-11-21T12:49:36.896Z</lastmod>
+    <data>
+        <display>
+        <title>Makefile 学习小记</title>
+        <pubTime>2017-11-16T03:51:00.000Z</pubTime>
         
         <tag>Demo</tag>
          
@@ -28,94 +128,8 @@
 
     
   <url>
-    <loc>https://blog.nightmare.xin/makefile.html</loc>
-    <lastmod>2017-11-18T15:39:37.733Z</lastmod>
-    <data>
-        <display>
-        <title>Makefile 学习小记</title>
-        <pubTime>2017-11-16T03:51:00.000Z</pubTime>
-        
-        <tag>Demo</tag>
-         
-        <tag>Makefile</tag>
-         
-         
-           
-             
-              <breadCrumb title="Demo" url="https://blog.nightmare.xin/categories/Demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/dt-2-2.html</loc>
-    <lastmod>2017-11-13T10:10:04.238Z</lastmod>
-    <data>
-        <display>
-        <title>线性表（一）</title>
-        <pubTime>2017-11-13T07:17:55.000Z</pubTime>
-        
-        <tag>C/C++</tag>
-         
-        <tag>List</tag>
-         
-         
-           
-             
-              <breadCrumb title="Demo" url="https://blog.nightmare.xin/categories/Demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/dt-2-3.html</loc>
-    <lastmod>2017-11-13T10:09:58.263Z</lastmod>
-    <data>
-        <display>
-        <title>线性表（二）</title>
-        <pubTime>2017-11-13T08:32:28.000Z</pubTime>
-        
-        <tag>C/C++</tag>
-         
-        <tag>List</tag>
-         
-         
-           
-             
-              <breadCrumb title="Demo" url="https://blog.nightmare.xin/categories/Demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/dark.html</loc>
-    <lastmod>2017-11-11T15:40:20.825Z</lastmod>
-    <data>
-        <display>
-        <title>暴走大事件被封</title>
-        <pubTime>2017-11-11T15:16:50.000Z</pubTime>
-        
-        <tag>和谐</tag>
-         
-         
-           
-             
-              <breadCrumb title="和谐化进程" url="https://blog.nightmare.xin/categories/%E5%92%8C%E8%B0%90%E5%8C%96%E8%BF%9B%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/2333.html</loc>
-    <lastmod>2017-11-09T12:02:03.142Z</lastmod>
+    <loc>https://blog.nightmare.xin/rainbow.html</loc>
+    <lastmod>2017-11-21T11:14:59.384Z</lastmod>
     <data>
         <display>
         <title>南航计算机学院第六期科创</title>
@@ -127,6 +141,28 @@
            
              
               <breadCrumb title="Chain" url="https://blog.nightmare.xin/categories/Chain/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.nightmare.xin/cloud.html</loc>
+    <lastmod>2017-11-21T11:12:14.640Z</lastmod>
+    <data>
+        <display>
+        <title>今天的云很好看啊</title>
+        <pubTime>2017-11-06T14:11:43.000Z</pubTime>
+        
+        <tag>Life</tag>
+         
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="https://blog.nightmare.xin/categories/Life/"/>
           
         </display>
     </data>
@@ -151,28 +187,6 @@
            
              
               <breadCrumb title="Demo" url="https://blog.nightmare.xin/categories/Demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/2017-11-6.html</loc>
-    <lastmod>2017-11-06T15:11:47.945Z</lastmod>
-    <data>
-        <display>
-        <title>今天的云很好看啊</title>
-        <pubTime>2017-11-06T14:11:43.000Z</pubTime>
-        
-        <tag>Life</tag>
-         
-        <tag>daily</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="https://blog.nightmare.xin/categories/Life/"/>
           
         </display>
     </data>
@@ -213,106 +227,6 @@
            
              
               <breadCrumb title="Demo" url="https://blog.nightmare.xin/categories/Demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/pyqt.html</loc>
-    <lastmod>2017-10-31T13:44:17.174Z</lastmod>
-    <data>
-        <display>
-        <title>pyqt 学习小记(一)</title>
-        <pubTime>2017-10-31T12:46:06.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>pyqt</tag>
-         
-         
-           
-             
-              <breadCrumb title="Demo" url="https://blog.nightmare.xin/categories/Demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/translate.html</loc>
-    <lastmod>2017-10-30T11:23:03.198Z</lastmod>
-    <data>
-        <display>
-        <title>便捷的一键翻译功能</title>
-        <pubTime>2017-10-29T09:19:49.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>ahk</tag>
-         
-        <tag>翻译</tag>
-         
-         
-           
-             
-              <breadCrumb title="Action" url="https://blog.nightmare.xin/categories/Action/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/test6.html</loc>
-    <lastmod>2017-10-30T11:22:55.337Z</lastmod>
-    <data>
-        <display>
-        <title>如何编写一个快捷的截图工具呢？</title>
-        <pubTime>2017-10-24T13:26:35.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>截图</tag>
-         
-        <tag>ahk</tag>
-         
-         
-           
-             
-              <breadCrumb title="Action" url="https://blog.nightmare.xin/categories/Action/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/test3.html</loc>
-    <lastmod>2017-10-30T11:22:41.083Z</lastmod>
-    <data>
-        <display>
-        <title>快速获取markdown图片链接</title>
-        <pubTime>2017-10-22T14:39:47.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-        <tag>图床</tag>
-         
-        <tag>七牛云</tag>
-         
-        <tag>工具</tag>
-         
-         
-           
-             
-              <breadCrumb title="Action" url="https://blog.nightmare.xin/categories/Action/"/>
           
         </display>
     </data>
