@@ -34,11 +34,11 @@
       <category term="Demo" scheme="https://blog.nightmare.xin/categories/Demo/"/>
     
     
-      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
-    
       <category term="Demo" scheme="https://blog.nightmare.xin/tags/Demo/"/>
     
       <category term="Makefile" scheme="https://blog.nightmare.xin/tags/Makefile/"/>
+    
+      <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
   </entry>
   
@@ -202,9 +202,9 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
-      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
-    
       <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
     
       <category term="翻译" scheme="https://blog.nightmare.xin/tags/%E7%BF%BB%E8%AF%91/"/>
     
@@ -230,11 +230,11 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
+    
       <category term="截图" scheme="https://blog.nightmare.xin/tags/%E6%88%AA%E5%9B%BE/"/>
     
       <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
-    
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -324,13 +324,13 @@
       <category term="Action" scheme="https://blog.nightmare.xin/categories/Action/"/>
     
     
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="markdown" scheme="https://blog.nightmare.xin/tags/markdown/"/>
     
       <category term="图床" scheme="https://blog.nightmare.xin/tags/%E5%9B%BE%E5%BA%8A/"/>
     
       <category term="七牛云" scheme="https://blog.nightmare.xin/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+    
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
