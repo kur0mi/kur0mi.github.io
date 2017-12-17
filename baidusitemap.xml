@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://blog.nightmare.xin/asp-md.html</loc>
+    <lastmod>2017-12-17T10:01:59.104Z</lastmod>
+    <data>
+        <display>
+        <title>ASP.NET 课程设计报告</title>
+        <pubTime>2017-12-17T09:58:18.000Z</pubTime>
+        
+        <tag>demo</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="https://blog.nightmare.xin/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.nightmare.xin/translate.html</loc>
     <lastmod>2017-11-21T13:00:01.523Z</lastmod>
     <data>
@@ -11,9 +31,9 @@
         <title>便捷的一键翻译功能</title>
         <pubTime>2017-10-29T09:19:49.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>工具</tag>
+         
+        <tag>python</tag>
          
         <tag>ahk</tag>
          
@@ -63,13 +83,13 @@
         <title>如何编写一个快捷的截图工具呢？</title>
         <pubTime>2017-10-24T13:26:35.000Z</pubTime>
         
-        <tag>python</tag>
-         
         <tag>工具</tag>
          
-        <tag>截图</tag>
+        <tag>python</tag>
          
         <tag>ahk</tag>
+         
+        <tag>截图</tag>
          
          
            
@@ -111,11 +131,11 @@
         <title>Makefile 学习小记</title>
         <pubTime>2017-11-16T03:51:00.000Z</pubTime>
         
+        <tag>python</tag>
+         
         <tag>Demo</tag>
          
         <tag>Makefile</tag>
-         
-        <tag>python</tag>
          
          
            
