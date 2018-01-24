@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="python,Demo,Makefile," />
+  <meta name="keywords" content="code," />
 
 
 
@@ -87,18 +87,40 @@
 
 
 
-<meta name="description" content="Makefile 关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分别放在若干个目录中，makefile 定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。">
-<meta name="keywords" content="python,Demo,Makefile">
+<meta name="description" content="世界诞生的前夜 - 开发环境配置">
+<meta name="keywords" content="code">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Makefile 学习小记">
-<meta property="og:url" content="https://blog.nightmare.xin/makefile.html">
+<meta property="og:title" content="顺利的 PA0">
+<meta property="og:url" content="https://blog.nightmare.xin/pa0.html">
 <meta property="og:site_name" content="kur0mi&#39;s blog">
-<meta property="og:description" content="Makefile 关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分别放在若干个目录中，makefile 定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。">
+<meta property="og:description" content="世界诞生的前夜 - 开发环境配置">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-11-21T12:49:36.896Z">
+<meta property="og:image" content="http://store.nightmare.xin/d0f6c7541943a4c29d0f07ed4518d561.png">
+<meta property="og:image" content="http://store.nightmare.xin/32a8970410a21f57e48b53f7ebef8026.png">
+<meta property="og:image" content="http://store.nightmare.xin/c81e728d9d4c2f636f067f89cc14862c.png">
+<meta property="og:image" content="http://store.nightmare.xin/eccbc87e4b5ce2fe28308fd9f2a7baf3.png">
+<meta property="og:image" content="http://store.nightmare.xin/a87ff679a2f3e71d9181a67b7542122c.png">
+<meta property="og:image" content="http://store.nightmare.xin/d2a37a9a62bec1cd830223cfc7bd0baf.png">
+<meta property="og:image" content="http://store.nightmare.xin/2071475516c2e4c025ca20cc3a796168.png">
+<meta property="og:image" content="http://store.nightmare.xin/987e7c907b3754c2c256297859d9ffb3.png">
+<meta property="og:image" content="http://store.nightmare.xin/26223a03a8150a53c62b0670234c4851.png">
+<meta property="og:image" content="http://store.nightmare.xin/3ac1943c40b23d003e9e0bb811110e42.png">
+<meta property="og:image" content="http://store.nightmare.xin/c5fc3450f457b4ce88e769cc25a3b258.png">
+<meta property="og:image" content="http://store.nightmare.xin/68208c81cb8beeae85f58fb8efa79e02.png">
+<meta property="og:image" content="http://store.nightmare.xin/2ad3d65d1a1aad9b7422c1f3954b7fca.png">
+<meta property="og:image" content="http://store.nightmare.xin/ee3cf09c2ef5bb06fd08ddfc3e74440a.png">
+<meta property="og:image" content="http://store.nightmare.xin/cfdb221d6a5487249b8f16a9e59ae5de.png">
+<meta property="og:image" content="http://store.nightmare.xin/7b46593209cb61e2e5e2eb0bff2bd01e.png">
+<meta property="og:image" content="http://store.nightmare.xin/fc29afb1f09a66c6e3489dd42b457924.png">
+<meta property="og:image" content="http://store.nightmare.xin/ac7d9a906d6339418a161961dd33d9ec.png">
+<meta property="og:image" content="http://store.nightmare.xin/948c8095dd3bd55d81f8ebd1219acfe3.png">
+<meta property="og:image" content="http://store.nightmare.xin/85d08050c9d8f25555b0a9094f5328c5.png">
+<meta property="og:image" content="http://store.nightmare.xin/eb33f58daf8434ced28be3d709ae1797.png">
+<meta property="og:updated_time" content="2018-01-24T07:59:08.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Makefile 学习小记">
-<meta name="twitter:description" content="Makefile 关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分别放在若干个目录中，makefile 定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。">
+<meta name="twitter:title" content="顺利的 PA0">
+<meta name="twitter:description" content="世界诞生的前夜 - 开发环境配置">
+<meta name="twitter:image" content="http://store.nightmare.xin/d0f6c7541943a4c29d0f07ed4518d561.png">
 
 
 
@@ -128,13 +150,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.nightmare.xin/makefile.html"/>
+  <link rel="canonical" href="https://blog.nightmare.xin/pa0.html"/>
 
 
 
 
 
-  <title>Makefile 学习小记 | kur0mi's blog</title>
+  <title>顺利的 PA0 | kur0mi's blog</title>
   
 
 
@@ -271,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/makefile.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/pa0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kur0mi">
@@ -288,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Makefile 学习小记</h1>
+          <h1 class="post-title" itemprop="name headline">顺利的 PA0</h1>
         
 
         <div class="post-meta">
@@ -300,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-16T11:51:00+08:00">
-                2017-11-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T17:58:18+08:00">
+                2018-01-20
               </time>
             
 
@@ -323,8 +345,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Demo/" itemprop="url" rel="index">
-                    <span itemprop="name">Demo</span>
+                  <a href="/categories/PAs/" itemprop="url" rel="index">
+                    <span itemprop="name">PAs</span>
                   </a>
                 </span>
 
@@ -347,7 +369,7 @@
 
           
               <div class="post-description">
-                  Makefile 关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分别放在若干个目录中，makefile 定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。
+                  世界诞生的前夜 - 开发环境配置
               </div>
           
 
@@ -364,27 +386,92 @@
       
 
       
-        <h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>参考文章：</p>
-<ul>
-<li><a href="https://seisman.github.io/how-to-write-makefile/overview.html" target="_blank" rel="external">跟我一起写 Makefile</a></li>
-<li><a href="https://github.com/oxnz/clang-user-manual/wiki/Clang-%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C" target="_blank" rel="external">Clang 中文用户手册</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_4de067e40102ds7d.html" target="_blank" rel="external">编译器 cc、gcc、g++、CC 的区别</a></li>
-<li><a href="https://www.zhihu.com/question/39952667" target="_blank" rel="external">MinGW、MinGW-w64 与TDM-GCC 应该如何选择？</a></li>
-<li><a href="http://blog.csdn.net/vlily/article/details/7247888" target="_blank" rel="external">C++ 函数系列篇：函数的默认值+带默认参数的函数</a></li>
-<li><a href="http://www.cnblogs.com/lidan/archive/2011/05/25/2239517.html" target="_blank" rel="external">g++ 参数介绍</a></li>
-<li><a href="https://tonghuix.io/2012/04/cc%E7%9A%84%E9%80%9A%E7%94%A8makefile%E6%A8%A1%E6%9D%BF/" target="_blank" rel="external">C/C++ 的通用Makefile模板</a></li>
-<li><a href="https://sourceforge.net/projects/gcmakefile/" target="_blank" rel="external">Generic Makefile for C/C++ Programs</a></li>
-</ul>
-<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>TODO list：</p>
-<ul>
-<li><del>自动从源文件寻找依赖</del></li>
-<li><del>批量处理多个程序</del></li>
-<li><del>一键清理</del></li>
-<li>more…</li>
-</ul>
-<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>下边是我实现的 makefile 模板。</p>
-<p><a href="https://github.com/kur0mi/tools/blob/master/Makefile/Makefile%20v1.0" target="_blank" rel="external">Makefile 模板 v1.0</a></p>
-<p><a href="https://github.com/kur0mi/tools/blob/master/Makefile/Makefile%20v2.0" target="_blank" rel="external">Makefile 模板 v2.0</a></p>
+        <h1 id="PA0-世界诞生的前夜-开发环境配置"><a href="#PA0-世界诞生的前夜-开发环境配置" class="headerlink" title="PA0 - 世界诞生的前夜: 开发环境配置"></a>PA0 - 世界诞生的前夜: 开发环境配置</h1><h2 id="Installing-a-GNU-Linux-VM"><a href="#Installing-a-GNU-Linux-VM" class="headerlink" title="Installing a GNU/Linux VM"></a>Installing a GNU/Linux VM</h2><pre><code>我的搭配是 阿里云主机（Ubuntu 16.04 LTS） + docker（debian 9 stretch）
+</code></pre><h2 id="Installing-Docker"><a href="#Installing-Docker" class="headerlink" title="Installing Docker"></a>Installing Docker</h2><pre><code>在官网下载docker即可
+</code></pre><p><img src="http://store.nightmare.xin/d0f6c7541943a4c29d0f07ed4518d561.png" alt=""></p>
+<h2 id="Preparing-Dockerfile"><a href="#Preparing-Dockerfile" class="headerlink" title="Preparing Dockerfile"></a>Preparing Dockerfile</h2><pre><code>复制粘贴到Dockerfile并修改username &amp; password
+</code></pre><p><img src="http://store.nightmare.xin/32a8970410a21f57e48b53f7ebef8026.png" alt=""></p>
+<h2 id="Building-Docker-image"><a href="#Building-Docker-image" class="headerlink" title="Building Docker image"></a>Building Docker image</h2><pre><code>根据Dockerfile建立镜像（原示例debian镜像被我删了）
+</code></pre><p><img src="http://store.nightmare.xin/c81e728d9d4c2f636f067f89cc14862c.png" alt=""></p>
+<h2 id="Creating-Debian-Container"><a href="#Creating-Debian-Container" class="headerlink" title="Creating Debian Container"></a>Creating Debian Container</h2><pre><code>根据镜像创建容器
+
+--name指定容器名字，选择tag v2，-p将本机的20022端口映射到容器的22端口（即ssh端口，通过ssh连接本机的20022端口就可以连接到容器），
+</code></pre><p><img src="http://store.nightmare.xin/eccbc87e4b5ce2fe28308fd9f2a7baf3.png" alt=""></p>
+<h1 id="First-Exploration-with-GNU-Linux"><a href="#First-Exploration-with-GNU-Linux" class="headerlink" title="First Exploration with GNU/Linux"></a>First Exploration with GNU/Linux</h1><h2 id="SSH-Configuration"><a href="#SSH-Configuration" class="headerlink" title="SSH Configuration"></a>SSH Configuration</h2><pre><code>ssh连接到本地的20022端口（该端口映射容器的ssh端口）
+
+-p指定端口号，username是前边添加的用户名，localhost选择本机，配置好用户名，主机号，连接端口后就可以直接使用putty连接容器了
+</code></pre><p><img src="http://store.nightmare.xin/a87ff679a2f3e71d9181a67b7542122c.png" alt=""></p>
+<h2 id="First-exploration"><a href="#First-exploration" class="headerlink" title="First exploration"></a>First exploration</h2><pre><code>使用ssh连接到容器（debian）
+
+用户名是之前设置的，主机名可以修改为自己喜欢的名字，我修改了./bashrc以便登录时直接进入到工作目录（方便做pa1）
+</code></pre><p><img src="http://store.nightmare.xin/d2a37a9a62bec1cd830223cfc7bd0baf.png" alt=""></p>
+<h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><blockquote>
+<p>Where is GUI?</p>
+</blockquote>
+<pre><code>Gui，即graphic user interface，与Cli，command line interface
+
+最近看《x86汇编》，了解到显示器，或者说显卡有两种工作方式。一屏有很多像素点，可以通过设置这些像素点的亮暗和颜色来显示界面，即依次渲染每一个像素点，这是图形界面。第二种实现准备一些字符，这样不必关心该字符每一个像素点是如何渲染的，即命令行界面。因此debian要比windows看起来小得多。
+</code></pre><blockquote>
+<p>Have you wondered if there is something that you can do it in CLI,but can not in GUI? Have no idea? If you are asked to count how many lines of code you have coded during the 程序设计基础 course, what will you do?</p>
+</blockquote>
+<pre><code>图形界面能做的命令行基本都能做，命令行能做的图形界面未必能做，因为图形界面将许多细节封装在黑盒子里我们触碰不到。
+统计行数 cat test.txt | wc –l。
+</code></pre><blockquote>
+<p>why vim is called 编辑器之神.</p>
+</blockquote>
+<pre><code>Vim 支持多种平台，有多种工作模式，各种便利的快捷键。。
+</code></pre><blockquote>
+<p>Why Windows is quite “fat”?</p>
+</blockquote>
+<pre><code>大概是因为桌面系统吧。。
+</code></pre><p>&gt;<br>    最后exit退出登录。</p>
+<h1 id="Installing-Tools"><a href="#Installing-Tools" class="headerlink" title="Installing Tools"></a>Installing Tools</h1><h2 id="Checking-network-state"><a href="#Checking-network-state" class="headerlink" title="Checking network state"></a>Checking network state</h2><pre><code>Ping百度，-c指定ping的次数
+</code></pre><p><img src="http://store.nightmare.xin/2071475516c2e4c025ca20cc3a796168.png" alt=""></p>
+<h2 id="Updating-pakage-information"><a href="#Updating-pakage-information" class="headerlink" title="Updating pakage information"></a>Updating pakage information</h2><pre><code>替换apt源为中科大的源，update从源列表更新信息，upgrade升级本地软件到最新版本。
+
+一些重要的操作需要超级管理员权限，防止误操作造成大的损失吧。。关机当然是很重要的操作。
+</code></pre><h2 id="Install-tools-for-pas"><a href="#Install-tools-for-pas" class="headerlink" title="Install tools for pas"></a>Install tools for pas</h2><pre><code>依次安装build工具包，gdb，git，libreadline-dev，libsdl2-dev，qemu-system-x86
+</code></pre><h2 id="Configuring-vim"><a href="#Configuring-vim" class="headerlink" title="Configuring vim"></a>Configuring vim</h2><pre><code>安装vim，输入vimtutor，学习操作
+配置vim语法高亮（去掉注释）
+学习diff格式
+配置更多vim特性
+</code></pre><h1 id="More-Exploration"><a href="#More-Exploration" class="headerlink" title="More Exploration"></a>More Exploration</h1><h2 id="Learning-to-use-basic-tools"><a href="#Learning-to-use-basic-tools" class="headerlink" title="Learning to use basic tools"></a>Learning to use basic tools</h2><pre><code>学习基本linux知识
+练习hello world
+</code></pre><p><img src="http://store.nightmare.xin/987e7c907b3754c2c256297859d9ffb3.png" alt=""></p>
+<pre><code>学习makefile
+学习gdb
+学习man，为了方便同时安装了man中文手册
+</code></pre><p><img src="http://store.nightmare.xin/26223a03a8150a53c62b0670234c4851.png" alt=""></p>
+<p><img src="http://store.nightmare.xin/3ac1943c40b23d003e9e0bb811110e42.png" alt=""></p>
+<pre><code>学习read the fuck manual
+</code></pre><h2 id="Install-tmux"><a href="#Install-tmux" class="headerlink" title="Install tmux"></a>Install tmux</h2><pre><code>安装使用tmux
+</code></pre><p><img src="http://store.nightmare.xin/c5fc3450f457b4ce88e769cc25a3b258.png" alt=""></p>
+<blockquote>
+<p>滚动条?</p>
+</blockquote>
+<pre><code>《x86汇编：从实模式到保护模式》有一章使用汇编实现了滚动条，即下滚一行就是将每一行的字符依次重新写到上一行，第一行存入内存，最后一行使用默认的黑色背景空字符。
+</code></pre><blockquote>
+<p>Transfer files betwoon host and container？</p>
+</blockquote>
+<pre><code>我使用的是xftp，如果是在ubuntu和docker传文件的话就用scp
+</code></pre><p><img src="http://store.nightmare.xin/68208c81cb8beeae85f58fb8efa79e02.png" alt=""></p>
+<p><img src="http://store.nightmare.xin/2ad3d65d1a1aad9b7422c1f3954b7fca.png" alt=""></p>
+<p><img src="http://store.nightmare.xin/ee3cf09c2ef5bb06fd08ddfc3e74440a.png" alt=""></p>
+<h1 id="Acquire-source-code-for-pas"><a href="#Acquire-source-code-for-pas" class="headerlink" title="Acquire source code for pas"></a>Acquire source code for pas</h1><h2 id="Getting-source-code"><a href="#Getting-source-code" class="headerlink" title="Getting source code"></a>Getting source code</h2><blockquote>
+<p>为什么不使用root账户做实验</p>
+</blockquote>
+<pre><code>因为容易误操作造成重大灾难。
+</code></pre><p>&gt;<br>    git clone 代码到本地<br>    配置git<br>    切换分支master<br>    运行git初始化<br>    学习git<br><img src="http://store.nightmare.xin/cfdb221d6a5487249b8f16a9e59ae5de.png" alt=""></p>
+<pre><code>我已经commit了, 运行make run，已经做完cpu的配置，所以没错误（切换到了pa1）。。
+</code></pre><p><img src="http://store.nightmare.xin/7b46593209cb61e2e5e2eb0bff2bd01e.png" alt=""></p>
+<p><img src="http://store.nightmare.xin/fc29afb1f09a66c6e3489dd42b457924.png" alt=""></p>
+<p><img src="http://store.nightmare.xin/ac7d9a906d6339418a161961dd33d9ec.png" alt=""></p>
+<p><img src="http://store.nightmare.xin/948c8095dd3bd55d81f8ebd1219acfe3.png" alt=""></p>
+<pre><code>gdb正常
+</code></pre><p><img src="http://store.nightmare.xin/85d08050c9d8f25555b0a9094f5328c5.png" alt=""></p>
+<pre><code>文件结构
+</code></pre><p><img src="http://store.nightmare.xin/eb33f58daf8434ced28be3d709ae1797.png" alt=""></p>
+<p>Over</p>
 
       
     </div>
@@ -402,11 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
-          
-            <a href="/tags/Demo/" rel="tag"># Demo</a>
-          
-            <a href="/tags/Makefile/" rel="tag"># Makefile</a>
+            <a href="/tags/code/" rel="tag"># code</a>
           
         </div>
       
@@ -419,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/rainbow.html" rel="next" title="南航计算机学院第六期科创">
-                <i class="fa fa-chevron-left"></i> 南航计算机学院第六期科创
+              <a href="/asp.html" rel="next" title="ASP.NET 课程设计报告">
+                <i class="fa fa-chevron-left"></i> ASP.NET 课程设计报告
               </a>
             
           </div>
@@ -429,8 +512,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/asp.html" rel="prev" title="ASP.NET 课程设计报告">
-                ASP.NET 课程设计报告 <i class="fa fa-chevron-right"></i>
+              <a href="/pa1.html" rel="prev" title="有趣的 PA0">
+                有趣的 PA0 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -643,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00"><span class="nav-number">1.</span> <span class="nav-text">0x00</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01"><span class="nav-number">2.</span> <span class="nav-text">0x01</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02"><span class="nav-number">3.</span> <span class="nav-text">0x02</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PA0-世界诞生的前夜-开发环境配置"><span class="nav-number">1.</span> <span class="nav-text">PA0 - 世界诞生的前夜: 开发环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-a-GNU-Linux-VM"><span class="nav-number">1.1.</span> <span class="nav-text">Installing a GNU/Linux VM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Docker"><span class="nav-number">1.2.</span> <span class="nav-text">Installing Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preparing-Dockerfile"><span class="nav-number">1.3.</span> <span class="nav-text">Preparing Dockerfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-Docker-image"><span class="nav-number">1.4.</span> <span class="nav-text">Building Docker image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-Debian-Container"><span class="nav-number">1.5.</span> <span class="nav-text">Creating Debian Container</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#First-Exploration-with-GNU-Linux"><span class="nav-number">2.</span> <span class="nav-text">First Exploration with GNU/Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-Configuration"><span class="nav-number">2.1.</span> <span class="nav-text">SSH Configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#First-exploration"><span class="nav-number">2.2.</span> <span class="nav-text">First exploration</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题："><span class="nav-number">3.</span> <span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Installing-Tools"><span class="nav-number">4.</span> <span class="nav-text">Installing Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Checking-network-state"><span class="nav-number">4.1.</span> <span class="nav-text">Checking network state</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Updating-pakage-information"><span class="nav-number">4.2.</span> <span class="nav-text">Updating pakage information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-tools-for-pas"><span class="nav-number">4.3.</span> <span class="nav-text">Install tools for pas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configuring-vim"><span class="nav-number">4.4.</span> <span class="nav-text">Configuring vim</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#More-Exploration"><span class="nav-number">5.</span> <span class="nav-text">More Exploration</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Learning-to-use-basic-tools"><span class="nav-number">5.1.</span> <span class="nav-text">Learning to use basic tools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-tmux"><span class="nav-number">5.2.</span> <span class="nav-text">Install tmux</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Acquire-source-code-for-pas"><span class="nav-number">6.</span> <span class="nav-text">Acquire source code for pas</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-source-code"><span class="nav-number">6.1.</span> <span class="nav-text">Getting source code</span></a></li></ol></li></ol></div>
             
 
           </div>
