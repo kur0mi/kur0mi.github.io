@@ -486,7 +486,7 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 16px;
   color: #eaeaea;
   background: #000;
   line-height: 1.6;
@@ -501,12 +501,13 @@ code {
   color: #fff;
   background: #00f;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 16px;
 }
 pre {
   padding: 10px;
 }
 pre code {
+  font-size: 16px;
   padding: 0;
   color: #eaeaea;
   background: none;
@@ -558,6 +559,7 @@ pre code {
   background-color: #292929;
 }
 .highlight .code pre {
+  font-size: 16px;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
@@ -1860,7 +1862,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1a2a73;
+  background: #85ff74;
 }
 .links-of-blogroll {
   font-size: 13px;
