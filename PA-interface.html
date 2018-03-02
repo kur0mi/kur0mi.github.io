@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="code," />
+  <meta name="keywords" content="PAs," />
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="介绍 PA 中一些接口函数">
-<meta name="keywords" content="code">
+<meta name="description" content="介绍 PA 中一些好用的接口函数">
+<meta name="keywords" content="PAs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pa2_push&amp;pop">
-<meta property="og:url" content="https://blog.nightmare.xin/pa2-push-pop.html">
+<meta property="og:title" content="PA - 接口相关">
+<meta property="og:url" content="https://blog.nightmare.xin/PA-interface.html">
 <meta property="og:site_name" content="kur0mi&#39;s blog">
-<meta property="og:description" content="介绍 PA 中一些接口函数">
+<meta property="og:description" content="介绍 PA 中一些好用的接口函数">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-02-19T10:16:40.191Z">
+<meta property="og:updated_time" content="2018-03-02T06:53:16.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pa2_push&amp;pop">
-<meta name="twitter:description" content="介绍 PA 中一些接口函数">
+<meta name="twitter:title" content="PA - 接口相关">
+<meta name="twitter:description" content="介绍 PA 中一些好用的接口函数">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.nightmare.xin/pa2-push-pop.html"/>
+  <link rel="canonical" href="https://blog.nightmare.xin/PA-interface.html"/>
 
 
 
 
 
-  <title>pa2_push&pop | kur0mi's blog</title>
+  <title>PA - 接口相关 | kur0mi's blog</title>
   
 
 
@@ -271,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/pa2-push-pop.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.nightmare.xin/PA-interface.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kur0mi">
@@ -288,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pa2_push&pop</h1>
+          <h1 class="post-title" itemprop="name headline">PA - 接口相关</h1>
         
 
         <div class="post-meta">
@@ -347,7 +347,7 @@
 
           
               <div class="post-description">
-                  介绍 PA 中一些接口函数
+                  介绍 PA 中一些好用的接口函数
               </div>
           
 
@@ -367,40 +367,88 @@
         <h2 id="接口函数"><a href="#接口函数" class="headerlink" title="接口函数"></a>接口函数</h2><blockquote>
 <p>PA 中有许多接口函数，可以供我们直接调用，特别方便，但是得先了解各个参数和功能，现在把它们总结在这里，方便以后查阅</p>
 </blockquote>
+<pre><code>以下将guest客户地址写做虚拟地址，将host地址写做实际地址。
+</code></pre><blockquote>
 <p>地址转换</p>
 <ol>
 <li>guest_to_host(p)</li>
-<li>host_to_guest(p)</li>
 </ol>
+</blockquote>
+<pre><code>将一个 uint32_t 类型的虚拟地址转换为 void * 的实际地址
+</code></pre><ol>
+<li><p>host_to_guest(p)</p>
+<p> 与上一个相反</p>
+</li>
+</ol>
+<blockquote>
 <p>I/O 相关</p>
 <ol>
 <li>uint32_t vaddr_read(vaddr_t, int);</li>
-<li>uint32_t paddr_read(paddr_t, int);</li>
-<li>void vaddr_write(vaddr_t, int, uint32_t);</li>
-<li>void paddr_write(paddr_t, int, uint32_t);</li>
 </ol>
+</blockquote>
+<pre><code>从虚拟地址 vaddr_t 出读取 int 字节的数据，最多为四个字节。
+</code></pre><ol>
+<li><p>uint32_t paddr_read(paddr_t, int);</p>
+<p> 和上一个没什么区别。。可能以后会改吧。</p>
+</li>
+<li><p>void vaddr_write(vaddr_t, int, uint32_t);</p>
+<p> 将 int 字节的数据 uint32_t 写入虚拟地址 vaddr_t，</p>
+</li>
+<li><p>void paddr_write(paddr_t, int, uint32_t);</p>
+<p> 同上。。</p>
+</li>
+</ol>
+<blockquote>
 <p>ModRM 相关</p>
 <ol>
-<li>void operand_write(Operand <em>, rtlreg_t </em>);  // 将右边指针指向的值 写入 左边的操作数</li>
+<li>void operand_write(Operand <em>, rtlreg_t </em>);</li>
 </ol>
+</blockquote>
+<pre><code>将右边指针指向的数据 写入 左边的操作数（reg or mem）
+</code></pre><blockquote>
 <p>译码相关</p>
 <ol>
-<li>make_DHelper(I);    // 读取一个立即数，保存在 id_dest</li>
-<li>make_DHelper(r);    // 从 opcode 低三位获得寄存器编号，保存在 id_dest</li>
-<li>make_DHelper(E);    // 解析一个通用寄存器或内存操作数，保存在 id_dest</li>
-<li>make_DHelper(gp7_E);    //  与上近似，但不载入 value</li>
-<li>make_DHelper(J);    // 解析 jmp_eip</li>
+<li>make_DHelper(XXX);</li>
 </ol>
+</blockquote>
+<pre><code>宏展开：decode_xxx 函数
+</code></pre><ol>
+<li><p>make_EHelper(XXX);</p>
+<p> 宏展开：exec_xxx 函数</p>
+</li>
+<li><p>make_DopHelper(XXX);</p>
+<p> 宏展开：decode_op_xxx 函数</p>
+</li>
+</ol>
+<blockquote>
 <p>前缀</p>
 <ol>
-<li>make_EHelper(operand_size); // 操作数前缀，转为 16 位操作数</li>
-<li>static make_EHelper(2byte_esc); // 双字节指令前缀</li>
+<li>make_EHelper(operand_size);</li>
 </ol>
+</blockquote>
+<pre><code>操作数前缀，转为 16 位操作数
+</code></pre><ol>
+<li><p>static make_EHelper(2byte_esc);</p>
+<p> 双字节指令前缀</p>
+</li>
+</ol>
+<blockquote>
 <p>杂项</p>
 <ol>
-<li>make_group(name, …);      // group 类型，需要进一步解析 ModRM 的 reg/opcode 字节 来确定真正的指令</li>
-<li>make_EHelper(real);         // 读取操作码，操作码写入 decoding.opcode，操作数宽度写入 src(dest, src1).width，然后执行 opcode_table 中的 译码函数 和 解码函数</li>
-<li>IDEXW(id, ex, w);           // 将要用到的，译码函数 decode_id， 执行函数 exec_ex，操作数宽度 w</li>
+<li>make_group(name, …);</li>
+</ol>
+</blockquote>
+<pre><code>group 类型，需要进一步解析 ModRM 的 reg/opcode 字节 来确定真正的指令
+</code></pre><ol>
+<li><p>make_EHelper(real);</p>
+<p> 读取操作码，操作码写入 decoding.opcode，操作数宽度写入 src(dest, src1).width，然后执行 opcode_table 中的 译码函数 和 解码函数</p>
+</li>
+<li><p>IDEXW(id, ex, w);</p>
+<p> 将要用到的，译码函数 decode_id， 执行函数 exec_ex，操作数宽度 w</p>
+</li>
+<li><p>idex(vaddr_t <em> eip, opcode_entry </em> e);</p>
+<p> 解码（instr decode）和执行（execute）</p>
+</li>
 </ol>
 <hr>
 <hr>
@@ -410,7 +458,6 @@
 <hr>
 <hr>
 <hr>
-<p>至于 push 和 pop 的实现，看 <a href="http://www.logix.cz/michal/doc/i386/" target="_blank" rel="external">i386手册</a> 的 <a href="http://www.logix.cz/michal/doc/i386/app-a.htm" target="_blank" rel="external">附录A</a> 就好了</p>
 <p>i386 手册: <a href="http://www.logix.cz/michal/doc/i386/" target="_blank" rel="external">地址</a></p>
 <p>参考手册: <a href="http://www.fermimn.gov.it/linux/quarta/x86/index.htm" target="_blank" rel="external">地址</a></p>
 <p>推荐通过附录A中的 opcode_map 和 opcode_table 了解指令</p>
@@ -431,7 +478,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/code/" rel="tag"># code</a>
+            <a href="/tags/PAs/" rel="tag"># PAs</a>
           
         </div>
       

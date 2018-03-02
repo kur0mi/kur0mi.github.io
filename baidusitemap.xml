@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://blog.nightmare.xin/PA-eflags.html</loc>
-    <lastmod>2018-03-02T06:01:42.864Z</lastmod>
+    <loc>https://blog.nightmare.xin/PA-interface.html</loc>
+    <lastmod>2018-03-02T06:53:16.678Z</lastmod>
     <data>
         <display>
-        <title>PA - 标志位相关</title>
-        <pubTime>2018-03-02T04:47:23.000Z</pubTime>
+        <title>PA - 接口相关</title>
+        <pubTime>2018-02-19T09:05:11.000Z</pubTime>
         
         <tag>PAs</tag>
          
@@ -24,14 +24,14 @@
 
     
   <url>
-    <loc>https://blog.nightmare.xin/pa2-push-pop.html</loc>
-    <lastmod>2018-02-19T10:16:40.191Z</lastmod>
+    <loc>https://blog.nightmare.xin/PA-eflags.html</loc>
+    <lastmod>2018-03-02T06:01:42.864Z</lastmod>
     <data>
         <display>
-        <title>pa2_push&pop</title>
-        <pubTime>2018-02-19T09:05:11.000Z</pubTime>
+        <title>PA - 标志位相关</title>
+        <pubTime>2018-03-02T04:47:23.000Z</pubTime>
         
-        <tag>code</tag>
+        <tag>PAs</tag>
          
          
            
