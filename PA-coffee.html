@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="kur0mi&#39;s blog">
 <meta property="og:description" content="一些乱七八糟的东西">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-03-03T13:44:33.907Z">
+<meta property="og:updated_time" content="2018-03-03T13:56:02.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PA - 杂项">
 <meta name="twitter:description" content="一些乱七八糟的东西">
@@ -380,6 +380,11 @@
 <h2 id="C代码格式化"><a href="#C代码格式化" class="headerlink" title="C代码格式化"></a>C代码格式化</h2><p>按unix内核的格式格式化，还需要修改indent的配置文件，具体在哪忘了。。</p>
 <p>附带一些格式化之后的更正和备份文件的删除</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> file <span class="keyword">in</span> `find . -<span class="built_in">type</span> f -name <span class="string">"*.[ch]"</span>`</div><div class="line"><span class="keyword">do</span></div><div class="line">	indent <span class="variable">$file</span></div><div class="line">	sed -i <span class="string">'s/2 byte_esc/2byte_esc/g'</span> <span class="variable">$file</span></div><div class="line">	sed -i <span class="string">'s/0 b/0b/g'</span> <span class="variable">$file</span></div><div class="line">	sed -i <span class="string">'s/- &gt;/-&gt;/g'</span> <span class="variable">$file</span></div><div class="line">	sed -i <span class="string">'s/retrun/return/g'</span> <span class="variable">$file</span></div><div class="line"><span class="keyword">done</span></div><div class="line">find . -<span class="built_in">type</span> f -name <span class="string">"*.orig"</span> | xargs rm</div><div class="line">find . -<span class="built_in">type</span> f -name <span class="string">"*~"</span> | xargs rm</div><div class="line">find . -<span class="built_in">type</span> f -name <span class="string">"*.swp"</span> | xargs rm</div><div class="line">find . -<span class="built_in">type</span> f -name <span class="string">"*.swo"</span> | xargs rm</div></pre></td></tr></table></figure>
+<h2 id="符号位扩展-和-零扩展"><a href="#符号位扩展-和-零扩展" class="headerlink" title="符号位扩展 和 零扩展"></a>符号位扩展 和 零扩展</h2><p>参与运算的两个数位数不一致时，就需要对其中一个数进行数位扩展</p>
+<p>符号位扩展： 若符号位是1，则高位全部扩展为1；若符号位是0，高位全部扩展为0。</p>
+<p>至于零扩展，无论如何，高位都扩展为0。</p>
+<p>当你想要参与运算的是一个有符号数时，就进行符号扩展；当你想要进行无符号数运算时，就进行零扩展。</p>
+<p>简单来说，也就是计算时心里要有B数。</p>
 
       
     </div>
@@ -630,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#高亮显示文本"><span class="nav-number">1.</span> <span class="nav-text">高亮显示文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-列编辑模式"><span class="nav-number">2.</span> <span class="nav-text">vim 列编辑模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-批量修改替换-字符串"><span class="nav-number">3.</span> <span class="nav-text">vim 批量修改替换 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C代码格式化"><span class="nav-number">4.</span> <span class="nav-text">C代码格式化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#高亮显示文本"><span class="nav-number">1.</span> <span class="nav-text">高亮显示文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-列编辑模式"><span class="nav-number">2.</span> <span class="nav-text">vim 列编辑模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-批量修改替换-字符串"><span class="nav-number">3.</span> <span class="nav-text">vim 批量修改替换 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C代码格式化"><span class="nav-number">4.</span> <span class="nav-text">C代码格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#符号位扩展-和-零扩展"><span class="nav-number">5.</span> <span class="nav-text">符号位扩展 和 零扩展</span></a></li></ol></div>
             
 
           </div>
