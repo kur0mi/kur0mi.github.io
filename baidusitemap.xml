@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://blog.nightmare.xin/PA-coffee.html</loc>
+    <lastmod>2018-03-03T13:38:36.756Z</lastmod>
+    <data>
+        <display>
+        <title>PA - 杂项</title>
+        <pubTime>2018-03-03T13:12:40.000Z</pubTime>
+        
+        <tag>PAs</tag>
+         
+         
+           
+             
+              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.nightmare.xin/PA-interface.html</loc>
     <lastmod>2018-03-02T07:02:31.464Z</lastmod>
     <data>
@@ -113,11 +133,11 @@
         
         <tag>python</tag>
          
-        <tag>工具</tag>
-         
         <tag>ahk</tag>
          
         <tag>翻译</tag>
+         
+        <tag>工具</tag>
          
          
            
@@ -137,13 +157,13 @@
         <title>快速获取markdown图片链接</title>
         <pubTime>2017-10-22T14:39:47.000Z</pubTime>
         
+        <tag>工具</tag>
+         
         <tag>markdown</tag>
          
         <tag>图床</tag>
          
         <tag>七牛云</tag>
-         
-        <tag>工具</tag>
          
          
            
@@ -165,11 +185,11 @@
         
         <tag>python</tag>
          
+        <tag>ahk</tag>
+         
         <tag>工具</tag>
          
         <tag>截图</tag>
-         
-        <tag>ahk</tag>
          
          
            

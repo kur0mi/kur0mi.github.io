@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2018-03-02T06:12:59.826Z</updated>
+  <updated>2018-03-03T13:38:36.756Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PA - 杂项</title>
+    <link href="https://blog.nightmare.xin/PA-coffee.html"/>
+    <id>https://blog.nightmare.xin/PA-coffee.html</id>
+    <published>2018-03-03T13:12:40.000Z</published>
+    <updated>2018-03-03T13:38:36.756Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="高亮显示文本"><a href="#高亮显示文本" class="headerlink" title="高亮显示文本"></a>高亮显示文本</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">enum</span> &#123;</div><div class="line">    black = <span class="number">30</span>, red, green, yellow, blue,</div><div class="line">    purple, darkgreen, white</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> kurumi(back, front, format, ...) \</span></div><div class="line">  <span class="keyword">do</span> &#123; \</div><div class="line">      fflush(<span class="built_in">stdout</span>); \</div><div class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stdout</span>, <span class="string">"\x1b[%d;%dm"</span>, back+<span class="number">10</span>, front); \</div><div class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stdout</span>, format, ## __VA_ARGS__); \</div><div class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stdout</span>, <span class="string">"\x1b[0m"</span>); \</div><div class="line">  &#125; <span class="keyword">while</span> (<span class="number">0</span>)</div></pre></td></tr></table></figure><p>调用方式： kurumi(背景色, 前景色, 格式字符串, 参数表列);</p><p>也可以进一步封装。</p><p>参考文章: <a href="http://blog.csdn.net/feixiaku/article/details/39639553" target="_blank" rel="external">C/C++控制台带颜色功能输出</a></p><h2 id="vim-列编辑模式"><a href="#vim-列编辑模式" class="headerlink" title="vim 列编辑模式"></a>vim 列编辑模式</h2><p>按下 ctrl-v，上下移动可以看到选中的列，此时就可以对它们同时进行编辑</p><ol><li>按下 I（大写 i），在选中内容之前插入</li><li>按下 A，在选中内容之后插入</li><li>按下 d，删除选中内容</li><li>其他快捷键</li></ol><h2 id="vim-批量修改替换-字符串"><a href="#vim-批量修改替换-字符串" class="headerlink" title="vim 批量修改替换 字符串"></a>vim 批量修改替换 字符串</h2><p>:s/XXX/YYY 将当前行的XXX修改为YYY（仅修改第一个XXX）<br>:s/XXX/YYY/g 将当前行的XXX修改为YYY（全部）<br>:3,5s/XXX/YYY/g 修改从第3行到第5行</p><p>先用 V 模式选中块区域，然后按 :（冒号）可以快速对选中内容进行替换<br>:’&lt;,’&gt;s/XXX/YYY/g</p>]]></content>
+    
+    <summary type="html">
+    
+      一些乱七八糟的东西
+    
+    </summary>
+    
+      <category term="PAs" scheme="https://blog.nightmare.xin/categories/PAs/"/>
+    
+    
+      <category term="PAs" scheme="https://blog.nightmare.xin/tags/PAs/"/>
+    
+  </entry>
   
   <entry>
     <title>PA - 标志位相关</title>
@@ -312,11 +334,11 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
     
       <category term="翻译" scheme="https://blog.nightmare.xin/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -340,11 +362,11 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
+      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
+    
       <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="截图" scheme="https://blog.nightmare.xin/tags/%E6%88%AA%E5%9B%BE/"/>
-    
-      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
     
   </entry>
   
@@ -434,13 +456,13 @@
       <category term="Action" scheme="https://blog.nightmare.xin/categories/Action/"/>
     
     
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
+    
       <category term="markdown" scheme="https://blog.nightmare.xin/tags/markdown/"/>
     
       <category term="图床" scheme="https://blog.nightmare.xin/tags/%E5%9B%BE%E5%BA%8A/"/>
     
       <category term="七牛云" scheme="https://blog.nightmare.xin/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
-    
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -467,32 +489,6 @@
       <category term="比赛" scheme="https://blog.nightmare.xin/tags/%E6%AF%94%E8%B5%9B/"/>
     
       <category term="南航" scheme="https://blog.nightmare.xin/tags/%E5%8D%97%E8%88%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第四届世安杯比赛</title>
-    <link href="https://blog.nightmare.xin/test.html"/>
-    <id>https://blog.nightmare.xin/test.html</id>
-    <published>2017-10-21T01:43:47.000Z</published>
-    <updated>2017-10-30T11:19:25.987Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第四届世安杯划水日记"><a href="#第四届世安杯划水日记" class="headerlink" title="第四届世安杯划水日记"></a>第四届世安杯划水日记</h1><p>两位队友的文章 @a-lie-Z<a href="http://qrzbing.cn/2017/CTF_WriteUp171008.html#more" target="_blank" rel="external">链接地址</a> 和 @primykq<a href="https://primykq.top/2017/10/08/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E4%B8%96%E5%AE%89%E6%9D%AF%E9%85%B1%E6%B2%B9%E8%AE%B0/" target="_blank" rel="external">链接地址</a></p><h2 id="ctf入门级题目"><a href="#ctf入门级题目" class="headerlink" title="ctf入门级题目"></a>ctf入门级题目</h2><p>ereg传入数组时不会返回FALSE，strpos传入数组也不会反回FALSE…</p><p>此外ereg还可以使用%00截断</p><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><p>php代码审计的题，很喜欢</p><p>对于x1，注意到case 0后边没有break，直接传入<strong>x1=0</strong>即可</p><p>对于x2，构造json字符串。其中x21不能为数字且x21&gt;”2017”，传入<strong>x21=2018a</strong>。x22出题点应该是array_search是弱比较，只需要有一个键为0，就可以绕过。</p><p>对于x3，直接md5碰撞，脚本大概长这样…<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?php</span></span></div><div class="line"><span class="php">$a = <span class="string">'1'</span>;</span></div><div class="line"><span class="php">$s = <span class="string">'XIPU'</span>;</span></div><div class="line"><span class="php"><span class="keyword">while</span>(<span class="number">1</span>)</span></div><div class="line"><span class="php">&#123;</span></div><div class="line"><span class="php">    $x3 = $s + $a;</span></div><div class="line"><span class="php">    substr(md5($x3),<span class="number">8</span>,<span class="number">16</span>) == substr(md5(<span class="string">'15562'</span>),<span class="number">8</span>,<span class="number">16</span>)?<span class="keyword">die</span>($x3):$a++;</span></div><div class="line"><span class="php">&#125;</span></div><div class="line"><span class="php"><span class="meta">?&gt;</span></span></div></pre></td></tr></table></figure></p><h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>右键查看源码发现提示，密码为五位数字，想到爆破。看一下验证码，猜想应该是第一次请求会生成vcode并保存在session，后面每一次请求与保存的vcode比对并生成新的vcode。所以写脚本每次请求需要带入phpsessid（一开始没注意导致一直抓不到验证vcode的页面，还以为出bug了…）</p><p>基于此，写python脚本爆破，这里又踩了一个坑，没错，我是从10000开始爆破的，五位数字…只想说人生经验还不够丰富</p><p>好像burp可以用intruder模块直接爆破，有一个选项是可以使用返回的页面作为下一次请求的参数，很适合这个题。</p><h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p>php://input伪协议+未处理的post数据绕过第一层，然后利用include+php://filter/read=convert.base64-encode/class.php读源码，这里很好奇无法读取flag.php。</p><p>先读取index.php发现对$file参数做了过滤.构造序列化字符串（其中需要给一个变量赋值），然后程序执行echo调用_toString，就可以getflag。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>然后就…没有了。 </p><p>不说了，虽然菜，但还是玩的很开心的。</p><p>ps: 希望下午校赛可以取得好成绩</p>]]></content>
-    
-    <summary type="html">
-    
-      本来没写的，看到两位队友都写了，就顺手记录一下吧，整理在一起做个纪念
-    
-    </summary>
-    
-      <category term="CTF" scheme="https://blog.nightmare.xin/categories/CTF/"/>
-    
-    
-      <category term="世安杯" scheme="https://blog.nightmare.xin/tags/%E4%B8%96%E5%AE%89%E6%9D%AF/"/>
-    
-      <category term="CTF" scheme="https://blog.nightmare.xin/tags/CTF/"/>
-    
-      <category term="比赛" scheme="https://blog.nightmare.xin/tags/%E6%AF%94%E8%B5%9B/"/>
     
   </entry>
   
