@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2018-03-03T13:56:02.507Z</updated>
+  <updated>2018-03-08T06:00:16.719Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PA - 一些坑</title>
+    <link href="https://blog.nightmare.xin/PA-questions.html"/>
+    <id>https://blog.nightmare.xin/PA-questions.html</id>
+    <published>2018-03-08T05:44:34.000Z</published>
+    <updated>2018-03-08T06:00:16.719Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="6A-push-Ib"><a href="#6A-push-Ib" class="headerlink" title="6A: push Ib"></a>6A: push Ib</h2><p>问题首先发现是在这里 tests/add.c</p><p><img src="http://store.nightmare.xin/8fed1493aadb125b2bfce8281dbb886f.png" alt=""></p><p>main 中循环判断 add 的结果是否正确。</p><p>关键汇编代码如下</p><p><img src="http://store.nightmare.xin/d00409d09a259573be913a94e8d2ba31.png" alt=""></p><p>ebx 记录循环次数，每次减一，减到0结束循环，问题的关键出在这里边。通过手动修改，我发现循环次数大于4就会出问题，报很奇怪的错误。</p><p>通过手动查看代码发现问题</p><p><img src="http://store.nightmare.xin/e567ba9ca5f43fa0a2cea583a805576c.jpg" alt=""></p><p>em… 6a 01 在opcode table解释为 push Ib，这给人一种误解，是push一个字节，然后我上网搜索不能push一个字节，需要对单字节扩展。</p><p>所以处理 push Ib 的时候对单字节操作数进行符号扩展就好了。</p>]]></content>
+    
+    <summary type="html">
+    
+      PA 中遇到过的神坑，必看。调几天都调不出来的那种。正所谓，千行代码两茫茫，bug何处藏...
+    
+    </summary>
+    
+      <category term="PAs" scheme="https://blog.nightmare.xin/categories/PAs/"/>
+    
+    
+      <category term="PAs" scheme="https://blog.nightmare.xin/tags/PAs/"/>
+    
+  </entry>
   
   <entry>
     <title>PA - 杂项</title>
@@ -334,11 +356,11 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
+    
       <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
     
       <category term="翻译" scheme="https://blog.nightmare.xin/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -362,11 +384,11 @@
     
       <category term="python" scheme="https://blog.nightmare.xin/tags/python/"/>
     
-      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
-    
       <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="截图" scheme="https://blog.nightmare.xin/tags/%E6%88%AA%E5%9B%BE/"/>
+    
+      <category term="ahk" scheme="https://blog.nightmare.xin/tags/ahk/"/>
     
   </entry>
   
@@ -456,39 +478,13 @@
       <category term="Action" scheme="https://blog.nightmare.xin/categories/Action/"/>
     
     
-      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="markdown" scheme="https://blog.nightmare.xin/tags/markdown/"/>
     
       <category term="图床" scheme="https://blog.nightmare.xin/tags/%E5%9B%BE%E5%BA%8A/"/>
     
       <category term="七牛云" scheme="https://blog.nightmare.xin/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
     
-  </entry>
-  
-  <entry>
-    <title>2017年南航CTF校赛</title>
-    <link href="https://blog.nightmare.xin/test2.html"/>
-    <id>https://blog.nightmare.xin/test2.html</id>
-    <published>2017-10-22T02:46:26.000Z</published>
-    <updated>2017-10-30T11:19:50.920Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="CTF校赛"><a href="#CTF校赛" class="headerlink" title="CTF校赛"></a>CTF校赛</h1><p>本来想趁着学校大佬们都去打天翼杯，然后校赛混个奖什么的，然而，哈哈没有然而，确实被我们混到了，排名第四，校内队伍第二。 作为第一次参加这种 <strong>比较</strong> 正式的比赛也是一个好的开始。</p><p>最出乎意料的是，这次比赛比预想中难了好多好多好多。差点心态就炸了，不过还好队友们相互鼓励还是坚持了下来。</p><p>现在将这次比赛过程记录如下：</p><h2 id="MISC1-–"><a href="#MISC1-–" class="headerlink" title="MISC1 ++–"></a>MISC1 ++–</h2><p>看到问题立马想到了BrainFuck，然而打开一看却是各种颜文字…</p><p>参考文章: <a href="https://qing.su/article/119.html，" target="_blank" rel="external">https://qing.su/article/119.html，</a></p><p>注意到BrainFuck的结构，观察前部结构：</p><p>‘<strong>( ͡° ͜ʖ ͡°)</strong>‘由’<strong>+</strong>‘替代;</p><p>‘<strong>( ͡°(</strong>‘由’<strong>[</strong>‘替代，对应地，’<strong>) ͡°)</strong>‘由’<strong>]</strong>‘替代;</p><p>‘<strong>ᕦ( ͡°ヮ ͡°)ᕥ</strong>‘由’<strong>&gt;</strong>‘替代。</p><p>之后观察后面的结构：</p><p>‘<strong>(&gt; ͜ʖ(∩ ͡° ͜ʖ ͡°)⊃━☆ﾟ.*)</strong>‘由’<strong>.</strong>‘替代;</p><p>‘<strong>(♥ ͜ʖ♥)</strong>‘由’<strong>-</strong>‘替代;</p><p>‘<strong>(∩ ͡° ͜ʖ ͡°)⊃━☆ﾟ.*</strong>‘由’<strong>&lt;</strong>‘替代。</p><p>至此，我们可以得到正确的BrainFuck表达式</p><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="title">[</span>&gt;<span class="literal">+</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&lt;&lt;&lt;&lt;<span class="literal">-</span><span class="title">]</span></div><div class="line">&gt;&gt;&gt;&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line">&lt;<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line">&gt;<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line">&lt;<span class="string">.</span></div><div class="line">&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div><div class="line"><span class="literal">-</span><span class="literal">-</span><span class="string">.</span></div><div class="line"><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div></pre></td></tr></table></figure><p>在网站: <a href="https://sange.fi/esoteric/brainfuck/impl/interp/i.html" target="_blank" rel="external">https://sange.fi/esoteric/brainfuck/impl/interp/i.html</a> 上解密，得到flag</p><p><img src="http://oxhwf4emp.bkt.clouddn.com/NUAACTF_Brainfuck.png" alt=""></p><h2 id="MISC3-recover"><a href="#MISC3-recover" class="headerlink" title="MISC3 recover"></a>MISC3 recover</h2><p>（吐槽一下，在chrome输flag，没有选中的话是看不见的。。。）</p><p>下载后发现是个png图片，但打不开</p><p>第一反应是去改文件头，还是选择先strings一下</p><p>然后就有了点惊喜</p><p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fkq1rmhz6ej30sn03bq2v.jpg" alt=""></p><p>瞄了一眼已解决列表，卧槽，已经7个队伍了，论抢一血的重要性哇</p><p>话说300分是不是多了点。。。。。。</p><h2 id="web50"><a href="#web50" class="headerlink" title="web50"></a>web50</h2><p>因为每道题的一血(第一个做出来的)有额外加分嘛，然后就准备抢一血。 刷新网页，点开sign-in题，右键源码，找到flag，提交，失败…而且输入框也有问题，不能显示。 然后过了几分钟，应该是被主办方修好了，我们运气不错拿到了一血。</p><h2 id="web100"><a href="#web100" class="headerlink" title="web100"></a>web100</h2><p>题目是sign-up，点开题目地址，主要有<strong>注册</strong>，<strong>登录</strong>，<strong>注销</strong>三个功能。试了一下随便注册一个账号都可以登录。一时没有其他思路就用awvs扫了一下，扫出来一个index.php.bak和scehma.sql文件，基本确定应该是属于源码泄露的题。然后对着源码开始审计，发现需要修改一个字段，试着用 <strong>me’ union select 1#</strong> 注入失败，一直到比赛结束都没做出来… 感觉这里应该是有过滤。</p><h2 id="web150"><a href="#web150" class="headerlink" title="web150"></a>web150</h2><p><img src="http://oxm4hc2s3.bkt.clouddn.com/3.png" alt=""></p><p>题目循环检测alert并删除，试了各种编码无效，去做web300的时候才想到jsfuck编码，可以绕过检测并且由js解析。</p><p>当然要先闭合前边的引号，后边可以闭合或直接注释掉。</p><h2 id="web200"><a href="#web200" class="headerlink" title="web200"></a>web200</h2><p>这道题就是真的坑了，参数 <strong>?file=flag</strong> 没有显示任何内容，试着%00截断返回错误信息，包括文件包含路径<strong>include_path=’/usr/local/php’</strong>和当前路径<strong>/app/xxx/index.php</strong>。</p><p>然后当我输入绝对路径就会显示</p><blockquote><p>you want to search with root path, huh?</p></blockquote><p>输入相对路径就显示</p><blockquote><p>you want to search with apparent path, huh?</p></blockquote><p>那个 <strong>huh</strong> 真是巨嘲讽，各种尝试都失败了，最后也没做出来，赛后才知道只需要用 <strong>php://filter/read=convert.base64-encode/resource=flag</strong> 就可以了，，我记得我当时这样试过，但貌似哪里出错了就放弃了。还是经验不够。</p><h2 id="web300"><a href="#web300" class="headerlink" title="web300"></a>web300</h2><p>这就是这次比赛最开心的一道题了，进去之后发现正则匹配对输入进行了过滤，’[^[]!+]+/g’，也就是说只能使用 <strong>[]!+</strong> 四个字符进行构造，eval(input)可以对input进行js解析，综合题意，只要可以使用eval(input)构造出’alert’字符串即可。</p><p>一开始当然直接jsfuck，然后由于 <strong>()</strong> 被过滤掉了就fail了。然后各种困惑，各种google之后，get到jsfuck的编码方式，就解开了本题。记录如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">以下内容基于</div><div class="line">[]      =&gt;  []</div><div class="line"></div><div class="line">然后!可以将类型转化为布尔型</div><div class="line">![]     =&gt;  false</div><div class="line">!![]    =&gt;  true</div><div class="line"></div><div class="line">+可以将类型转化为整形</div><div class="line">+![]    =&gt;  0</div><div class="line">+!![]   =&gt;  1</div><div class="line">!![]+!![]   =&gt;  2 </div><div class="line"></div><div class="line">然后+[]可以转化为字符串</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line"></div><div class="line">类似于数组取下标</div><div class="line">(![]+[])[+!![]] =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">然后就可以类似的从&apos;false&apos;, &apos;true&apos;中读出&apos;a&apos;,&apos;l&apos;,&apos;e&apos;,&apos;r&apos;,&apos;t&apos;。</div><div class="line"></div><div class="line">em...但是...题目过滤了小括号。需要绕一下</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line">[![]+[]]    =&gt;  [&apos;false&apos;]</div><div class="line">[![]+[]][+[]]    =&gt;  &apos;false&apos;</div><div class="line">[![]+[]][+[]][+!![]]    =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">最后用加号拼起来即可。</div><div class="line">这题最后一半靠蒙，\笑哭\笑哭</div></pre></td></tr></table></figure><p>截图如下：<br><img src="http://oxm4hc2s3.bkt.clouddn.com/4.png" alt=""></p><p><img src="http://oxm4hc2s3.bkt.clouddn.com/2.png" alt=""></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>开心，也有点小遗憾吧，路还很长啊。</p>]]></content>
-    
-    <summary type="html">
-    
-      趁着学校大佬们都去打天翼杯，然后校赛混了个第四名
-    
-    </summary>
-    
-      <category term="CTF" scheme="https://blog.nightmare.xin/categories/CTF/"/>
-    
-    
-      <category term="CTF" scheme="https://blog.nightmare.xin/tags/CTF/"/>
-    
-      <category term="比赛" scheme="https://blog.nightmare.xin/tags/%E6%AF%94%E8%B5%9B/"/>
-    
-      <category term="南航" scheme="https://blog.nightmare.xin/tags/%E5%8D%97%E8%88%AA/"/>
+      <category term="工具" scheme="https://blog.nightmare.xin/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
