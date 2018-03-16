@@ -44,92 +44,12 @@
 
     
   <url>
-    <loc>https://blog.nightmare.xin/slash/pa1.1.html</loc>
-    <lastmod>2018-03-16T10:30:27.622Z</lastmod>
-    <data>
-        <display>
-        <title>有趣的 PA1</title>
-        <pubTime>2018-01-23T09:58:18.000Z</pubTime>
-        
-        <tag>code</tag>
-         
-         
-           
-             
-              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/slash/pa1.html</loc>
-    <lastmod>2018-03-16T10:27:53.927Z</lastmod>
-    <data>
-        <display>
-        <title>有趣的 PA1</title>
-        <pubTime>2018-01-23T09:58:18.000Z</pubTime>
-        
-        <tag>code</tag>
-         
-         
-           
-             
-              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/slash/PA-questions.html</loc>
-    <lastmod>2018-03-08T06:00:16.719Z</lastmod>
-    <data>
-        <display>
-        <title>PA - 一些坑</title>
-        <pubTime>2018-03-08T05:44:34.000Z</pubTime>
-        
-        <tag>PAs</tag>
-         
-         
-           
-             
-              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.nightmare.xin/PA-questions.html</loc>
     <lastmod>2018-03-08T06:00:16.719Z</lastmod>
     <data>
         <display>
         <title>PA - 一些坑</title>
         <pubTime>2018-03-08T05:44:34.000Z</pubTime>
-        
-        <tag>PAs</tag>
-         
-         
-           
-             
-              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/slash/PA-coffee.html</loc>
-    <lastmod>2018-03-03T13:56:02.507Z</lastmod>
-    <data>
-        <display>
-        <title>PA - 杂项</title>
-        <pubTime>2018-03-03T13:12:40.000Z</pubTime>
         
         <tag>PAs</tag>
          
@@ -164,52 +84,12 @@
 
     
   <url>
-    <loc>https://blog.nightmare.xin/slash/PA-interface.html</loc>
-    <lastmod>2018-03-02T07:02:31.464Z</lastmod>
-    <data>
-        <display>
-        <title>PA - 接口相关</title>
-        <pubTime>2018-02-19T09:05:11.000Z</pubTime>
-        
-        <tag>PAs</tag>
-         
-         
-           
-             
-              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.nightmare.xin/PA-interface.html</loc>
     <lastmod>2018-03-02T07:02:31.464Z</lastmod>
     <data>
         <display>
         <title>PA - 接口相关</title>
         <pubTime>2018-02-19T09:05:11.000Z</pubTime>
-        
-        <tag>PAs</tag>
-         
-         
-           
-             
-              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/slash/PA-eflags.html</loc>
-    <lastmod>2018-03-02T06:12:59.826Z</lastmod>
-    <data>
-        <display>
-        <title>PA - 标志位相关</title>
-        <pubTime>2018-03-02T04:47:23.000Z</pubTime>
         
         <tag>PAs</tag>
          
@@ -232,26 +112,6 @@
         <pubTime>2018-03-02T04:47:23.000Z</pubTime>
         
         <tag>PAs</tag>
-         
-         
-           
-             
-              <breadCrumb title="PAs" url="https://blog.nightmare.xin/categories/PAs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.nightmare.xin/slash/pa0.html</loc>
-    <lastmod>2018-02-19T09:04:07.769Z</lastmod>
-    <data>
-        <display>
-        <title>顺利的 PA0</title>
-        <pubTime>2018-01-20T09:58:18.000Z</pubTime>
-        
-        <tag>code</tag>
          
          
            
@@ -347,9 +207,9 @@
          
         <tag>工具</tag>
          
-        <tag>ahk</tag>
-         
         <tag>截图</tag>
+         
+        <tag>ahk</tag>
          
          
            
