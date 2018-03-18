@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="这篇文章是个坑">
+<meta name="description" content="坑">
 <meta name="keywords" content="Demo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何编写一个快捷的截图工具呢？">
 <meta property="og:url" content="https://blog.nightmare.xin/test6.html">
 <meta property="og:site_name" content="kur0mi&#39;s blog">
-<meta property="og:description" content="这篇文章是个坑">
+<meta property="og:description" content="坑">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2018-03-18T07:00:59.543Z">
+<meta property="og:updated_time" content="2018-03-18T13:10:42.265Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何编写一个快捷的截图工具呢？">
-<meta name="twitter:description" content="这篇文章是个坑">
+<meta name="twitter:description" content="坑">
 
 
 
@@ -323,8 +323,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Action/" itemprop="url" rel="index">
-                    <span itemprop="name">Action</span>
+                  <a href="/categories/Demo/" itemprop="url" rel="index">
+                    <span itemprop="name">Demo</span>
                   </a>
                 </span>
 
@@ -347,7 +347,7 @@
 
           
               <div class="post-description">
-                  这篇文章是个坑
+                  坑
               </div>
           
 
@@ -364,8 +364,8 @@
       
 
       
-        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>各种截图工具似乎都不太好用啊233，win的截取全屏/当前窗口都不太方便，无法截取任意位置，QQ截图用起来要好一些但图片则是默认保存在缓存，自己又不会改，那么…</p>
-<h1 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h1><p>怎么用脚本按自己的想法实现截屏功能呢？想啊想，大致需要这些：</p>
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>各种截图工具似乎都不太好用啊233，win的截取全屏/当前窗口都不太方便，无法截取任意位置，QQ截图用起来要好一些但图片则是默认保存在缓存，自己又不会改，那么…</p>
+<h2 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h2><p>怎么用脚本按自己的想法实现截屏功能呢？想啊想，大致需要这些：</p>
 <ul>
 <li><p>启动截图方便，想法是可以使用autohotkey脚本自定义热键，或者修改注册表将命令添加进右键菜单</p>
 </li>
@@ -376,9 +376,8 @@
 <li><p>截屏完毕之后，修改，保存什么的…</p>
 </li>
 </ul>
-<h1 id="高潮"><a href="#高潮" class="headerlink" title="高潮"></a>高潮</h1><p>学习了python关于操控鼠标的一些API，信心满满的开始了第一步，先截取一个全屏图像试试，于是写下：<br><figure class="highlight julia"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from PIL <span class="keyword">import</span> ImageGrab</div><div class="line"></div><div class="line"><span class="literal">im</span> = ImageGrab.grab()</div><div class="line"><span class="literal">im</span>.show()</div><div class="line"><span class="literal">im</span>.save('test.jpg')</div></pre></td></tr></table></figure></p>
-<p>最后推荐一个看图软件 <strong>FastStone Image Viewer</strong>，不仅截图精确，还很方便修剪</p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>好吧，这个故事结束了，这个截图太好用了233(都说了这篇文章是一个坑)</p>
+<h2 id="废了"><a href="#废了" class="headerlink" title="废了"></a>废了</h2><p>学习了python关于操控鼠标的一些API，信心满满的开始了第一步，先截取一个全屏图像试试，于是写下：<br><figure class="highlight julia"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from PIL <span class="keyword">import</span> ImageGrab</div><div class="line"></div><div class="line"><span class="literal">im</span> = ImageGrab.grab()</div><div class="line"><span class="literal">im</span>.show()</div><div class="line"><span class="literal">im</span>.save('test.jpg')</div></pre></td></tr></table></figure></p>
+<h2 id="——————————————"><a href="#——————————————" class="headerlink" title="——————————————-"></a>——————————————-</h2><p>没有然后了，最后推荐一个看图软件 <strong>FastStone Image Viewer</strong>，不仅截图精确，而且可以很精确的修剪</p>
 
       
     </div>
@@ -502,7 +501,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -645,7 +644,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发展"><span class="nav-number">2.</span> <span class="nav-text">发展</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高潮"><span class="nav-number">3.</span> <span class="nav-text">高潮</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发展"><span class="nav-number">2.</span> <span class="nav-text">发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#废了"><span class="nav-number">3.</span> <span class="nav-text">废了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#——————————————"><span class="nav-number">4.</span> <span class="nav-text">——————————————-</span></a></li></ol></div>
             
 
           </div>
