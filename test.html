@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="世安杯,CTF,比赛," />
+  <meta name="keywords" content="CTF," />
 
 
 
@@ -88,14 +88,14 @@
 
 
 <meta name="description" content="本来没写的，看到两位队友都写了，就顺手记录一下吧，整理在一起做个纪念">
-<meta name="keywords" content="世安杯,CTF,比赛">
+<meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第四届世安杯比赛">
 <meta property="og:url" content="https://blog.nightmare.xin/test.html">
 <meta property="og:site_name" content="kur0mi&#39;s blog">
 <meta property="og:description" content="本来没写的，看到两位队友都写了，就顺手记录一下吧，整理在一起做个纪念">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-10-30T11:19:25.987Z">
+<meta property="og:updated_time" content="2018-03-18T07:00:10.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第四届世安杯比赛">
 <meta name="twitter:description" content="本来没写的，看到两位队友都写了，就顺手记录一下吧，整理在一起做个纪念">
@@ -376,7 +376,7 @@
 <p>好像burp可以用intruder模块直接爆破，有一个选项是可以使用返回的页面作为下一次请求的参数，很适合这个题。</p>
 <h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p>php://input伪协议+未处理的post数据绕过第一层，然后利用include+php://filter/read=convert.base64-encode/class.php读源码，这里很好奇无法读取flag.php。</p>
 <p>先读取index.php发现对$file参数做了过滤.构造序列化字符串（其中需要给一个变量赋值），然后程序执行echo调用_toString，就可以getflag。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>然后就…没有了。 </p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>然后就…没有了。</p>
 <p>不说了，虽然菜，但还是玩的很开心的。</p>
 <p>ps: 希望下午校赛可以取得好成绩</p>
 
@@ -396,11 +396,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/世安杯/" rel="tag"># 世安杯</a>
-          
             <a href="/tags/CTF/" rel="tag"># CTF</a>
-          
-            <a href="/tags/比赛/" rel="tag"># 比赛</a>
           
         </div>
       
@@ -513,7 +509,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -524,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

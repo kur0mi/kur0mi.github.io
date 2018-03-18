@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="hexo,博客," />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -88,7 +88,7 @@
 
 
 <meta name="description" content="今天我翻新了我的博客外观(没错，就是你们现在看到的这样子)，吃饱喝足之后，干脆和我搭建博客的过程一起记录一下吧">
-<meta name="keywords" content="hexo,博客">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次搭建博客全过程">
 <meta property="og:url" content="https://blog.nightmare.xin/test4.html">
@@ -96,7 +96,7 @@
 <meta property="og:description" content="今天我翻新了我的博客外观(没错，就是你们现在看到的这样子)，吃饱喝足之后，干脆和我搭建博客的过程一起记录一下吧">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="http://store.nightmare.xin/54324234.png">
-<meta property="og:updated_time" content="2017-10-30T11:20:38.149Z">
+<meta property="og:updated_time" content="2018-03-18T07:00:40.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次搭建博客全过程">
 <meta name="twitter:description" content="今天我翻新了我的博客外观(没错，就是你们现在看到的这样子)，吃饱喝足之后，干脆和我搭建博客的过程一起记录一下吧">
@@ -378,7 +378,7 @@
 <p>基础的一些配置在hexo根目录下的_config.yml文件中，主题配置在themes/next/_config.yml中，一些个性化配置则需要修改主题目录下的source目录。</p>
 <p>source目录下有css, fonts, images, js, lib五个文件夹，修改颜色背景标题栏大小挂件之类的样式需要去修改css，其他四个文件夹存储渲染页面需要用到的字体，图片，js特效和依赖文件。</p>
 <p>我做的修改如下(均在css文件夹中)：</p>
-<p>在_custom/custom.styl添加<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Custom styles.</span></div><div class="line"><span class="selector-tag">body</span> &#123; </div><div class="line">    <span class="attribute">background</span>: url(/images/GOQS6G4LH2Z1_1000x500.jpg);</div><div class="line">    <span class="attribute">background-size</span>: cover;</div><div class="line">    <span class="attribute">background-repeat</span>: no-repeat;</div><div class="line">    <span class="attribute">background-attachment</span>: fixed;</div><div class="line">    <span class="attribute">background-position</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在_custom/custom.styl添加<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Custom styles.</span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">background</span>: url(/images/GOQS6G4LH2Z1_1000x500.jpg);</div><div class="line">    <span class="attribute">background-size</span>: cover;</div><div class="line">    <span class="attribute">background-repeat</span>: no-repeat;</div><div class="line">    <span class="attribute">background-attachment</span>: fixed;</div><div class="line">    <span class="attribute">background-position</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这样就有了背景图。但是next的Pisces不支持文本半透明，导致图片大部分被遮住了，于是继续修改_schemes/Pisces文件夹。我基本是看到什么改什么，打开hexo s –debug本地调试，一点一点的改，里面碰到一些变量我找了好久找不到它在哪里，比如这样的。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.content-wrap</span> &#123;</div><div class="line">  <span class="attribute">float</span>: right;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">padding</span>: $content-desktop-padding;</div><div class="line">  <span class="attribute">width</span>: $content-desktop;</div><div class="line">  <span class="attribute">min-height</span>: <span class="number">700px</span>;</div></pre></td></tr></table></figure></p>
 <p>于是，，碰到这种变量不知道是什么值我又特别想改，，就直接改了，终于在我的不懈努力下改完了！</p>
 <p>但是！！！最终在我打开variables文件夹后心态崩溃了，里面base.styl(基本样式)和Pisces.styl(Pisces特有的样式)存储了所有这些变量还附带了说明，我如同一个白痴晕晕乎乎瞎改了一遍，在那么一瞬间都想重装next了，想想毕竟是自己的成果，还是就这样吧，何必自己为难自己…</p>
@@ -401,8 +401,6 @@
         <div class="post-tags">
           
             <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-            <a href="/tags/博客/" rel="tag"># 博客</a>
           
         </div>
       
@@ -519,7 +517,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -530,7 +528,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

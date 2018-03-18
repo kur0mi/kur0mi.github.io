@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="CTF,比赛,南航," />
+  <meta name="keywords" content="CTF," />
 
 
 
@@ -88,7 +88,7 @@
 
 
 <meta name="description" content="趁着学校大佬们都去打天翼杯，然后校赛混了个第四名">
-<meta name="keywords" content="CTF,比赛,南航">
+<meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017年南航CTF校赛">
 <meta property="og:url" content="https://blog.nightmare.xin/test2.html">
@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://oxm4hc2s3.bkt.clouddn.com/3.png">
 <meta property="og:image" content="http://oxm4hc2s3.bkt.clouddn.com/4.png">
 <meta property="og:image" content="http://oxm4hc2s3.bkt.clouddn.com/2.png">
-<meta property="og:updated_time" content="2017-10-30T11:19:50.920Z">
+<meta property="og:updated_time" content="2018-03-18T07:00:16.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017年南航CTF校赛">
 <meta name="twitter:description" content="趁着学校大佬们都去打天翼杯，然后校赛混了个第四名">
@@ -411,7 +411,7 @@
 <p>那个 <strong>huh</strong> 真是巨嘲讽，各种尝试都失败了，最后也没做出来，赛后才知道只需要用 <strong>php://filter/read=convert.base64-encode/resource=flag</strong> 就可以了，，我记得我当时这样试过，但貌似哪里出错了就放弃了。还是经验不够。</p>
 <h2 id="web300"><a href="#web300" class="headerlink" title="web300"></a>web300</h2><p>这就是这次比赛最开心的一道题了，进去之后发现正则匹配对输入进行了过滤，’[^[]!+]+/g’，也就是说只能使用 <strong>[]!+</strong> 四个字符进行构造，eval(input)可以对input进行js解析，综合题意，只要可以使用eval(input)构造出’alert’字符串即可。</p>
 <p>一开始当然直接jsfuck，然后由于 <strong>()</strong> 被过滤掉了就fail了。然后各种困惑，各种google之后，get到jsfuck的编码方式，就解开了本题。记录如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">以下内容基于</div><div class="line">[]      =&gt;  []</div><div class="line"></div><div class="line">然后!可以将类型转化为布尔型</div><div class="line">![]     =&gt;  false</div><div class="line">!![]    =&gt;  true</div><div class="line"></div><div class="line">+可以将类型转化为整形</div><div class="line">+![]    =&gt;  0</div><div class="line">+!![]   =&gt;  1</div><div class="line">!![]+!![]   =&gt;  2 </div><div class="line"></div><div class="line">然后+[]可以转化为字符串</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line"></div><div class="line">类似于数组取下标</div><div class="line">(![]+[])[+!![]] =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">然后就可以类似的从&apos;false&apos;, &apos;true&apos;中读出&apos;a&apos;,&apos;l&apos;,&apos;e&apos;,&apos;r&apos;,&apos;t&apos;。</div><div class="line"></div><div class="line">em...但是...题目过滤了小括号。需要绕一下</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line">[![]+[]]    =&gt;  [&apos;false&apos;]</div><div class="line">[![]+[]][+[]]    =&gt;  &apos;false&apos;</div><div class="line">[![]+[]][+[]][+!![]]    =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">最后用加号拼起来即可。</div><div class="line">这题最后一半靠蒙，\笑哭\笑哭</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">以下内容基于</div><div class="line">[]      =&gt;  []</div><div class="line"></div><div class="line">然后!可以将类型转化为布尔型</div><div class="line">![]     =&gt;  false</div><div class="line">!![]    =&gt;  true</div><div class="line"></div><div class="line">+可以将类型转化为整形</div><div class="line">+![]    =&gt;  0</div><div class="line">+!![]   =&gt;  1</div><div class="line">!![]+!![]   =&gt;  2</div><div class="line"></div><div class="line">然后+[]可以转化为字符串</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line"></div><div class="line">类似于数组取下标</div><div class="line">(![]+[])[+!![]] =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">然后就可以类似的从&apos;false&apos;, &apos;true&apos;中读出&apos;a&apos;,&apos;l&apos;,&apos;e&apos;,&apos;r&apos;,&apos;t&apos;。</div><div class="line"></div><div class="line">em...但是...题目过滤了小括号。需要绕一下</div><div class="line">![]+[]  =&gt;  &apos;false&apos;</div><div class="line">[![]+[]]    =&gt;  [&apos;false&apos;]</div><div class="line">[![]+[]][+[]]    =&gt;  &apos;false&apos;</div><div class="line">[![]+[]][+[]][+!![]]    =&gt;  &apos;a&apos;</div><div class="line"></div><div class="line">最后用加号拼起来即可。</div><div class="line">这题最后一半靠蒙，\笑哭\笑哭</div></pre></td></tr></table></figure>
 <p>截图如下：<br><img src="http://oxm4hc2s3.bkt.clouddn.com/4.png" alt=""></p>
 <p><img src="http://oxm4hc2s3.bkt.clouddn.com/2.png" alt=""></p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>开心，也有点小遗憾吧，路还很长啊。</p>
@@ -433,10 +433,6 @@
         <div class="post-tags">
           
             <a href="/tags/CTF/" rel="tag"># CTF</a>
-          
-            <a href="/tags/比赛/" rel="tag"># 比赛</a>
-          
-            <a href="/tags/南航/" rel="tag"># 南航</a>
           
         </div>
       
@@ -553,7 +549,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -564,7 +560,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
