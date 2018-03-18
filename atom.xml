@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2018-03-08T06:00:16.719Z</updated>
+  <updated>2018-03-18T11:37:31.932Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无法 ping 通 github.com</title>
+    <link href="https://blog.nightmare.xin/hexo_upload_fail.html"/>
+    <id>https://blog.nightmare.xin/hexo_upload_fail.html</id>
+    <published>2018-03-18T09:58:18.000Z</published>
+    <updated>2018-03-18T11:37:31.932Z</updated>
+    
+    <content type="html"><![CDATA[<p>更新一下博客，输入 hexo clean &amp;&amp; hexo d -g 突然传不上去了，一开始以为是网络的原因，又传了一次还是失败了，看一下错误信息</p><p><img src="http://store.nightmare.xin/18-3-18/16700539.jpg" alt=""></p><p>22 端口 connection abort，应该是 github 连不上了</p><p>ping 也 ping 不通</p><p>解决办法是换个 ip，换一个你觉得速度还可以的 github.com 的 ip</p><p><img src="http://store.nightmare.xin/18-3-18/67953893.jpg" alt=""></p><p>进入 C:\Windows\System32\drivers\etc，右键 hosts，属性-&gt;安全-&gt;编辑，给当前用户添加写入的权限</p><p><img src="http://store.nightmare.xin/18-3-18/64095860.jpg" alt=""></p><p>然后在 hosts 文件末尾添加 一条解析</p><p>然后打开 powershell，输入 ipconfig /flushdns，刷新一下就可以 ping 通 github.com 了</p><p><img src="http://store.nightmare.xin/18-3-18/3964314.jpg" alt=""></p><p>最后博客上传成功。</p>]]></content>
+    
+    <summary type="html">
+    
+      github 咋又上不去了呀
+    
+    </summary>
+    
+      <category term="demo" scheme="https://blog.nightmare.xin/categories/demo/"/>
+    
+    
+      <category term="demo" scheme="https://blog.nightmare.xin/tags/demo/"/>
+    
+  </entry>
   
   <entry>
     <title>PA - 一些坑</title>
@@ -105,33 +127,11 @@
   </entry>
   
   <entry>
-    <title>无法 ping 通 github.com</title>
-    <link href="https://blog.nightmare.xin/hexo_upload_fail.html"/>
-    <id>https://blog.nightmare.xin/hexo_upload_fail.html</id>
-    <published>2017-12-17T09:58:18.000Z</published>
-    <updated>2018-03-18T09:40:09.127Z</updated>
-    
-    <content type="html"><![CDATA[<p>更新一下博客，输入 hexo clean &amp;&amp; hexo d -g 突然传不上去了，一开始以为是网络的原因，又传了一次还是失败了，看一下错误信息</p><p><img src="http://store.nightmare.xin/18-3-18/16700539.jpg" alt=""></p><p>22 端口 connection abort，应该是 github 连不上了</p><p>ping 也 ping 不通</p><p>解决办法是换个 ip，换一个你觉得速度还可以的 github.com 的 ip</p><p><img src="http://store.nightmare.xin/18-3-18/67953893.jpg" alt=""></p><p>进入 C:\Windows\System32\drivers\etc，右键 hosts，属性-&gt;安全-&gt;编辑，给当前用户添加写入的权限</p><p><img src="http://store.nightmare.xin/18-3-18/64095860.jpg" alt=""></p><p>然后在 hosts 文件末尾添加 一条解析</p><p>然后打开 powershell，输入 ipconfig /flushdns，刷新一下就可以 ping 通 github.com 了</p><p><img src="http://store.nightmare.xin/18-3-18/3964314.jpg" alt=""></p><p>最后博客上传成功。</p>]]></content>
-    
-    <summary type="html">
-    
-      github 咋又上不去了呀
-    
-    </summary>
-    
-      <category term="demo" scheme="https://blog.nightmare.xin/categories/demo/"/>
-    
-    
-      <category term="demo" scheme="https://blog.nightmare.xin/tags/demo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>ASP.NET 课程设计报告</title>
     <link href="https://blog.nightmare.xin/asp.html"/>
     <id>https://blog.nightmare.xin/asp.html</id>
     <published>2017-12-17T09:58:18.000Z</published>
-    <updated>2018-03-18T07:01:26.827Z</updated>
+    <updated>2018-03-18T11:38:58.921Z</updated>
     
     <content type="html"><![CDATA[<ul><li>网站地址 <a href="http://nightmare.xin/" target="_blank" rel="external">nightmare.xin</a></li><li><p>支持注册和登录功能， 有后台数据库， 登陆成功会跳转。</p></li><li><p>前端UI 秦瑞哲</p></li><li>后端处理 程斌</li><li>2017/12/11</li></ul><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本次课程要求设计一个网站，这就涉及到编程语言和框架的选取问题，之前只是粗略的学了一些 bootstrap，甚至连 jQuery 都没怎么用过，短时间内应该做不出什么太大的进展，索性专注于后端的设计。学过一点 php 和 python，但都是一些简单的 php 页面，在 thinkphp 和 flask 之间最终选择了 flask (<del>听说要比 Django 轻量级很多</del>)</p><h2 id="python-flask-apache-mysql"><a href="#python-flask-apache-mysql" class="headerlink" title="python + flask + apache + mysql"></a>python + flask + apache + mysql</h2><p>静态网站比如 hexo 是没有后台的，不具备处理请求的能力，而我也不打算使用这些一键建站(lamp甚至wordpress之类)的框架。因此需要自己设计一些接口供前端调用。下面是服务器的一些配置：主机(ubuntu 16.04 LTS)，web 服务器(apache 2.4)，数据库(mysql 5.7)，编程语言选择 python 和它的 web 框架 flask。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>首先是 apache 的配置，apache 负责接收和处理请求。<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="section">&lt;VirtualHost *:80&gt;</span></div><div class="line">        <span class="attribute"><span class="nomarkup">ServerName</span></span> nightmare.xin</div><div class="line">        <span class="attribute">WSGIScriptAlias</span> / /var/www/web/flaskapp.wsgi</div><div class="line">        <span class="section">&lt;Directory /var/www/web/app/&gt;</span></div><div class="line">            <span class="attribute"><span class="nomarkup">Order</span></span> allow,deny</div><div class="line">            <span class="attribute"><span class="nomarkup">Allow</span></span> from <span class="literal">all</span></div><div class="line">        <span class="section">&lt;/Directory&gt;</span></div><div class="line">        <span class="attribute">Alias</span> /static /var/www/web/app/static</div><div class="line">        <span class="section">&lt;Directory /var/www/web/app/static/&gt;</span></div><div class="line">            <span class="attribute"><span class="nomarkup">Order</span></span> allow,deny</div><div class="line">            <span class="attribute"><span class="nomarkup">Allow</span></span> from <span class="literal">all</span></div><div class="line">        <span class="section">&lt;/Directory&gt;</span></div><div class="line">        <span class="attribute">ErrorLog</span> <span class="variable">$&#123;APACHE_LOG_DIR&#125;</span>/error.log</div><div class="line">        <span class="attribute">LogLevel</span> warn</div><div class="line">        <span class="attribute">CustomLog</span> <span class="variable">$&#123;APACHE_LOG_DIR&#125;</span>/access.log combined</div><div class="line"><span class="section">&lt;/VirtualHost&gt;</span></div></pre></td></tr></table></figure></p><p>apache 接收请求后转发给 wsgi 处理，由 wsgi 传给应用程序，wsgi 是一套 apache, flask 都支持的标准，因此用作 web 服务器和应用程序之间的接口来简化后端设计。(首先载入 wsgi 模块，wsgi 的配置则基本不需要更改)(静态文件目录和错误/访问日志目录很重要)</p><p>该接口定义为如下 flaskapp.wsgi<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.path.insert(<span class="number">0</span>, <span class="string">"/var/www/web"</span>)</div><div class="line"><span class="keyword">from</span> app <span class="keyword">import</span> app</div><div class="line">application = app</div></pre></td></tr></table></figure></p><p>除了将网站根目录加入 path，该接口将 apache 请求处理转发到 app 对象(app 可以理解为一个 flask 应用程序对象)</p><p>该配置在 app/<strong>init</strong>.py 文件中，定义了如何处理请求的具体方法(建立路由表并编写处理代码)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, render_template, abort, redirect, url_for, send_from_directory</div><div class="line"><span class="comment">#from flask_bootstrap import Bootstrap</span></div><div class="line"><span class="comment">#from flask_moment import Moment</span></div><div class="line"><span class="comment">#from datetime import datetime</span></div><div class="line"><span class="keyword">from</span> flask_sqlalchemy <span class="keyword">import</span> SQLAlchemy</div><div class="line"><span class="keyword">from</span> models <span class="keyword">import</span> User</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"><span class="comment">#bootstrap = Bootstrap(app)</span></div><div class="line"><span class="comment">#moment = Moment(app)</span></div><div class="line">app.config[<span class="string">'SQLALCHEMY_DATABASE_URI'</span>] = <span class="string">'mysql://web_python:web_python@localhost/web_python'</span></div><div class="line">app.config[<span class="string">'SQLALCHEMY_TRACK_MODIFICATIONS'</span>] = <span class="keyword">True</span></div><div class="line">db = SQLAlchemy(app)</div><div class="line">db.create_all()</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">@app.route('/', methods=['GET'])</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">return</span> app.send_static_file(<span class="string">'Login/index.html'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">@app.route('/signin', methods=['POST'])</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">signin</span><span class="params">()</span>:</span></div><div class="line">    username = request.form[<span class="string">'username'</span>]</div><div class="line">    password = request.form[<span class="string">'password'</span>]</div><div class="line">    <span class="keyword">if</span> User.query.filter_by(username=username, password=password).first() != <span class="keyword">None</span>:</div><div class="line">        <span class="keyword">return</span> app.send_static_file(<span class="string">'Backstage/tables.html'</span>)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> app.send_static_file(<span class="string">'Login/index.html'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">@app.route('/signup', methods=['POST'])</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">signup</span><span class="params">()</span>:</span></div><div class="line">    username = request.form[<span class="string">'username'</span>]</div><div class="line">    password = request.form[<span class="string">'password'</span>]</div><div class="line">    email = request.form[<span class="string">'email'</span>]</div><div class="line"></div><div class="line">    u = User(username=username, password=password, email=email)</div><div class="line">    db.session.add(u)</div><div class="line">    db.session.commit()</div><div class="line">    <span class="keyword">return</span> app.send_static_file(<span class="string">'Login/index.html'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">@app.errorhandler(404)</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">page_not_found</span><span class="params">(e)</span>:</span></div><div class="line">    <span class="keyword">return</span> render_template(<span class="string">'404.html'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    app.run(debug=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p><p>其中用到了 Mysql 数据库，这里新建一个 web_python 的数据库，并新建一个名为 web_python 的用户，密码设置为 web_python，权限设置为允许任意ip登录，但只授权操作 web_python 数据库。</p><p><img src="http://store.nightmare.xin/37693cfc748049e45d87b8c7d8b9aacd.png" alt=""></p><p>sqlalchemy 模块提供了非常简便的方法使 flask 程序 mysql 交互<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">app = Flask(__name__)</div><div class="line">db = SQLAlchemy(app)</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(db.Model)</span>:</span></div><div class="line">    __tablename__ = <span class="string">'users'</span></div><div class="line">    id = db.Column(db.Integer, primary_key=<span class="keyword">True</span>)</div><div class="line">    username = db.Column(db.String(<span class="number">80</span>), unique=<span class="keyword">True</span>)</div><div class="line">    password = db.Column(db.String(<span class="number">80</span>), unique=<span class="keyword">True</span>)</div><div class="line">    email = db.Column(db.String(<span class="number">80</span>), unique=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, username, password,  email)</span>:</span></div><div class="line">        self.username = username</div><div class="line">        self.password = password</div><div class="line">        self.email = email</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> <span class="string">'&lt;User %r&gt;'</span> % self.username</div></pre></td></tr></table></figure></p><p>以上代码将 python 类对象抽象为一个数据库，该类的变量作为字段名。</p><p>对数据库的操作被封装为以下函数<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">db.create_all() 创建数据库和初始化</div><div class="line">db<span class="selector-class">.session</span><span class="selector-class">.add</span>() 添加一条记录</div><div class="line">db<span class="selector-class">.session</span><span class="selector-class">.update</span>() 更新</div><div class="line">db<span class="selector-class">.session</span><span class="selector-class">.delete</span>() 删除</div><div class="line">db<span class="selector-class">.session</span><span class="selector-class">.commit</span>() 将修改提交到远程数据库</div><div class="line">... ...</div></pre></td></tr></table></figure></p><h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>中途服务器出现过几次问题，比如网页请求502呀，资源请求404呀，apache无法启动呀，无法定向到指定的url呀。 通过google和stackoverflow解决了，一个惨痛的教训是，一定记得看错误日志(在/var/log/下相应子目录)…</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>对 web 知识了解又加深了一些</p>]]></content>
     
@@ -215,13 +215,13 @@
   </entry>
   
   <entry>
-    <title>今天的云很好看啊</title>
-    <link href="https://blog.nightmare.xin/cloud.html"/>
-    <id>https://blog.nightmare.xin/cloud.html</id>
+    <title>随记</title>
+    <link href="https://blog.nightmare.xin/start.html"/>
+    <id>https://blog.nightmare.xin/start.html</id>
     <published>2017-11-06T14:11:43.000Z</published>
-    <updated>2018-03-17T13:38:33.875Z</updated>
+    <updated>2018-03-18T07:00:01.136Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>em.. 感冒已经很轻了，应该是要好了，终于可以免受这种痛苦了，算是这段时间的一个好消息。 再休息几天吧，暂停了一周的跑步计划也该重新开始了(又想到1000米跑逐步临近，有点迫不及待的想检测一下这段时间的成果呢)。 话说，我为什么总会感冒呢..</p><h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>近期的CTF比赛有上海的比赛和浙警的比赛，上海的网安大赛太难了，勉强做了一道100分的sql注入就跑路了，学长们很厉害，用我们的账号打到前几名。</p><p>浙警的比赛今天刚刚开始，分三周三次小比赛，听学长说题目对萌新比较友好，怀着激动的心情去玩了玩，几分郁闷，几分开心。</p><p><img src="http://store.nightmare.xin/0593ceb4c528a20a4daf1f70f0c70ebf.png" alt=""></p><p>就我自己的感觉吧，没有特别水的题，题目难度基本分为<strong>突然就做出来了</strong>和<strong>做到死也做不出来</strong>两种。</p><p>应该是很多大表哥对这种小比赛不感兴趣，侥幸混个no.10。</p><p><img src="http://store.nightmare.xin/28b1895a15ed5e7d4e8fc83bbfb15495.png" alt=""></p><h1 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h1><p>数据结构讲到了tree(树)了，今天认真听了一下，感觉老师讲的还是很好的，讲的很详细听的也有意思，以前为什么不想听呢，其实以前内心是有点反感的，大部分人都没有什么编程能力就去讲数据结构算法什么的，数据结构是算法的基础，算法是程序的灵魂嘛，但是这些要建立在代码熟练的基础上，嗯em.. 反感的最初来源应该是编程速成班，快速培训或校园招聘什么的，不理解那些人的心态，完全就是抱着”试试看，或许我成功了呢”，或者”我周围人都那么做，我那么做也没什么嘛”的心态？ 一边渴望得到认可，一边又沉醉在”周围人都和我一样”的心态中，或许是我性格比较孤僻的原因么</p><h1 id="0x04"><a href="#0x04" class="headerlink" title="0x04"></a>0x04</h1><p>谈到性格改变什么的，在大二认识的伙伴们可能会觉得我平时在一起时不太爱讲话，其实比起大一已经好多了，大一认识的伙伴们应该有体会，一年我还是学到了些什么有很大改变的，提到了大一就不得不提起高中和初中了，初中被欺负，高中没住校，六年与人交流可以说是非常少之又少了… 刚进大学也只想混日子混过去的，至于为什么突然转变，这就不得不说提起我的大姐姐了，由于在博客中又是不太好提的就不提了… (想知道的直接问我嘛，又不是不能说(骄傲.jpg))</p><h1 id="0x05"><a href="#0x05" class="headerlink" title="0x05"></a>0x05</h1><p>嘛，现在社会还是太浮躁了</p><h1 id="0x06"><a href="#0x06" class="headerlink" title="0x06"></a>0x06</h1><p>我的小窝还是装的很不错了，改天再买个放东西的架子什么的，对了，我的二次元枕套也要买</p><h1 id="0x07"><a href="#0x07" class="headerlink" title="0x07"></a>0x07</h1><p>哇，都0x07了，再写点什么呢</p><h1 id="0x08"><a href="#0x08" class="headerlink" title="0x08"></a>0x08</h1><p>人生有很多选择，有些很重要，但更重要的是选择之后坚持走下去。</p><h1 id="0x09"><a href="#0x09" class="headerlink" title="0x09"></a>0x09</h1><p>其实我特别想知道都有谁看过我的博客，想写个签到评论什么的功能，但是，本菜鸡懒啊…</p><h1 id="0x0a"><a href="#0x0a" class="headerlink" title="0x0a"></a>0x0a</h1><p>乒乓球握拍姿势感觉越来越奇怪，很别扭，难受</p><p>上次打赢了了一个小姐姐还不服气(哼~)</p><h1 id="0x0b"><a href="#0x0b" class="headerlink" title="0x0b"></a>0x0b</h1><p>到这里结束了，为什么呢，因为马上要熄灯断网了</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="day-0x00"><a href="#day-0x00" class="headerlink" title="day_0x00"></a>day_0x00</h2><p>面对未来和未知的担忧和恐慌，在今天快要结束时终于消失的无影无踪。</p>]]></content>
     
     <summary type="html">
     
@@ -237,13 +237,13 @@
   </entry>
   
   <entry>
-    <title>随记</title>
-    <link href="https://blog.nightmare.xin/start.html"/>
-    <id>https://blog.nightmare.xin/start.html</id>
+    <title>今天的云很好看啊</title>
+    <link href="https://blog.nightmare.xin/cloud.html"/>
+    <id>https://blog.nightmare.xin/cloud.html</id>
     <published>2017-11-06T14:11:43.000Z</published>
-    <updated>2018-03-18T07:00:01.136Z</updated>
+    <updated>2018-03-17T13:38:33.875Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="day-0x00"><a href="#day-0x00" class="headerlink" title="day_0x00"></a>day_0x00</h2><p>面对未来和未知的担忧和恐慌，在今天快要结束时终于消失的无影无踪。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>em.. 感冒已经很轻了，应该是要好了，终于可以免受这种痛苦了，算是这段时间的一个好消息。 再休息几天吧，暂停了一周的跑步计划也该重新开始了(又想到1000米跑逐步临近，有点迫不及待的想检测一下这段时间的成果呢)。 话说，我为什么总会感冒呢..</p><h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>近期的CTF比赛有上海的比赛和浙警的比赛，上海的网安大赛太难了，勉强做了一道100分的sql注入就跑路了，学长们很厉害，用我们的账号打到前几名。</p><p>浙警的比赛今天刚刚开始，分三周三次小比赛，听学长说题目对萌新比较友好，怀着激动的心情去玩了玩，几分郁闷，几分开心。</p><p><img src="http://store.nightmare.xin/0593ceb4c528a20a4daf1f70f0c70ebf.png" alt=""></p><p>就我自己的感觉吧，没有特别水的题，题目难度基本分为<strong>突然就做出来了</strong>和<strong>做到死也做不出来</strong>两种。</p><p>应该是很多大表哥对这种小比赛不感兴趣，侥幸混个no.10。</p><p><img src="http://store.nightmare.xin/28b1895a15ed5e7d4e8fc83bbfb15495.png" alt=""></p><h1 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h1><p>数据结构讲到了tree(树)了，今天认真听了一下，感觉老师讲的还是很好的，讲的很详细听的也有意思，以前为什么不想听呢，其实以前内心是有点反感的，大部分人都没有什么编程能力就去讲数据结构算法什么的，数据结构是算法的基础，算法是程序的灵魂嘛，但是这些要建立在代码熟练的基础上，嗯em.. 反感的最初来源应该是编程速成班，快速培训或校园招聘什么的，不理解那些人的心态，完全就是抱着”试试看，或许我成功了呢”，或者”我周围人都那么做，我那么做也没什么嘛”的心态？ 一边渴望得到认可，一边又沉醉在”周围人都和我一样”的心态中，或许是我性格比较孤僻的原因么</p><h1 id="0x04"><a href="#0x04" class="headerlink" title="0x04"></a>0x04</h1><p>谈到性格改变什么的，在大二认识的伙伴们可能会觉得我平时在一起时不太爱讲话，其实比起大一已经好多了，大一认识的伙伴们应该有体会，一年我还是学到了些什么有很大改变的，提到了大一就不得不提起高中和初中了，初中被欺负，高中没住校，六年与人交流可以说是非常少之又少了… 刚进大学也只想混日子混过去的，至于为什么突然转变，这就不得不说提起我的大姐姐了，由于在博客中又是不太好提的就不提了… (想知道的直接问我嘛，又不是不能说(骄傲.jpg))</p><h1 id="0x05"><a href="#0x05" class="headerlink" title="0x05"></a>0x05</h1><p>嘛，现在社会还是太浮躁了</p><h1 id="0x06"><a href="#0x06" class="headerlink" title="0x06"></a>0x06</h1><p>我的小窝还是装的很不错了，改天再买个放东西的架子什么的，对了，我的二次元枕套也要买</p><h1 id="0x07"><a href="#0x07" class="headerlink" title="0x07"></a>0x07</h1><p>哇，都0x07了，再写点什么呢</p><h1 id="0x08"><a href="#0x08" class="headerlink" title="0x08"></a>0x08</h1><p>人生有很多选择，有些很重要，但更重要的是选择之后坚持走下去。</p><h1 id="0x09"><a href="#0x09" class="headerlink" title="0x09"></a>0x09</h1><p>其实我特别想知道都有谁看过我的博客，想写个签到评论什么的功能，但是，本菜鸡懒啊…</p><h1 id="0x0a"><a href="#0x0a" class="headerlink" title="0x0a"></a>0x0a</h1><p>乒乓球握拍姿势感觉越来越奇怪，很别扭，难受</p><p>上次打赢了了一个小姐姐还不服气(哼~)</p><h1 id="0x0b"><a href="#0x0b" class="headerlink" title="0x0b"></a>0x0b</h1><p>到这里结束了，为什么呢，因为马上要熄灯断网了</p>]]></content>
     
     <summary type="html">
     
@@ -395,7 +395,7 @@
     <link href="https://blog.nightmare.xin/test5.html"/>
     <id>https://blog.nightmare.xin/test5.html</id>
     <published>2017-10-23T13:56:59.000Z</published>
-    <updated>2018-03-18T07:00:49.017Z</updated>
+    <updated>2018-03-18T11:38:31.517Z</updated>
     
     <content type="html"><![CDATA[<h1 id="回忆"><a href="#回忆" class="headerlink" title="回忆"></a>回忆</h1><p>翻一翻以前的日记，大概从9.15开始的<br><img src="http://store.nightmare.xin/81448138f5f163ccdba4acc69819f280.png" alt=""><br>以前也试图坚持过，但总是很难坚持下来，这次一个月已经过去了，也算是小有成就吧。</p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>坚持锻炼不仅是体重减轻，肉肉减掉，强化身体防猝死，于我而言时刻提醒我去坚持梦想不放弃，还有最最最最重要的，晚上睡觉踏实多了(也许是我换了个枕头的缘故？)，远离修仙，从我做起。</p><p>ps: 听说瘦下来会变帅 Orz.</p>]]></content>
     
@@ -405,10 +405,10 @@
     
     </summary>
     
-      <category term="DIARY" scheme="https://blog.nightmare.xin/categories/DIARY/"/>
+      <category term="Life" scheme="https://blog.nightmare.xin/categories/Life/"/>
     
     
-      <category term="锻炼" scheme="https://blog.nightmare.xin/tags/%E9%94%BB%E7%82%BC/"/>
+      <category term="DIARY" scheme="https://blog.nightmare.xin/tags/DIARY/"/>
     
   </entry>
   
