@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2018-03-20T10:23:34.777Z</updated>
+  <updated>2018-03-21T03:14:23.973Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.nightmare.xin/socket.html"/>
     <id>https://blog.nightmare.xin/socket.html</id>
     <published>2018-03-20T09:58:18.000Z</published>
-    <updated>2018-03-20T10:23:34.777Z</updated>
+    <updated>2018-03-21T03:14:23.973Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/kur0mi/socket" target="_blank" rel="external">项目地址</a></p><p>TODO：</p><ul><li><p>信号控制</p></li><li><p>多线（进）程处理</p></li><li><p>more …</p></li></ul><h2 id="day-3-20"><a href="#day-3-20" class="headerlink" title="day_3_20"></a>day_3_20</h2><p>虽然由于全局变量锁的存在，使得 python 的多进程变得很是鸡肋 —— 它同一时间实际只有一个进程在运行。</p><p>但我还是决定使用 python 多线程来完成需求。一是由于 python 抽象程度高，可以在练习中更加专注于想学习的部分，而不是处理一处又一处的细节搞得焦头烂额。二是 python 开发速度快，对于前期产品的测试和使用是足够满足要求的。即便是随着规模的扩大使得 python 多线程速度的弊端暴露出来，由于了解了技术细节，用其他语言重写也会相对容易。</p><p>os.fork 方法不具有跨平台的特点。与此相比，使用 multiprocessing 中的 Process 模块支持跨平台而且封装程度更高。</p><p><img src="http://store.nightmare.xin/18-3-20/17742477.jpg" alt=""></p><p>start() 方法启动一个进程</p><p>join() 方法用来阻塞主进程，等待子进程运行结束再继续执行</p><p>Process.pid 返回进程 id</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/kur0mi/socket" target="_blank" rel="external">项目地址</a></p><p>TODO：</p><ul><li><p>信号控制</p></li><li><p>多线（进）程处理（目前确认多进程方案）</p></li><li><p>more …</p></li></ul><h2 id="day-3-20-选择"><a href="#day-3-20-选择" class="headerlink" title="day_3_20 选择"></a>day_3_20 选择</h2><p>涉及到 socket 网络应用，99% 的时间都浪费在 IO 等待而不是 CPU 的计算，所以使用 开发快速的语言，如 python，会很方便，因为它影响的 CPU 计算速度 对于 IO 来说极其有限。</p><p><del>虽然由于 GIL 的存在，使得 python 的多线程变得很是鸡肋 —— 它同一时间实际只有一个线程在运行。</del></p><p><del>但我还是决定使用 python 多线程来完成需求。一是由于 python 抽象程度高，可以在练习中更加专注于想学习的部分，而不是处理一处又一处的细节搞得焦头烂额。二是 python 开发速度快，对于前期产品的测试和使用是足够满足要求的。即便是随着规模的扩大使得 python 多线程速度的弊端暴露出来，由于了解了技术细节，用其他语言重写也会相对容易。</del></p><pre><code>3-21今天我了解到python多线程无法充分利用多核资源，但是多进程是可以的，算是一个好消息了</code></pre><p>多进程使得程序可以充分利用 CPU 多核资源，主进程负责分发任务，子进程处理请求。Apache 就是这种模式。</p><p>但是多进程需要极大地开销，因为每个进程独占所有资源，进程的切换每次都要保存现场-恢复现场。</p><p>多线程，又叫轻量级进程。多线程的切换代价极小，因为所有线程共享同一份系统资源，同时这使得它难以控制。IIS 就是这种模式。</p><p>现在流行一种多任务处理技术叫做 异步 IO，又叫协程，可以在单线程内高效率的处理多任务。有时间再学习一下。</p><p>因为 python 多线程的弊端，多线程不予考虑。</p><p>目前确定的方案是 多进程，协程 还有待研究。多进程还支持分布式，真是 wow，不过估计用不到了。</p><h2 id="demo-list"><a href="#demo-list" class="headerlink" title="demo list"></a>demo list</h2><blockquote><p>Process</p></blockquote><p>os.fork 方法不具有跨平台的特点。与此相比，使用 multiprocessing 中的 Process 模块，封装了 fork 方法，支持跨平台而且封装程度更高。</p><p><img src="http://store.nightmare.xin/18-3-20/17742477.jpg" alt=""></p><p>start() 方法启动一个进程</p><p>join() 方法用来阻塞主进程，等待子进程运行结束再继续执行</p><p>Process.pid 返回进程 id</p><p>还可以使用 os.getpid()，os.getppid() 获取 ID</p>]]></content>
     
     <summary type="html">
     
