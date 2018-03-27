@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.nightmare.xin/"/>
-  <updated>2018-03-21T03:14:23.973Z</updated>
+  <updated>2018-03-27T10:18:53.537Z</updated>
   <id>https://blog.nightmare.xin/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2018qwb-nextrsa</title>
+    <link href="https://blog.nightmare.xin/2018qwb-nextrsa.html"/>
+    <id>https://blog.nightmare.xin/2018qwb-nextrsa.html</id>
+    <published>2018-03-27T08:56:47.000Z</published>
+    <updated>2018-03-27T10:18:53.537Z</updated>
+    
+    <content type="html"><![CDATA[<p>刚开始了解 RSA，先写下流程，深入学习之后再补充吧。</p><h2 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h2><blockquote><p>任意给定正整数n，请问在小于等于n的正整数之中，有多少个与n构成互质关系？</p></blockquote><p>$$ n = p_1^{k_1}p_2^{k_2}…p_r^{k_r} $$<br>$$ \phi(x) = n(1-\frac{1}{p_1})(1-\frac{1}{p_2})…(1-\frac{1}{p_r}) $$</p><h2 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h2><blockquote><p>如果两个正整数a和n互质，则n的欧拉函数 φ(n) 可以让下面的等式成立：</p></blockquote><p>$$ a^{\phi(n)}\equiv1(mod\ n) $$</p><h2 id="模反元素"><a href="#模反元素" class="headerlink" title="模反元素"></a>模反元素</h2><blockquote><p>如果两个正整数a和n互质，那么一定可以找到整数b，使得 ab-1 被n整除，或者说ab被n除的余数是1。</p></blockquote><p>$$ ab\equiv1(mod\ n) $$</p><h2 id="RSA-加密"><a href="#RSA-加密" class="headerlink" title="RSA 加密"></a>RSA 加密</h2><ol><li>选择两个不相等的质数 p，q</li><li>计算乘积 $ n = p * q $</li><li>计算 n 的欧拉函数 $ \phi(n)=(p-1)(q-1) $</li><li>随机选择一个整数e，条件是1&lt; e &lt; φ(n)，且e与φ(n) 互质。</li><li>计算e对于φ(n)的模反元素d。使得 $$ ed\equiv1(mod\ \phi(n)) $$</li><li>n，e 是公钥，n，d 是私钥。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      神特么 RSA 大杂烩，以后再也不用担心 RSA 了
+    
+    </summary>
+    
+      <category term="CTF" scheme="https://blog.nightmare.xin/categories/CTF/"/>
+    
+    
+      <category term="CTF" scheme="https://blog.nightmare.xin/tags/CTF/"/>
+    
+  </entry>
   
   <entry>
     <title>socket tool</title>
@@ -431,28 +453,6 @@
     
     
       <category term="hexo" scheme="https://blog.nightmare.xin/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快速获取markdown图片链接</title>
-    <link href="https://blog.nightmare.xin/test3.html"/>
-    <id>https://blog.nightmare.xin/test3.html</id>
-    <published>2017-10-22T14:39:47.000Z</published>
-    <updated>2018-03-18T13:08:20.137Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="markdown简介"><a href="#markdown简介" class="headerlink" title="markdown简介"></a>markdown简介</h1><p>Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性，被称作“「电子邮件」风格的「标记语言」”。</p><p>markdown语法参考<a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">链接</a></p><h1 id="七牛云简介"><a href="#七牛云简介" class="headerlink" title="七牛云简介"></a>七牛云简介</h1><p>这里主要使用七牛云作为图床————也就是互联网上的一处空间————来存储markdown需要的图片。</p><h1 id="autohotkey-python简介"><a href="#autohotkey-python简介" class="headerlink" title="autohotkey+python简介"></a>autohotkey+python简介</h1><p>autohotkey使用一种极为简便的语法来创建脚本自定义热键，python同样以简洁的语法和强大的功能著称，两者配合就可以使用热键快速的解决很多复杂问题。</p><h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><p>设置快捷键，实现一键<strong>上传图片到七牛云存储，并复制外链到剪切板</strong>，避免编写markdown文档时<strong>打开七牛云+上传图片+复制外链</strong>的繁杂操作。</p><h1 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h1><p><a href="https://github.com/kur0mi/tools/tree/master/picture_upload" target="_blank" rel="external">picture_upload</a></p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>nothing…</p><p>ps: 第一次写这种博客，时间也有点匆忙，以后有时间再改改吧。</p>]]></content>
-    
-    <summary type="html">
-    
-      使用autohotkey自定义热键，并通过利用python脚本强大的处理能力，实现一键处理功能
-    
-    </summary>
-    
-      <category term="Action" scheme="https://blog.nightmare.xin/categories/Action/"/>
-    
-    
-      <category term="Demo" scheme="https://blog.nightmare.xin/tags/Demo/"/>
     
   </entry>
   
